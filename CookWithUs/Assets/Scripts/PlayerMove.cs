@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerMove : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 2f;
-    public float jumpForce = 5f;
+    [Range(0.0f, 10.0f)]
+    public float moveSpeed;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
