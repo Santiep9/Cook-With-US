@@ -48,18 +48,16 @@ public class BattleSystem : MonoBehaviour
     {
         dialogueText.text = "Soy tan feo, nadie me querrá nunca...";
 
-       
         GameObject nuevoBoton = Instantiate(boton1, botonSpawn);
 
-       
-        RectTransform rt = nuevoBoton.GetComponent<RectTransform>();
-        rt.SetParent(botonSpawn, false);  
+        GameObject tmpCanvas = GameObject.Find("UI");
 
-       
-        rt.anchoredPosition = Vector2.zero; 
-        rt.sizeDelta = new Vector2(200, 50);
+        nuevoBoton.transform.SetParent(tmpCanvas.transform, false);
 
-        //TMP_Text textoHijo = boton1.transform.GetChild(0).GetComponent<TMP_Text>();
-        //opcion1.text = "Eres guapo.";
+        nuevoBoton.transform.position = new Vector2(0, 8);
+
+
+        TMP_Text textoHijo = nuevoBoton.transform.GetChild(0).GetComponent<TMP_Text>();
+        textoHijo.text = "Eres guapo.";
     }
 }

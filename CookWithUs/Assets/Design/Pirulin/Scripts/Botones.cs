@@ -9,6 +9,5 @@ public class Botones : MonoBehaviour
     public void AddPoints()
     {
         OnPointsAdded.Invoke(points);
-
     }
 }
