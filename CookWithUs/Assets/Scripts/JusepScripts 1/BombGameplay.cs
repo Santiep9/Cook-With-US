@@ -5,7 +5,10 @@ public class BombGameplay : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 2f;
-    public float jumpForce = 5f;
+
+    [Header("Bomb")]
+    public GameObject bomb;
+    public Transform bombPos;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -26,6 +29,11 @@ public class BombGameplay : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void DropBomb(InputAction.CallbackContext context)
+    {
+        GameObject newBomb = Instantiate(bomb, bombPos);
     }
 
     private void Move()
