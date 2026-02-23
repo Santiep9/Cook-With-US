@@ -16,6 +16,8 @@ public class BattleSystem : MonoBehaviour
 
     public BattleState state;
 
+    public Vector2 posicionYBoton;
+
     [Header("Opciones para elegir")]
     public GameObject boton1;
     public GameObject boton2;
@@ -29,6 +31,7 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
+        posicionYBoton = new Vector2(0, 8);
     }
 
     IEnumerator SetupBattle()
@@ -48,16 +51,24 @@ public class BattleSystem : MonoBehaviour
     {
         dialogueText.text = "Soy tan feo, nadie me querrá nunca...";
 
-        GameObject nuevoBoton = Instantiate(boton1, botonSpawn);
+        CreateButton(3);
+    }
 
-        GameObject tmpCanvas = GameObject.Find("UI");
+    void CreateButton(int cantidad)
+    {
+        for(int i = 0; i < cantidad; i++)
+        {
+            GameObject nuevoBoton = Instantiate(boton1, botonSpawn);
 
-        nuevoBoton.transform.SetParent(tmpCanvas.transform, false);
+            GameObject tmpCanvas = GameObject.Find("UI");
 
-        nuevoBoton.transform.position = new Vector2(0, 8);
+            nuevoBoton.transform.SetParent(tmpCanvas.transform, false);
 
+            nuevoBoton.transform.position = posicionYBoton;
 
-        TMP_Text textoHijo = nuevoBoton.transform.GetChild(0).GetComponent<TMP_Text>();
-        textoHijo.text = "Eres guapo.";
+            TMP_Text textoHijo = nuevoBoton.transform.GetChild(0).GetComponent<TMP_Text>();
+            textoHijo.text = "Eres guapo.";
+            posicionYBoton.y += 4;
+        }
     }
 }
