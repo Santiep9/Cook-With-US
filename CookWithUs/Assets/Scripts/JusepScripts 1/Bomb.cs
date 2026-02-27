@@ -1,16 +1,20 @@
+using System;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-    public GameObject bomb;
+    public float explodeTime = 3f;
 
-    void Start()
+    public event Action OnBombExplode;
+
+    private void Start()
     {
-        Explode();
+        Invoke(nameof(Explode), explodeTime);
     }
 
-    void Explode()
+    private void Explode()
     {
-        Destroy(bomb, 3.0f);
+        OnBombExplode.Invoke();
+        Destroy(gameObject);
     }
 }

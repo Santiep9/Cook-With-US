@@ -9,6 +9,13 @@ public class BombGameplay : MonoBehaviour
     [Header("Bomb")]
     public GameObject bomb;
     public Transform bombPos;
+    public float bombOffset = 1f;
+    public LayerMask wallLayer;
+    public float bombCheckRadius = 0.2f;
+
+    [Header("BombLimit")]
+    public int maxBombs = 1;
+    private int currentBombs = 0;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -33,7 +40,25 @@ public class BombGameplay : MonoBehaviour
 
     public void DropBomb(InputAction.CallbackContext context)
     {
-        GameObject newBomb = Instantiate(bomb, bombPos);
+        if (!context.performed) return;
+
+        if (currentBombs >= maxBombs) return;
+
+        Vector2 spawnPos = bombPos.position;
+
+        Collider2D hit = Physics2D.OverlapCircle(spawnPos, bombCheckRadius, wallLayer);
+
+        if (hit != null) return;
+
+        GameObject newBomb = Instantiate(bomb, spawnPos, Quaternion.identity);
+
+        currentBombs++;
+
+        Bomb bombScript = newBomb.GetComponent<Bomb>();
+        if (bombScript != null)
+        {
+            bombScript.OnBombExplode += HandleBombExplode;
+        }
     }
 
     private void Move()
@@ -45,7 +70,38 @@ public class BombGameplay : MonoBehaviour
     {
         if (sr == null) return;
 
-        if (moveInput.x < -0.01f) sr.flipX = true;
-        else if (moveInput.x > 0.01f) sr.flipX = false;
+        if (moveInput.sqrMagnitude < 0.01f) return;
+
+        if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
+        {
+            if (moveInput.x < 0)
+            {
+                sr.flipX = true;
+                bombPos.localPosition = new Vector3(-bombOffset, 0f, 0f);
+            }
+            else
+            {
+                sr.flipX = false;
+                bombPos.localPosition = new Vector3(bombOffset, 0f, 0f);
+            }
+        }
+        else
+        {
+            if (moveInput.y > 0)
+            {
+                sr.flipY = true;
+                bombPos.localPosition = new Vector3(0f, bombOffset, 0f);
+            }
+            else
+            {
+                sr.flipY = false;
+                bombPos.localPosition = new Vector3(0f, -bombOffset, 0f);
+            }
+        }
+    }
+
+    private void HandleBombExplode()
+    {
+        currentBombs = Mathf.Max(0, currentBombs - 1);
     }
 }
