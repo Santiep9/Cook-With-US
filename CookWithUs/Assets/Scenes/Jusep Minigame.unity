@@ -6675,7 +6675,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   bombCheckRadius: 0.4
-  maxBombs: 1
 --- !u!1001 &1633419893
 PrefabInstance:
   m_ObjectHideFlags: 0
