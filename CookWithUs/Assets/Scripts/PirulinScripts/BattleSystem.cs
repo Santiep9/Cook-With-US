@@ -21,7 +21,6 @@ public class BattleSystem : MonoBehaviour
     [Header("Opciones para elegir")]
     public GameObject boton1;
     public GameObject boton2;
-    public GameObject boton3;
     public TMP_Text texto1;
     public TMP_Text texto2;
     public TMP_Text texto3;
@@ -51,12 +50,12 @@ public class BattleSystem : MonoBehaviour
     {
         dialogueText.text = "Soy tan feo, nadie me querrá nunca...";
 
-        CreateButton(3);
+        CreateButtonCorrect(1);
+        CreateButtonWrong(2);
     }
-
-    void CreateButton(int cantidad)
+    void CreateButtonCorrect(int cantidad)
     {
-        for(int i = 0; i < cantidad; i++)
+        for (int i = 0; i < cantidad; i++)
         {
             GameObject nuevoBoton = Instantiate(boton1, botonSpawn);
 
@@ -71,4 +70,22 @@ public class BattleSystem : MonoBehaviour
             posicionYBoton.y += 4;
         }
     }
+    void CreateButtonWrong(int cantidad)
+    {
+        for(int i = 0; i < cantidad; i++)
+        {
+            GameObject nuevoBoton = Instantiate(boton2, botonSpawn);
+
+            GameObject tmpCanvas = GameObject.Find("UI");
+
+            nuevoBoton.transform.SetParent(tmpCanvas.transform, false);
+
+            nuevoBoton.transform.position = posicionYBoton;
+
+            TMP_Text textoHijo = nuevoBoton.transform.GetChild(0).GetComponent<TMP_Text>();
+            textoHijo.text = "Eres guapo.";
+            posicionYBoton.y += 4;
+        }
+    }
+
 }

@@ -615,9 +615,9 @@ MonoBehaviour:
   enemyLocation: {fileID: 2112445658}
   dialogueText: {fileID: 1047378988}
   state: 0
+  posicionYBoton: {x: 0, y: 0}
   boton1: {fileID: 9218524291519007412, guid: 5a56bf552839f78428f5209d51278c76, type: 3}
-  boton2: {fileID: 5194013723030226731, guid: a76af74e557c3f94a9f727094c463f37, type: 3}
-  boton3: {fileID: 5757738610920561490, guid: 6a232da3987b2bc42bde354f3d56c1c1, type: 3}
+  boton2: {fileID: 8145444931160563, guid: 78302b312b7451047a95cd5533e97354, type: 3}
   texto1: {fileID: 0}
   texto2: {fileID: 0}
   texto3: {fileID: 0}
