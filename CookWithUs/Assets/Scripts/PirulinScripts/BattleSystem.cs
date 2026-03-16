@@ -13,7 +13,7 @@ public class BattleSystem : MonoBehaviour
 
     [SerializeField] private Transform playerLocation;
     [SerializeField] private Transform enemyLocation;
-    
+
     [SerializeField] private RectTransform posBoton1;
     [SerializeField] private RectTransform posBoton2;
     [SerializeField] private RectTransform posBoton3;
@@ -27,12 +27,11 @@ public class BattleSystem : MonoBehaviour
     [Header("Opciones para elegir")]
     [SerializeField] private GameObject boton1;
     [SerializeField] private GameObject boton2;
-    [SerializeField] private TMP_Text texto1;
-    [SerializeField] private TMP_Text texto2;
-    [SerializeField] private TMP_Text texto3;
-    [SerializeField] private Transform botonSpawn;
+
 
     public List<GameObject> botones = new List<GameObject>();
+
+    public RectTransform[] posiciones;
 
 
     private void Start()
@@ -40,6 +39,8 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.START;
         StartCoroutine(SetupBattle());
         posicionYBoton = new Vector2(0, 8);
+
+        posiciones = new RectTransform[] { posBoton1, posBoton2, posBoton3 };
     }
 
     IEnumerator SetupBattle()
@@ -59,67 +60,51 @@ public class BattleSystem : MonoBehaviour
     {
         dialogueText.text = "Soy tan feo, nadie me querrá nunca...";
 
-        CreateButtonCorrect(1);
-        CreateButtonWrong(2);
+        CreateButtons();
+        RandomizarBotones();
+        AsignarPosiciones();
     }
-    void CreateButtonCorrect(int cantidad)
+    void CreateButtons()
     {
         GameObject tmpCanvas = GameObject.Find("UI");
-        RectTransform rect = tmpCanvas.GetComponent<RectTransform>();
 
-        for (int i = 0; i < cantidad; i++)
+        GameObject nuevoBotonBUENO = Instantiate(boton1, tmpCanvas.transform);
+
+        botones.Add(nuevoBotonBUENO);
+
+        TMP_Text textoHijo = nuevoBotonBUENO.transform.GetChild(0).GetComponent<TMP_Text>();
+        textoHijo.text = "Eres guapo.";
+
+
+        for (int i = 0; i < 2; i++)
         {
-            GameObject nuevoBoton = Instantiate(boton1, tmpCanvas.transform);
-            
-            botones.Add(nuevoBoton);
+            GameObject nuevoBotonMALO = Instantiate(boton2, tmpCanvas.transform);
 
-            RandomizarBotones(nuevoBoton);
+            botones.Add(nuevoBotonMALO);
 
-            RectTransform rt = nuevoBoton.GetComponent<RectTransform>();
-
-            rt.anchoredPosition = posBoton1.anchoredPosition;
-
-            TMP_Text textoHijo = nuevoBoton.transform.GetChild(0).GetComponent<TMP_Text>();
-            textoHijo.text = "Eres guapo.";
-
-            print("llamada CORRECT numero " + i);
+            TMP_Text textoHijoMALO = nuevoBotonMALO.transform.GetChild(0).GetComponent<TMP_Text>();
+            textoHijoMALO.text = "Eres feo y tonto.";
         }
-    }
-    void CreateButtonWrong(int cantidad)
-    {
-        GameObject tmpCanvas = GameObject.Find("UI");
-        RectTransform rect = tmpCanvas.GetComponent<RectTransform>();
 
-        RectTransform[] posiciones = {posBoton2, posBoton3};
-
-        for (int i = 0; i < cantidad; i++)
-        {
-            GameObject nuevoBoton = Instantiate(boton2, tmpCanvas.transform);
-
-            botones.Add(nuevoBoton);
-
-            RandomizarBotones(nuevoBoton);
-
-            RectTransform rt = nuevoBoton.GetComponent<RectTransform>();
-
-            rt.anchoredPosition = posiciones[i].anchoredPosition;
-
-            TMP_Text textoHijo = nuevoBoton.transform.GetChild(0).GetComponent<TMP_Text>();
-            textoHijo.text = "Eres guapo.";
-
-            print("llamada WRONG numero " + i);
-        }
     }
 
-    void RandomizarBotones(GameObject boton)
+    void RandomizarBotones()
     {
-        for(int i = 0; i < botones.Count; i++)
+        for (int i = botones.Count - 1; i > 0; i--) // i 2 , r 0 // i 1, r 1
         {
-            int r = (int)(Random.value * (botones.Count - i));
-            boton = botones[r];
+            int r = Random.Range(0, i + 1);
+            GameObject boton = botones[r];
             botones[r] = botones[i];
             botones[i] = boton;
             print(r + "numero random");
+        }
+    }
+    void AsignarPosiciones()
+    {
+        for (int i = 0; i < botones.Count; i++)
+        {
+            RectTransform rt = botones[i].GetComponent<RectTransform>();
+            rt.anchoredPosition = posiciones[i].anchoredPosition;
         }
     }
 }
