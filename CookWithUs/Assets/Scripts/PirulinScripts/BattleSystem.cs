@@ -34,6 +34,7 @@ public class BattleSystem : MonoBehaviour
     public RectTransform[] posiciones;
 
 
+
     private void Start()
     {
         state = BattleState.START;
@@ -87,7 +88,6 @@ public class BattleSystem : MonoBehaviour
         }
 
     }
-
     void RandomizarBotones()
     {
         for (int i = botones.Count - 1; i > 0; i--) // i 2 , r 0 // i 1, r 1
@@ -96,7 +96,6 @@ public class BattleSystem : MonoBehaviour
             GameObject boton = botones[r];
             botones[r] = botones[i];
             botones[i] = boton;
-            print(r + "numero random");
         }
     }
     void AsignarPosiciones()
@@ -105,6 +104,26 @@ public class BattleSystem : MonoBehaviour
         {
             RectTransform rt = botones[i].GetComponent<RectTransform>();
             rt.anchoredPosition = posiciones[i].anchoredPosition;
+        }
+    }
+
+    public void ElegirRespuesta()
+    {
+        state = BattleState.ENEMYTURN;
+
+        bool isCorrect = false;
+
+        Botones botonesss = new Botones();
+
+        botonesss.checkAnswer(isCorrect);
+
+        if(isCorrect)
+        {
+            print("es buena BATTLE SYSTEM");
+        }
+        else
+        {
+            print("es mala BATTLE SYSTEM");
         }
     }
 }
