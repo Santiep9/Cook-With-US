@@ -415,6 +415,88 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b03b0b5abdde9b44b7e194cadb87f30, type: 3}
+--- !u!1 &424316647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 424316649}
+  - component: {fileID: 424316648}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &424316648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424316647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e1cae641f544341a2d541b1147e187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  frasesPirulin:
+  - "Soy tan feo, nadie me querr\xE1 nunca."
+  - "que peque\xF1in que soy"
+  - tengo la pilila enana
+  - que manos mas grandes
+  - nice guys always finish last
+  - pobrecito de mi
+  - quieres  ser mi amigo
+  - lowk eres guapilla
+  - tu me eligirias antes que a otros
+  - soy tonto y tonto
+  - todos son mas guapos que yo
+  - no soy nada fuerte
+  respuestasPirulin:
+  - frase 0 buena
+  - frase 0 mala
+  - frase 1 buena
+  - frase 1 mala
+  - frase 2 buena
+  - frase 2 mala
+  - frase 3 buena
+  - frase 3 mala
+  - frase 4 buena
+  - frase 4 mala
+  - frase 5 buena
+  - frase 5 mala
+  - frase 6 buena
+  - frase 6 mala
+  - frase 7 buena
+  - frase 7 mala
+  - frase 8 buena
+  - frase 8 mala
+  - frase 9 buena
+  - frase 9 mala
+  - frase 10 buena
+  - frase 10 mala
+  - frase 11 buena
+  - frase 11 mala
+--- !u!4 &424316649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424316647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.26432, y: 1.50508, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &459226667
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,14 +700,12 @@ MonoBehaviour:
   posBoton3: {fileID: 796299356}
   dialogueText: {fileID: 1047378988}
   state: 0
-  posicionYBoton: {x: 0, y: 0}
   boton1: {fileID: 9218524291519007412, guid: 5a56bf552839f78428f5209d51278c76, type: 3}
   boton2: {fileID: 8145444931160563, guid: 78302b312b7451047a95cd5533e97354, type: 3}
-  texto1: {fileID: 0}
-  texto2: {fileID: 0}
-  texto3: {fileID: 0}
-  botonSpawn: {fileID: 0}
   botones: []
+  posiciones: []
+  dialogueManager: {fileID: 424316648}
+  DIALOGOCORRECT: 0
 --- !u!4 &517557822
 Transform:
   m_ObjectHideFlags: 0
@@ -1590,5 +1670,6 @@ SceneRoots:
   - {fileID: 1615837447}
   - {fileID: 99167555}
   - {fileID: 517557822}
+  - {fileID: 424316649}
   - {fileID: 29092344}
   - {fileID: 342451524}

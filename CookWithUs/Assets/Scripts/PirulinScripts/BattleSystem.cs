@@ -22,8 +22,6 @@ public class BattleSystem : MonoBehaviour
 
     [SerializeField] private BattleState state;
 
-    [SerializeField] private Vector2 posicionYBoton;
-
     [Header("Opciones para elegir")]
     [SerializeField] private GameObject boton1;
     [SerializeField] private GameObject boton2;
@@ -33,13 +31,20 @@ public class BattleSystem : MonoBehaviour
 
     public RectTransform[] posiciones;
 
+    public DialogueManager dialogueManager;
+
+    public BattleState currentState => state;
+
+    public bool DIALOGOCORRECT = false;
 
 
     private void Start()
     {
+        dialogueManager = FindFirstObjectByType<DialogueManager>();
+
         state = BattleState.START;
         StartCoroutine(SetupBattle());
-        posicionYBoton = new Vector2(0, 8);
+
 
         posiciones = new RectTransform[] { posBoton1, posBoton2, posBoton3 };
     }
@@ -49,7 +54,7 @@ public class BattleSystem : MonoBehaviour
         //Instantiate(playerPrefab, playerLocation); esto para el juego final, cuando entras al minijuego instancia los characters
         //Instantiate(enemyPrefab, enemyLocation);
 
-        dialogueText.text = "Bienvenido pequeñin.";
+        dialogueText.text = "hola pequeñin";
 
         yield return new WaitForSeconds(3f);
 
@@ -59,7 +64,7 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
-        dialogueText.text = "Soy tan feo, nadie me querrá nunca...";
+        dialogueText.text = dialogueManager.DialogueText();
 
         //CleanupButtons();
         CreateButtons();
@@ -122,10 +127,12 @@ public class BattleSystem : MonoBehaviour
         if (isCorrect)
         {
             print("es buena BATTLE SYSTEM");
+            DIALOGOCORRECT = true;
         }
         else
         {
             print("es mala BATTLE SYSTEM");
+            DIALOGOCORRECT = false;
         }
 
         state = BattleState.ENEMYTURN;
@@ -139,11 +146,11 @@ public class BattleSystem : MonoBehaviour
 
         if (isCorrect)
         {
-            dialogueText.text = "jej gracias tontolava";
+            dialogueText.text = dialogueManager.DialogueText();
         }
         else
         {
-            dialogueText.text = "eres un malo";
+            dialogueText.text = dialogueManager.DialogueText();
         }
 
         yield return new WaitForSeconds(5f);
