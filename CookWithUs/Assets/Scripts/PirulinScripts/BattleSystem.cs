@@ -61,6 +61,7 @@ public class BattleSystem : MonoBehaviour
     {
         dialogueText.text = "Soy tan feo, nadie me querrá nunca...";
 
+        //CleanupButtons();
         CreateButtons();
         RandomizarBotones();
         AsignarPosiciones();
@@ -107,17 +108,18 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void ElegirRespuesta()
+    void CleanupButtons()
     {
-        state = BattleState.ENEMYTURN;
+        foreach (GameObject boton in botones)
+        {
+            Destroy(boton);
+        }
 
-        bool isCorrect = false;
-
-        Botones botonesss = new Botones();
-
-        botonesss.checkAnswer(isCorrect);
-
-        if(isCorrect)
+        botones.Clear();
+    }
+    public void ElegirRespuesta(bool isCorrect)
+    {
+        if (isCorrect)
         {
             print("es buena BATTLE SYSTEM");
         }
@@ -125,5 +127,29 @@ public class BattleSystem : MonoBehaviour
         {
             print("es mala BATTLE SYSTEM");
         }
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn(isCorrect));
+    }
+
+    IEnumerator EnemyTurn(bool isCorrect)
+    {
+
+        CleanupButtons();
+
+        if (isCorrect)
+        {
+            dialogueText.text = "jej gracias tontolava";
+        }
+        else
+        {
+            dialogueText.text = "eres un malo";
+        }
+
+        yield return new WaitForSeconds(5f);
+
+
+        state = BattleState.PLAYERTURN;
+        PlayerTurn();
     }
 }

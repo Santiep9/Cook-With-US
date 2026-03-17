@@ -27,5 +27,9 @@ public class Botones : MonoBehaviour
             isCorrect = false;
             print("WRONG BOTONES");
         }
+
+
+        BattleSystem bs = FindFirstObjectByType<BattleSystem>();
+        bs.ElegirRespuesta(isCorrect);
     }
 }
