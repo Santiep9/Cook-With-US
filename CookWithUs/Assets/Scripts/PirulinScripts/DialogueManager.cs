@@ -28,6 +28,12 @@ public class DialogueManager : MonoBehaviour
         {
             case BattleState.PLAYERTURN:
 
+                if (valoresRandom.Count >= 12)
+                {
+                    valoresRandom.Clear();
+                    i = 0;
+                }
+
                 int randomValue = GetUniqueRandomIndex(0, 12);
                 valoresRandom.Add(randomValue);
 
