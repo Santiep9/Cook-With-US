@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Restaurant.unity
+    guid: 41461eb0b847ca44ba40b384ec982886
+  - enabled: 1
+    path: Assets/Scenes/CityMap.unity
+    guid: f779ea167b5e7584ea1c7a1f15858ffd
+  - enabled: 1
+    path: Assets/Scenes/Jusep Minigame.unity
+    guid: 903d23e123515b045badc2b8e5f44012
+  - enabled: 1
+    path: Assets/Scenes/Mjhon Minigame.unity
+    guid: aea63b880ca97af49ac99ba9a4387d83
+  - enabled: 1
+    path: Assets/Scenes/Pirulin MiniGame.unity
+    guid: 6fe469a14bd2f7045941442a7313da7d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
