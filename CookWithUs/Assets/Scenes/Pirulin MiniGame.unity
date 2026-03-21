@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   progressSlider: {fileID: 459226669}
+  tryAgain: {fileID: 4718555798517052285, guid: b18ac85d96cd9f54186c03efae4dab6c, type: 3}
 --- !u!4 &99167555
 Transform:
   m_ObjectHideFlags: 0
@@ -482,6 +483,7 @@ MonoBehaviour:
   - frase 10 mala
   - frase 11 buena
   - frase 11 mala
+  valoresRandom: 
 --- !u!4 &424316649
 Transform:
   m_ObjectHideFlags: 0

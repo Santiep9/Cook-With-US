@@ -40,6 +40,7 @@ public class BattleSystem : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
         dialogueManager = FindFirstObjectByType<DialogueManager>();
 
         state = BattleState.START;

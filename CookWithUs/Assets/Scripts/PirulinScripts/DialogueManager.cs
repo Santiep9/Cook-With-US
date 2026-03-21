@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
         {
             case BattleState.PLAYERTURN:
 
-                int randomValue = Random.Range(0, 12);
+                int randomValue = GetUniqueRandomIndex(0, 12);
                 valoresRandom.Add(randomValue);
 
                 resultado = frasesPirulin[valoresRandom[i]];
@@ -52,5 +52,17 @@ public class DialogueManager : MonoBehaviour
         }
 
         return resultado;
+    }
+
+    int GetUniqueRandomIndex(int min, int max)
+    {
+        int r;
+
+        do
+        {
+            r = Random.Range(min, max);
+        } while (valoresRandom.Contains(r));
+
+        return r;
     }
 }
