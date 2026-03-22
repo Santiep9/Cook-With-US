@@ -8,6 +8,10 @@ public class GameController : MonoBehaviour
     public int contadorDerrota = 0;
     public GameObject tryAgain;
 
+    public Image handleSprite;
+
+    public Sprite[] heartSprites;
+
     private void Start()
     {
 
@@ -35,8 +39,12 @@ public class GameController : MonoBehaviour
             progressAmount = 0;
             contadorDerrota++;
         }
+        else
+        {
+            contadorDerrota = 0;
+        }
 
-        if(contadorDerrota == 2)
+        if (contadorDerrota == 2)
         {
             Time.timeScale = 0f;
 
@@ -46,5 +54,16 @@ public class GameController : MonoBehaviour
 
             print("PERDISTE");
         }
+
+
+        UpdateSprite();
+    }
+
+    void UpdateSprite()
+    {
+        if (handleSprite == null) return;
+
+        int index = Mathf.Clamp(contadorDerrota, 0, heartSprites.Length - 1);
+        handleSprite.sprite = heartSprites[index];
     }
 }

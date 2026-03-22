@@ -37,6 +37,8 @@ public class BattleSystem : MonoBehaviour
 
     public bool DIALOGOCORRECT = false;
 
+    public int contadorTEXTO = 0;
+
 
     private void Start()
     {
@@ -74,6 +76,7 @@ public class BattleSystem : MonoBehaviour
     }
     void CreateButtons()
     {
+        contadorTEXTO = 1;
         GameObject tmpCanvas = GameObject.Find("UI");
 
         GameObject nuevoBotonBUENO = Instantiate(boton1, tmpCanvas.transform);
@@ -81,17 +84,19 @@ public class BattleSystem : MonoBehaviour
         botones.Add(nuevoBotonBUENO);
 
         TMP_Text textoHijo = nuevoBotonBUENO.transform.GetChild(0).GetComponent<TMP_Text>();
-        textoHijo.text = "Eres guapo.";
+        textoHijo.text = dialogueManager.DialogueTextAnto();
 
 
         for (int i = 0; i < 2; i++)
         {
+            contadorTEXTO++;
+
             GameObject nuevoBotonMALO = Instantiate(boton2, tmpCanvas.transform);
 
             botones.Add(nuevoBotonMALO);
 
             TMP_Text textoHijoMALO = nuevoBotonMALO.transform.GetChild(0).GetComponent<TMP_Text>();
-            textoHijoMALO.text = "Eres feo y tonto.";
+            textoHijoMALO.text = dialogueManager.DialogueTextAnto();
         }
 
     }

@@ -7,6 +7,7 @@ public class DialogueManager : MonoBehaviour
 
     public string[] frasesPirulin = new string[12];
     public string[] respuestasPirulin = new string[24];
+    public string[] opcionesAnto = new string[36];
 
     private BattleSystem bs;
 
@@ -55,6 +56,34 @@ public class DialogueManager : MonoBehaviour
 
                 i++;
                 break;
+        }
+
+        return resultado;
+    }
+
+    public string DialogueTextAnto()
+    {
+        if (bs == null) return "BS not found";
+
+        string resultado = "";
+
+        switch (bs.currentState)
+        {
+            case BattleState.PLAYERTURN:
+                if(bs.contadorTEXTO == 1)
+                {
+                    resultado = opcionesAnto[valoresRandom[i] * 3];
+                }
+                else if(bs.contadorTEXTO == 2)
+                {
+                    resultado = opcionesAnto[valoresRandom[i] * 3 + 1];
+                }
+                else
+                {
+                    resultado = opcionesAnto[valoresRandom[i] * 3 + 2];
+                }
+
+                    break;
         }
 
         return resultado;

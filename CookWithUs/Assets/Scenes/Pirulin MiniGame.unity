@@ -206,7 +206,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   progressSlider: {fileID: 459226669}
+  contadorDerrota: 0
   tryAgain: {fileID: 4718555798517052285, guid: b18ac85d96cd9f54186c03efae4dab6c, type: 3}
+  handleSprite: {fileID: 1478117793}
+  heartSprites:
+  - {fileID: 7611919021688551150, guid: 816ba0049f10b4c41b189c9187b58ccb, type: 3}
+  - {fileID: 1397508918857533692, guid: d1d767629a5f1e2449e5ba8a177f6b82, type: 3}
+  - {fileID: -5352405348017511800, guid: 655f797225e6635408f2f9595bc9ab09, type: 3}
 --- !u!4 &99167555
 Transform:
   m_ObjectHideFlags: 0
@@ -483,6 +489,43 @@ MonoBehaviour:
   - frase 10 mala
   - frase 11 buena
   - frase 11 mala
+  opcionesAnto:
+  - 0 buena
+  - 0 mala
+  - 0 mala
+  - 1 buena
+  - 1 mala
+  - 1 mala
+  - 2 buena
+  - 2 mala
+  - 2 mala
+  - 3 buena
+  - 3 mala
+  - 3 mala
+  - 4 buena
+  - 4 mala
+  - 4 mala
+  - 5 buena
+  - 5 mala
+  - 5 mala
+  - 6 buena
+  - 6 mala
+  - 6 mala
+  - 7 buena
+  - 7 mala
+  - 7 mala
+  - 8 buena
+  - 8 mala
+  - 8 mala
+  - 9 buena
+  - 9 mala
+  - 9 mala
+  - 10 buena
+  - 10 mala
+  - 10 mala
+  - 11 buena
+  - 11 mala
+  - 11 mala
   valoresRandom: 
 --- !u!4 &424316649
 Transform:
@@ -708,6 +751,7 @@ MonoBehaviour:
   posiciones: []
   dialogueManager: {fileID: 424316648}
   DIALOGOCORRECT: 0
+  contadorTEXTO: 1
 --- !u!4 &517557822
 Transform:
   m_ObjectHideFlags: 0
