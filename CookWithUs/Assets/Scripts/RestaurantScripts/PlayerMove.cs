@@ -11,6 +11,8 @@ public class PlayerMove : MonoBehaviour
     private SpriteRenderer sr;
     private Vector2 moveInput;
 
+    public bool canMove = true;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,17 +30,12 @@ public class PlayerMove : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
     }
 
-    public void OnInteract(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            Debug.Log("interacted");
-        }
-    }
-
     private void Move()
     {
-        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+        if (canMove != false)
+        {
+            rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+        }
     }
 
     private void FlipSprite()
