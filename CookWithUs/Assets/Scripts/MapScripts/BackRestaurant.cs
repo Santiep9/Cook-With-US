@@ -7,7 +7,6 @@ public class BackRestaurant : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("Click detectado");
         SceneManager.LoadScene(sceneName);
     }
 }
