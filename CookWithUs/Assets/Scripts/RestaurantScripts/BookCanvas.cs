@@ -24,19 +24,27 @@ public class BookCanvas : MonoBehaviour
     public Option mjohn;
     public Option jusep;
 
+    public void Start()
+    {
+        CityGameManager.Instance.activeScene = -1;
+    }
+
     public void SelectPirulin()
     {
         change(pirulin);
+        CityGameManager.Instance.activeScene = 0;
     }
 
     public void SelectMjohn()
     {
         change(mjohn);
+        CityGameManager.Instance.activeScene = 1;
     }
 
     public void SelectJusep()
     {
         change(jusep);
+        CityGameManager.Instance.activeScene = 2;
     }
 
     public void CloseBook()
