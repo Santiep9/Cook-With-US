@@ -1134,6 +1134,7 @@ GameObject:
   - component: {fileID: 183283058}
   - component: {fileID: 183283057}
   - component: {fileID: 183283056}
+  - component: {fileID: 183283060}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1224,6 +1225,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &183283060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183283055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6d392d8431aff4ba4ea80fffcc7c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BtnVolverProvisional
 --- !u!1001 &216674241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2079,9 +2092,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 8f6d392d8431aff4ba4ea80fffcc7c8e, type: 3}
-        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
-        m_MethodName: 
+      - m_Target: {fileID: 183283060}
+        m_TargetAssemblyTypeName: BtnVolverProvisional, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
