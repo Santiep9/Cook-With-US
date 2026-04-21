@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocationClick
   sceneId: 1
-  sceneName: Mjhon Minigame
+  sceneName: Mjhon Area
 --- !u!61 &536389428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocationClick
   sceneId: 0
-  sceneName: Pirulin Minigame
+  sceneName: Pirulin Area
 --- !u!61 &1609506458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocationClick
   sceneId: 2
-  sceneName: Jusep Minigame
+  sceneName: Jusep Area
 --- !u!61 &1733896940
 BoxCollider2D:
   m_ObjectHideFlags: 0
