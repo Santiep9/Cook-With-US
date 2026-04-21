@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
 
     List<string> Questions = new List<string>() { "¿Que sabes de Concha?", "¿Que sabes de Raqueta?", "¿Que sabes de TV?", "¿Que sabes de sexo?" };
 
-
     enum Player
     {
         John,
@@ -60,7 +59,6 @@ public class GameManager : MonoBehaviour
         John6,
         John7,
         John8
-
     }
 
     Player current_player = Player.John;
@@ -203,8 +201,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-
- 
     void QuestionTextDisplayer(int button_n)
     {
         if (Object1 != null) Object1.interactable = false;
@@ -212,11 +208,8 @@ public class GameManager : MonoBehaviour
         if (Object3 != null) Object3.interactable = false;
         if (Object4 != null) Object4.interactable = false;
 
-        
-        
             QuestionText.enabled = true;
             QuestionText.text = Questions[button_n];
-        
     }
     void TextDisplayer(int button_n)
     {
@@ -224,8 +217,6 @@ public class GameManager : MonoBehaviour
         if (Object2 != null) Object2.interactable = false;
         if (Object3 != null) Object3.interactable = false;
         if (Object4 != null) Object4.interactable = false;
-
-
 
         switch (current_player)
         {
@@ -261,17 +252,8 @@ public class GameManager : MonoBehaviour
                 Text.enabled = true;
                 Text.text = ObjectNames8[button_n];
                 break;
-
-
         }
     }
-   
-
-
-
-
-
-
 
     private void HideButton(Button btn, Button btn2, Button btn3, Button btn4, Button btn5, Button btn6, Button btn7)
     {
@@ -293,7 +275,6 @@ public class GameManager : MonoBehaviour
         btn5.interactable = true;
         btn6.gameObject.SetActive(false);
         btn7.gameObject.SetActive(false);
-
     }
     private void HideSuspect1(Button spc1, Button spc2 , Button spc3, Button spc4)
     {
@@ -347,8 +328,6 @@ public class GameManager : MonoBehaviour
         spc4.gameObject.SetActive(true);
         spc4.interactable = true;
     }
-
-
 
     private void ShowPaso(Button btn8)
     {
@@ -464,6 +443,7 @@ public class GameManager : MonoBehaviour
         HidePaso(Object8);
         HidePaso1(Object5);
     }
+
     void Lose()
     {
         SuspectText.enabled = false;
@@ -471,7 +451,4 @@ public class GameManager : MonoBehaviour
         HidePaso(Object8);
         HidePaso1(Object5);
     }
-
-
 }
-

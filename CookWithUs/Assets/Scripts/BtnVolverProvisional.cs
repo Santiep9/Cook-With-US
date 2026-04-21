@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class BtnVolverProvisional : MonoBehaviour
 {
+    public string sceneName;
+
     public void ChangeScene()
     {
-        SceneManager.LoadScene("CityMap");
+        SceneManager.LoadScene(sceneName);
     }
 }
