@@ -6,6 +6,8 @@ public class MjhonInteract : MonoBehaviour
 {
     public GameObject interactText;
     public GameObject player;
+    public GameObject CanvasDialogue;
+    
 
     private bool closePlayer = false;
 
@@ -14,7 +16,8 @@ public class MjhonInteract : MonoBehaviour
         if (closePlayer && Keyboard.current.eKey.wasPressedThisFrame)
         {
             interactText.SetActive(false);
-            SceneManager.LoadScene("Mjhon Minigame");
+            CanvasDialogue.SetActive(true);
+            player.GetComponent<PlayerMove>().canMove = false;
         }
     }
 
@@ -35,4 +38,5 @@ public class MjhonInteract : MonoBehaviour
             interactText.SetActive(false);
         }
     }
+    
 }
