@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        Contador.text = "Preguntas restantes: " + contador.ToString() + " /24";
+        Contador.text = "Preguntas restantes: " + contador.ToString() + " /16";
         QueJohn = (int)current_player;
         John.text = "John:" + (QueJohn + 1).ToString();
     }   
@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
                 ShowPaso(Object8);
                 break;
             case "Paso1":
-                if (contador >= 24)
+                if (contador >= 16)
                 {
                     Escritorio.gameObject.SetActive(false);
                     QuestionsBox.gameObject.SetActive(false);
