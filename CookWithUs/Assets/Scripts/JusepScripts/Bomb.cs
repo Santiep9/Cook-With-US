@@ -15,10 +15,9 @@ public class Bomb : MonoBehaviour
         }*/
 
     [Header("Detect Explosion")]
-    Rigidbody2D player;
-    int fireDist;
-    Transform firePoint;
-    LineRenderer lineRenderer;
+    public Rigidbody2D player;
+    public int boomDist;
+    public Transform origin;
 
     private void Start()
     {
@@ -33,50 +32,16 @@ public class Bomb : MonoBehaviour
         Destroy(gameObject);
     }
 
-    /*private void FixedUpdate()
+    private void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, fireDist);
+        RaycastHit2D hitInfo = Physics2D.Raycast(origin.position, Vector2.up);
+        Debug.DrawLine(origin.position, Vector2.up, Color.red, 3f);
+        RaycastHit2D hitInfo2 = Physics2D.Raycast(origin.position, Vector2.down);
+        Debug.DrawLine(origin.position, Vector2.down, Color.red, 3f);
+        RaycastHit2D hitInfo3 = Physics2D.Raycast(origin.position, Vector2.right);
+        Debug.DrawLine(origin.position, Vector2.right, Color.red, 3f);
+        RaycastHit2D hitInfo4 = Physics2D.Raycast(origin.position, Vector2.left);
+        Debug.DrawLine(origin.position, Vector2.left, Color.red, 3f);
 
-        if (hit != null)
-        {
-            if (hit == GameObject.FindGameObjectWithTag("Player"))
-            {
-                lineRenderer.enabled = true;
-                StartCoroutine(Shoot1());
-                Debug.Log("Player");
-            }
-            else if (hit == GameObject.FindGameObjectWithTag("obstacle"))
-            {
-                //lineRenderer.enabled = false;
-                Debug.Log("obstacle");
-            }
-        }
     }
-
-    IEnumerator Shoot1()
-    {
-        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right, shootDist, hittableLayer);
-
-        if (hitInfo != null)
-        {
-            HealthBar health = hitInfo.transform.GetComponent<HealthBar>();
-
-            if (health != null)
-            {
-                health.TakeDamage(damage);
-            }
-            Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
-
-            lineRenderer.SetPosition(0, firePoint.position);
-            lineRenderer.SetPosition(1, hitInfo.point);
-
-            Debug.Log("shoot");
-        }
-
-        lineRenderer.enabled = true;
-
-        yield return new WaitForSeconds(0.02f);
-
-        lineRenderer.enabled = false;
-    }*/
 }

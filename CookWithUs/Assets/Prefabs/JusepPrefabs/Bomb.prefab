@@ -140,4 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48666b4d16485e4f86529f7d99e3adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
-  bomb: {fileID: 2556387093346786222}
+  explodeTime: 3
+  player: {fileID: 6646550083600438603, guid: d05977c2110eeb04fbc78241aee38632, type: 3}
+  boomDist: 2
+  origin: {fileID: 652062461601861693}
+  lineRenderer: {fileID: 0}
