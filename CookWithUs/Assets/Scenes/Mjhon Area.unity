@@ -248,8 +248,9 @@ MonoBehaviour:
   conversacionMjohn:
   - Hey Bro que haces en la playa??
   - Chupame la polla
-  - Vale
-  - Yupi
+  - No quiero
+  - jo
+  - Esto ya no sale
   Text: {fileID: 1990808257}
   frases: 0
   CanvasDialogue: {fileID: 1072739482}
@@ -842,7 +843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HOLA
+  m_text: Aqui va un frame de mjohn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1135,6 +1136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100195314}
   - component: {fileID: 1100195313}
+  - component: {fileID: 1100195315}
   m_Layer: 0
   m_Name: TimeLine
   m_TagString: Untagged
@@ -1179,6 +1181,20 @@ Transform:
   - {fileID: 1368176616}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1100195315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100195312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bb11ef9abf2ef48b4bb2d0e45bf2fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CambioEscenas
+  TiempoEscena: 10
+  NombreEscena: Mjhon Minigame
 --- !u!1 &1368176615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,7 +1691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HOLA 22
+  m_text: aqui va otro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1966,7 +1982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: overwot
+  m_text: '"Sonidos de almeja llorando muy heavy"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

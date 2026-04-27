@@ -10,7 +10,7 @@ public class BotonPaso : MonoBehaviour
     public GameObject Canvas;
     public void Clickado()
     {
-        if (frases >= 4)
+        if (frases == 4)
         {
             Canvas.SetActive(true);
             CanvasDialogue.SetActive(false);
