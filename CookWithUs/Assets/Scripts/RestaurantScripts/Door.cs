@@ -14,7 +14,7 @@ public class Door : MonoBehaviour
         if (closePlayer && Keyboard.current.eKey.wasPressedThisFrame)
         {
             interactText.SetActive(false);
-            SceneManager.LoadScene("CityMap");
+            SceneManager.LoadScene("Pirulin Area");
         }
     }
 

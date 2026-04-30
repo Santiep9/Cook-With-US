@@ -307,6 +307,7 @@ MonoBehaviour:
   canvasBook: {fileID: 1658918413}
   player: {fileID: 770045760}
   interactText: {fileID: 401496659}
+  cityGameManager: {fileID: 2147382358}
   pirulin:
     image: {fileID: -9030036915516692218, guid: c056802ff0cecee469ba76e0e35dc82a, type: 3}
     textTitle: Pirulin
@@ -3645,6 +3646,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CityGameManager
   activeScene: -1
   unlockedScenes: 000000
+  isClicked1: 0
+  isClicked2: 0
+  isClicked3: 0
 --- !u!4 &2147382359
 Transform:
   m_ObjectHideFlags: 0
