@@ -32,40 +32,31 @@ public class BookCanvas : MonoBehaviour
     public void Start()
     {
         cityGameManager.GetComponent<CityGameManager>();
-        CityGameManager.Instance.activeScene = -1;
+
     }
 
     public void SelectPirulin()
     {
         change(pirulin);
-        CityGameManager.Instance.activeScene = 0;
         cityGameManager.isClicked1 = true;
         cityGameManager.isClicked2 = false;
         cityGameManager.isClicked3 = false;
-
-
     }
 
     public void SelectMjohn()
     {
         change(mjohn);
-        CityGameManager.Instance.activeScene = 1;
         cityGameManager.isClicked1 = false;
         cityGameManager.isClicked2 = true;
         cityGameManager.isClicked3 = false;
-
-
     }
 
     public void SelectJusep()
     {
         change(jusep);
-        CityGameManager.Instance.activeScene = 2;
         cityGameManager.isClicked3 = true;
         cityGameManager.isClicked2 = false;
         cityGameManager.isClicked1 = false;
-
-
     }
 
     public void CloseBook()

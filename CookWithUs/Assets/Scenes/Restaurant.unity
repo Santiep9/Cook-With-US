@@ -2176,8 +2176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4872c28b1a804bb4f8519b47180dfc78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  interactText: {fileID: 1428251738}
-  player: {fileID: 770045760}
+  NombreEscena: Pirulin Area
 --- !u!1 &1626261071
 GameObject:
   m_ObjectHideFlags: 0
@@ -3644,8 +3643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb376f5b5a0adfd478c457cd7c5cc70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CityGameManager
-  activeScene: -1
-  unlockedScenes: 000000
   isClicked1: 0
   isClicked2: 0
   isClicked3: 0

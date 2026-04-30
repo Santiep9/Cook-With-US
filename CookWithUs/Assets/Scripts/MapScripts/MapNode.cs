@@ -9,15 +9,10 @@ public class MapNode : MonoBehaviour
     public GameObject visualObject;
     public GameObject visualObject1;
     public GameObject visualObject2;
-
     
-
-    
-
     void Start()
     {
         cityGameManager = FindFirstObjectByType<CityGameManager>();
-        Debug.Log(cityGameManager);
         Check();
     }
     void Check()
