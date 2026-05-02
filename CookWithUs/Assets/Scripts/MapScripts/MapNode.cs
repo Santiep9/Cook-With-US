@@ -3,34 +3,44 @@ using UnityEngine.UI;
 
 public class MapNode : MonoBehaviour
 {
-    public int sceneId;
+
+    CityGameManager cityGameManager;
 
     public GameObject visualObject;
-
-    [Range(0f, 1f)] public float blockedAlpha = 0.4f;
-    [Range(0f, 1f)] public float availableAlpha = 1f;
-
-    private SpriteRenderer sr;
-
+    public GameObject visualObject1;
+    public GameObject visualObject2;
+    
     void Start()
     {
-        sr = visualObject.GetComponent<SpriteRenderer>();
-
-        bool unlocked = CityGameManager.Instance.unlockedScenes[sceneId];
-        bool active = CityGameManager.Instance.activeScene == sceneId;
-
-        float alpha = (unlocked || active) ? availableAlpha : blockedAlpha;
-
-        SetAlpha(alpha);
+        cityGameManager = FindFirstObjectByType<CityGameManager>();
+        Check();
+    }
+    void Check()
+    {
+        if (cityGameManager.isClicked1)
+        {
+            SelectPirulin();
+        }
+        if (cityGameManager.isClicked2)
+        {
+            SelectMjohn();
+        }
+        if (cityGameManager.isClicked3)
+        {
+            SelectJusep();
+        }
     }
 
-    void SetAlpha(float alpha)
+    void SelectPirulin()
+    {    
+            visualObject.SetActive(true);      
+    }
+    void SelectMjohn()
     {
-        if (sr != null)
-        {
-            Color c = sr.color;
-            c.a = alpha;
-            sr.color = c;
-        }
+            visualObject1.SetActive(true);
+    }
+    void SelectJusep()
+    {
+            visualObject2.SetActive(true);
     }
 }

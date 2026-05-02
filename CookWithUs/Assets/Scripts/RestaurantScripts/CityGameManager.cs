@@ -4,9 +4,9 @@ public class CityGameManager : MonoBehaviour
 {
     public static CityGameManager Instance;
 
-    public int activeScene = -1;
-
-    public bool[] unlockedScenes = new bool[3];
+    public bool isClicked1;
+    public bool isClicked2;
+    public bool isClicked3;
 
     void Awake()
     {
@@ -20,4 +20,5 @@ public class CityGameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }
