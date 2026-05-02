@@ -2937,6 +2937,7 @@ MonoBehaviour:
   BoxText: {fileID: 731604304}
   FinalText: {fileID: 375283422}
   BadFinalText: {fileID: 1931408830}
+  areas: {fileID: 11400000, guid: 61bdbd5adf6cc154f859a730927e04ec, type: 2}
 --- !u!4 &1488911880
 Transform:
   m_ObjectHideFlags: 0
@@ -3631,7 +3632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6d392d8431aff4ba4ea80fffcc7c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BtnVolverProvisional
-  sceneName: Mjhon Area
+  sceneName: MJohn Area
 --- !u!114 &1845128833
 MonoBehaviour:
   m_ObjectHideFlags: 0

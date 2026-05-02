@@ -4,28 +4,47 @@ using UnityEngine.UI;
 public class MapNode : MonoBehaviour
 {
 
-    CityGameManager cityGameManager;
+    public Areas areas;
+    public DoorData doorData;
 
     public GameObject visualObject;
     public GameObject visualObject1;
     public GameObject visualObject2;
     
+    public Transform player;
+
+    public Transform jusepDoor;
+    public Transform mjohnDoor;
+    
     void Start()
     {
-        cityGameManager = FindFirstObjectByType<CityGameManager>();
-        Check();
+        CheckCharacter();
+        CheckPOS();
     }
-    void Check()
+
+    void CheckPOS()
     {
-        if (cityGameManager.isClicked1)
+        if (doorData.puertaJusep)
+        {
+            player.transform.position = jusepDoor.position;
+        }
+        if (doorData.puertaMJohn)
+        {
+            player.transform.position = mjohnDoor.position;
+        }
+    }
+
+    void CheckCharacter()
+    {
+        if (areas.pirulinSelected)
         {
             SelectPirulin();
         }
-        if (cityGameManager.isClicked2)
+        if (areas.mjohnSelected || areas.mjohnCompleted)
         {
             SelectMjohn();
         }
-        if (cityGameManager.isClicked3)
+        if (areas.jusepSelected || areas.jusepCompleted)
         {
             SelectJusep();
         }
@@ -33,14 +52,15 @@ public class MapNode : MonoBehaviour
 
     void SelectPirulin()
     {    
-            visualObject.SetActive(true);      
+        if(!areas.pirulinCompleted) visualObject.SetActive(true);
+        else visualObject.SetActive(false);
     }
     void SelectMjohn()
     {
-            visualObject1.SetActive(true);
+         visualObject1.SetActive(false);
     }
     void SelectJusep()
     {
-            visualObject2.SetActive(true);
+         visualObject2.SetActive(false);
     }
 }

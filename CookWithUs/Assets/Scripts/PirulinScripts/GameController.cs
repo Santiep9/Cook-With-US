@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -12,6 +13,7 @@ public class GameController : MonoBehaviour
 
     public Sprite[] heartSprites;
 
+    public Areas areas;
     private void Start()
     {
 
@@ -29,7 +31,8 @@ public class GameController : MonoBehaviour
 
         if(progressAmount >= 100)
         {
-            //level complete
+            areas.pirulinCompleted = true;
+            SceneManager.LoadScene("Restaurant");
             Debug.Log("acabo");
         }
 
@@ -54,6 +57,7 @@ public class GameController : MonoBehaviour
 
             print("PERDISTE");
         }
+
 
 
         UpdateSprite();

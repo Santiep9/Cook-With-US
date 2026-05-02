@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal.Internal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -34,6 +35,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI BoxText;
     [SerializeField] public TextMeshProUGUI FinalText;
     [SerializeField] public TextMeshProUGUI BadFinalText;
+
+    [SerializeField] public Areas areas;
+
     int Object;
     int contador;
     int QueJohn;
@@ -438,10 +442,12 @@ public class GameManager : MonoBehaviour
 
     void Win()
     {
+        areas.mjohnCompleted = true;
         SuspectText.enabled = false;
         FinalText.enabled = true;
         HidePaso(Object8);
         HidePaso1(Object5);
+        SceneManager.LoadScene("Restaurant");
     }
 
     void Lose()

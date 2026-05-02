@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambioEscenas
   TiempoEscena: 10
-  NombreEscena: Mjhon Minigame
+  NombreEscena: MJohn Minigame
 --- !u!1 &1368176615
 GameObject:
   m_ObjectHideFlags: 0
