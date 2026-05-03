@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1005529405837893953}
   m_Layer: 0
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
   explodeTime: 3
-  player: {fileID: 6646550083600438603, guid: d05977c2110eeb04fbc78241aee38632, type: 3}
   boomDist: 2
   origin: {fileID: 652062461601861693}
-  lineRenderer: {fileID: 0}
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 64

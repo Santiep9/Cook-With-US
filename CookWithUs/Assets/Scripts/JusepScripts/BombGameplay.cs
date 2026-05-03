@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class BombGameplay : MonoBehaviour
 {
@@ -103,5 +105,17 @@ public class BombGameplay : MonoBehaviour
     private void HandleBombExplode()
     {
         currentBombs = Mathf.Max(0, currentBombs - 1);
+    }
+
+    public void Die()
+    {
+        StartCoroutine(RestartScene());
+    }
+
+    IEnumerator RestartScene()
+    {
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
@@ -8,40 +7,72 @@ public class Bomb : MonoBehaviour
 
     public event Action OnBombExplode;
 
-    /*Array[][] = {
-        {0,0,0},
-        {0,0,0},
-        {0,0,0}
-        }*/
+    private Collider2D bombCollider;
 
-    [Header("Detect Explosion")]
-    public Rigidbody2D player;
-    public int boomDist;
+    [Header("Explosion Settings")]
+    public int boomDist = 3;
     public Transform origin;
+    public LayerMask collisionMask;
 
     private void Start()
     {
-        Invoke(nameof(Explode), explodeTime);
+        bombCollider = GetComponent<Collider2D>();
 
-        player = GetComponent<Rigidbody2D>();
+        bombCollider.enabled = false;
+
+        Invoke(nameof(EnableCollider), 1f);
+        Invoke(nameof(Explode), explodeTime);
     }
 
     private void Explode()
     {
-        OnBombExplode.Invoke();
+        ExplodeDirection(Vector2.up);
+        ExplodeDirection(Vector2.down);
+        ExplodeDirection(Vector2.right);
+        ExplodeDirection(Vector2.left);
+
+        OnBombExplode?.Invoke();
         Destroy(gameObject);
     }
 
-    private void FixedUpdate()
+    void ExplodeDirection(Vector2 direction)
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(origin.position, Vector2.up);
-        Debug.DrawLine(origin.position, Vector2.up, Color.red, 3f);
-        RaycastHit2D hitInfo2 = Physics2D.Raycast(origin.position, Vector2.down);
-        Debug.DrawLine(origin.position, Vector2.down, Color.red, 3f);
-        RaycastHit2D hitInfo3 = Physics2D.Raycast(origin.position, Vector2.right);
-        Debug.DrawLine(origin.position, Vector2.right, Color.red, 3f);
-        RaycastHit2D hitInfo4 = Physics2D.Raycast(origin.position, Vector2.left);
-        Debug.DrawLine(origin.position, Vector2.left, Color.red, 3f);
+        for (int i = 1; i <= boomDist; i++)
+        {
+            Vector2 checkPos = (Vector2)origin.position + direction * i;
 
+            Debug.DrawLine(origin.position, checkPos, Color.red, 1f);
+
+            Collider2D col = Physics2D.OverlapBox(checkPos, Vector2.one * 0.8f, 0f);
+
+            if (col != null)
+            {
+                if (col.CompareTag("Player"))
+                {
+                    col.GetComponent<BombGameplay>().Die();  
+                }
+
+                if (col.CompareTag("Enemy"))
+                {
+                    Destroy(col.gameObject);
+                }
+
+                if (col.CompareTag("Breakable"))
+                {
+                    Destroy(col.gameObject);
+                    break;
+                }
+
+                if (col.gameObject.layer == LayerMask.NameToLayer("Wall"))
+                {
+                    break;
+                }
+            }
+        }
+    }
+
+    void EnableCollider()
+    {
+        bombCollider.enabled = true;
     }
 }

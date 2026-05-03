@@ -7,6 +7,8 @@ TagManager:
   - CORRECT
   - WRONG
   - Breakable
+  - Bomb
+  - Enemy
   layers:
   - Default
   - TransparentFX

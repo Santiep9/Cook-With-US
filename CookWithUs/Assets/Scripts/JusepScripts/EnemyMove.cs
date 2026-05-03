@@ -1,108 +1,257 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public float enemySpeed;
-    enum Direction { FORWARD, BACKWARD, LEFT, RIGHT };
-    Direction currentDirection = Direction.LEFT;
-    bool directionSelected = false;
+    [Header("Referencias")]
+    public Transform player;
+    public GameObject bombPrefab;
+
+    [Header("Movimiento")]
+    public float moveSpeed = 5f;
+
+    [Header("IA")]
+    public float thinkRate = 0.2f;
+
+    private Vector2 targetPos;
+    private float thinkTimer;
+
+    private GameObject currentBomb;
+    private bool isEscaping = false;
+    private Vector2 escapeTarget;
+
+    Vector2[] directions = new Vector2[]
+    {
+        Vector2.up,
+        Vector2.down,
+        Vector2.left,
+        Vector2.right
+    };
+
+    void Start()
+    {
+        targetPos = SnapToGrid(transform.position);
+        transform.position = targetPos;
+    }
 
     void Update()
     {
-        if (directionSelected)
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+    }
+
+    void FixedUpdate()
+    {
+        if (isEscaping)
         {
-            switch (currentDirection)
+            MoveTo(escapeTarget);
+
+            if (Vector2.Distance(transform.position, escapeTarget) < 0.1f)
             {
-                case Direction.LEFT:
-                    gameObject.transform.position = gameObject.transform.position + Vector3.left * enemySpeed * Time.deltaTime;
-                    break;
-
-                case Direction.RIGHT:
-                    gameObject.transform.position = gameObject.transform.position + Vector3.right * enemySpeed * Time.deltaTime;
-                    break;
-
-                case Direction.FORWARD:
-                    gameObject.transform.position = gameObject.transform.position + Vector3.forward * enemySpeed * Time.deltaTime;
-                    break;
-
-                case Direction.BACKWARD:
-                    gameObject.transform.position = gameObject.transform.position + Vector3.back * enemySpeed * Time.deltaTime;
-                    break;
+                isEscaping = false;
             }
+
+            return;
+        }
+
+        thinkTimer += Time.deltaTime;
+
+        if (thinkTimer >= thinkRate)
+        {
+            MoveTowardsPlayer();
+            thinkTimer = 0;
         }
     }
 
-    private List<Direction> availableDirections = new List<Direction>(4);
-
-    private void OnCollisionEnter(Collision collision)
+    void MoveTowardsPlayer()
     {
-        availableDirections.Clear();
-        if (!Physics.Raycast(gameObject.transform.position, Vector3.left, 1f))
-            availableDirections.Add(Direction.LEFT);
-        if (!Physics.Raycast(gameObject.transform.position, Vector3.right, 1f))
-            availableDirections.Add(Direction.RIGHT);
-        if (!Physics.Raycast(gameObject.transform.position, Vector3.forward, 1f))
-            availableDirections.Add(Direction.FORWARD);
-        if (!Physics.Raycast(gameObject.transform.position, Vector3.back, 1f))
-            availableDirections.Add(Direction.BACKWARD);
+        Vector2 myPos = SnapToGrid(transform.position);
+        Vector2 playerPos = SnapToGrid(player.position);
 
-        if (availableDirections.Count > 0)
+        Vector2 bestMove = myPos;
+        Vector2 bestDir = Vector2.zero;
+        float bestDist = Mathf.Infinity;
+
+        foreach (Vector2 dir in directions)
         {
-            currentDirection = availableDirections[Random.Range(0, availableDirections.Count)];
-        }
-        else
-        {
-            //Do something else, no direction to move
-        }
-    }
-
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        directionSelected = false;
-        Debug.DrawLine(transform.position, transform.position + Vector3.left * 5f);
-        Debug.DrawLine(transform.position, transform.position + Vector3.right * 5f);
-        Debug.DrawLine(transform.position, transform.position + Vector3.forward * 5f);
-        Debug.DrawLine(transform.position, transform.position + Vector3.back * 5f);
-
-        while (!directionSelected)
-        {
-            Random.seed = System.DateTime.Now.Millisecond;
-            int checkDirection = Random.Range(0, 4);
-            Debug.Log(checkDirection);
-
-            switch (checkDirection)
+            for (int i = 1; i <= 2; i++)
             {
-                case 1:
-                    if (!Physics.Raycast(gameObject.transform.position, Vector3.left, 1f))
-                    {
-                        currentDirection = Direction.LEFT;
-                        directionSelected = true;
-                    }
-                    break;
-                case 2:
-                    if (!Physics.Raycast(gameObject.transform.position, Vector3.right, 1f))
-                    {
-                        currentDirection = Direction.RIGHT;
-                        directionSelected = true;
-                    }
-                    break;
-                case 3:
-                    if (!Physics.Raycast(gameObject.transform.position, Vector3.forward, 1f))
-                    {
-                        currentDirection = Direction.FORWARD;
-                        directionSelected = true;
-                    }
-                    break;
-                case 4:
-                    if (!Physics.Raycast(gameObject.transform.position, Vector3.back, 1f))
-                    {
-                        currentDirection = Direction.BACKWARD;
-                        directionSelected = true;
-                    }
+                Vector2 checkPos = myPos + dir * i;
+
+                if (IsBreakable(checkPos))
+                {
+                    TryPlaceBomb(dir);
+                    return;
+                }
+
+                if (!IsWalkable(checkPos))
                     break;
             }
+
+            Vector2 nextPos = myPos + dir;
+
+            if (!IsWalkable(nextPos)) continue;
+
+            float dist = Vector2.Distance(nextPos, playerPos);
+
+            if (dist < bestDist)
+            {
+                bestDist = dist;
+                bestMove = nextPos;
+                bestDir = dir;
+            }
         }
-    }*/
+
+        if (Vector2.Distance(myPos, playerPos) <= 1.1f)
+        {
+            TryPlaceBomb(bestDir);
+            return;
+        }
+
+        MoveTo(bestMove);
+    }
+
+    void MoveTo(Vector2 pos)
+    {
+        targetPos = pos;
+    }
+
+    Vector2 SnapToGrid(Vector2 pos)
+    {
+        return new Vector2(Mathf.Round(pos.x), Mathf.Round(pos.y));
+    }
+    bool IsWalkable(Vector2 pos)
+    {
+        Collider2D col = Physics2D.OverlapBox(pos, Vector2.one * 0.8f, 0f);
+
+        if (col == null) return true;
+
+        if (col.CompareTag("Breakable")) return false;
+        if (col.CompareTag("Bomb")) return false;
+        if (col.gameObject.layer == LayerMask.NameToLayer("Wall")) return false;
+
+        return true;
+    }
+
+    bool IsBreakable(Vector2 pos)
+    {
+        Collider2D col = Physics2D.OverlapBox(pos, Vector2.one * 0.8f, 0f);
+        return col != null && col.CompareTag("Breakable");
+    }
+
+    void TryPlaceBomb(Vector2 direction)
+    {
+        if (currentBomb != null) return;
+
+        Vector2 myPos = SnapToGrid(transform.position);
+        Vector2 bombPos = myPos + direction;
+
+        if (!IsWalkable(bombPos)) return;
+
+        if (!CanEscapeAfterBomb(bombPos)) return;
+
+        currentBomb = Instantiate(bombPrefab, bombPos, Quaternion.identity);
+
+        Bomb bombScript = currentBomb.GetComponent<Bomb>();
+        bombScript.OnBombExplode += () => currentBomb = null;
+
+        isEscaping = true;
+        CalculateEscapeTarget();
+    }
+
+    bool CanEscapeAfterBomb(Vector2 bombPos)
+    {
+        Queue<Vector2> queue = new Queue<Vector2>();
+        HashSet<Vector2> visited = new HashSet<Vector2>();
+
+        queue.Enqueue(bombPos);
+        visited.Add(bombPos);
+
+        while (queue.Count > 0)
+        {
+            Vector2 current = queue.Dequeue();
+
+            if (!IsInBombRange(current))
+                return true;
+
+            foreach (Vector2 dir in directions)
+            {
+                Vector2 next = current + dir;
+
+                if (visited.Contains(next)) continue;
+                if (!IsWalkable(next)) continue;
+
+                visited.Add(next);
+                queue.Enqueue(next);
+            }
+        }
+
+        return false;
+    }
+
+    void CalculateEscapeTarget()
+    {
+        Vector2 start = SnapToGrid(transform.position);
+
+        Queue<Vector2> queue = new Queue<Vector2>();
+        HashSet<Vector2> visited = new HashSet<Vector2>();
+
+        queue.Enqueue(start);
+        visited.Add(start);
+
+        while (queue.Count > 0)
+        {
+            Vector2 current = queue.Dequeue();
+
+            if (!IsInBombRange(current) && IsWalkable(current))
+            {
+                escapeTarget = current;
+                return;
+            }
+
+            foreach (Vector2 dir in directions)
+            {
+                Vector2 next = current + dir;
+
+                if (visited.Contains(next)) continue;
+                if (!IsWalkable(next)) continue;
+
+                visited.Add(next);
+                queue.Enqueue(next);
+            }
+        }
+        escapeTarget = start;
+    }
+
+    bool IsInBombRange(Vector2 pos)
+    {
+        if (currentBomb == null) return false;
+
+        Vector2 bombPos = SnapToGrid(currentBomb.transform.position);
+
+        if (pos.x == bombPos.x)
+        {
+            float dist = Mathf.Abs(pos.y - bombPos.y);
+            if (dist <= 3) return true;
+        }
+
+        if (pos.y == bombPos.y)
+        {
+            float dist = Mathf.Abs(pos.x - bombPos.x);
+            if (dist <= 3) return true;
+        }
+
+        return false;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Explosion"))
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(SnapToGrid(transform.position), Vector2.one * 0.8f);
+    }
 }
