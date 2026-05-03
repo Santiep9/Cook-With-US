@@ -40,6 +40,8 @@ public class BattleSystem : MonoBehaviour
     public int contadorTEXTO = 0;
 
 
+    public Animator animator;
+
     private void Start()
     {
         Time.timeScale = 1.0f;
@@ -134,6 +136,10 @@ public class BattleSystem : MonoBehaviour
         {
             print("es buena BATTLE SYSTEM");
             DIALOGOCORRECT = true;
+            if(DIALOGOCORRECT)
+            {
+                animator.SetTrigger("Correcto");
+            }
         }
         else
         {

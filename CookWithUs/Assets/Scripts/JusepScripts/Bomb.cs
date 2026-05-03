@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bomb : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Bomb : MonoBehaviour
     public int boomDist = 3;
     public Transform origin;
     public LayerMask collisionMask;
+
+    public Areas areas;
 
     private void Start()
     {
@@ -55,6 +58,8 @@ public class Bomb : MonoBehaviour
                 if (col.CompareTag("Enemy"))
                 {
                     Destroy(col.gameObject);
+                    areas.jusepCompleted = true;
+                    SceneManager.LoadScene("Restaurant");
                 }
 
                 if (col.CompareTag("Breakable"))

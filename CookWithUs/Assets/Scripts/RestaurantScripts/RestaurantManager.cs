@@ -7,6 +7,7 @@ public class RestaurantManager : MonoBehaviour
 
     public GameObject pirulinRestaurante;
     public GameObject mJohnRestaurante;
+    public GameObject jusepRestaurante;
 
     private void Awake()
     {
@@ -21,6 +22,10 @@ public class RestaurantManager : MonoBehaviour
         if(areas.mjohnCompleted)
         {
             mJohnRestaurante.SetActive(true);
+        }
+        if(areas.jusepCompleted)
+        {
+            jusepRestaurante.SetActive(true);
         }
     }
 
