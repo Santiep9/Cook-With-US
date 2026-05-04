@@ -119,6 +119,7 @@ public class EnemyMove : MonoBehaviour
     {
         return new Vector2(Mathf.Round(pos.x), Mathf.Round(pos.y));
     }
+
     bool IsWalkable(Vector2 pos)
     {
         Collider2D col = Physics2D.OverlapBox(pos, Vector2.one * 0.8f, 0f);
@@ -249,6 +250,7 @@ public class EnemyMove : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
