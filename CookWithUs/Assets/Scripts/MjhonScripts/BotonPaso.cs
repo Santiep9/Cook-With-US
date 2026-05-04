@@ -10,6 +10,7 @@ public class BotonPaso : MonoBehaviour
     public GameObject Canvas;
     public void Clickado()
     {
+        Debug.Log("PENE");
         if (frases == 4)
         {
             Canvas.SetActive(true);

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class PirulinInteract : MonoBehaviour
+public class InteractCanvas : MonoBehaviour
 {
     public GameObject interactText;
     public GameObject player;
