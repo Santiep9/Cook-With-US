@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 658cd21581b4e7648a9cd9524e053cb0
+guid: 8a16db7caa095094ea0516464e463a0c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1080554493355756316
-    second: prota_0
+      213: 2663100036404278181
+    second: ayunt_0
+  - first:
+      213: -7522372131757359838
+    second: ayunt_1
+  - first:
+      213: 4202074910803250230
+    second: ayunt_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: prota_0
+      name: ayunt_0
       rect:
         serializedVersion: 2
-        x: 693
-        y: 683
-        width: 476
-        height: 803
+        x: 0
+        y: 384
+        width: 1826
+        height: 1431
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e4f31fc9691101f0800000000000000
-      internalID: -1080554493355756316
+      spriteID: 5a3f4379f5b35f420800000000000000
+      internalID: 2663100036404278181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ayunt_1
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 1021
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22dfd42c66a2b9790800000000000000
+      internalID: -7522372131757359838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ayunt_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 171
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63c420a2ed4c05a30800000000000000
+      internalID: 4202074910803250230
       vertices: []
       indices: 
       edges: []
@@ -125,8 +175,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      prota_0: -1080554493355756316
+      ayunt_0: 2663100036404278181
+      ayunt_1: -7522372131757359838
+      ayunt_2: 4202074910803250230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
