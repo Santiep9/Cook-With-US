@@ -29,6 +29,11 @@ public class BombGameplay : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
+    private void Start()
+    {
+        transform.position = SnapToGrid(transform.position);
+    }
+
     private void FixedUpdate()
     {
         Move();
@@ -43,13 +48,12 @@ public class BombGameplay : MonoBehaviour
     public void DropBomb(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-
         if (currentBombs >= maxBombs) return;
 
-        Vector2 spawnPos = bombPos.position;
+        Vector2 rawPos = bombPos.position;
+        Vector2 spawnPos = SnapToGrid(rawPos);
 
         Collider2D hit = Physics2D.OverlapCircle(spawnPos, bombCheckRadius, wallLayer);
-
         if (hit != null) return;
 
         GameObject newBomb = Instantiate(bomb, spawnPos, Quaternion.identity);
@@ -71,7 +75,6 @@ public class BombGameplay : MonoBehaviour
     private void FlipSprite()
     {
         if (sr == null) return;
-
         if (moveInput.sqrMagnitude < 0.01f) return;
 
         if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
@@ -85,6 +88,17 @@ public class BombGameplay : MonoBehaviour
             {
                 sr.flipX = false;
                 bombPos.localPosition = new Vector3(bombOffset, 0f, 0f);
+            }
+        }
+        else
+        {
+            if (moveInput.y > 0)
+            {
+                bombPos.localPosition = new Vector3(0f, bombOffset, 0f);
+            }
+            else
+            {
+                bombPos.localPosition = new Vector3(0f, -bombOffset, 0f);
             }
         }
     }
@@ -104,5 +118,10 @@ public class BombGameplay : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    Vector2 SnapToGrid(Vector2 pos)
+    {
+        return new Vector2(Mathf.Round(pos.x), Mathf.Round(pos.y));
     }
 }

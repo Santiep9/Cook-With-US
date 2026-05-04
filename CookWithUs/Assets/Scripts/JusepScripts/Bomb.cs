@@ -15,6 +15,13 @@ public class Bomb : MonoBehaviour
     public Transform origin;
     public LayerMask collisionMask;
 
+    [Header("Explosion Visuals")]
+    public GameObject explosionCenterPrefab;
+    public GameObject explosionMiddlePrefab;
+    public GameObject explosionEndPrefab;
+
+    public float explosionDuration = 0.5f;
+
     public Areas areas;
 
     private void Start()
@@ -35,6 +42,8 @@ public class Bomb : MonoBehaviour
         ExplodeDirection(Vector2.left);
 
         OnBombExplode?.Invoke();
+        GameObject center = Instantiate(explosionCenterPrefab, origin.position, Quaternion.identity);
+        Destroy(center, explosionDuration);
         Destroy(gameObject);
     }
 
@@ -44,15 +53,15 @@ public class Bomb : MonoBehaviour
         {
             Vector2 checkPos = (Vector2)origin.position + direction * i;
 
-            Debug.DrawLine(origin.position, checkPos, Color.red, 1f);
-
             Collider2D col = Physics2D.OverlapBox(checkPos, Vector2.one * 0.8f, 0f);
+
+            bool isEnd = false;
 
             if (col != null)
             {
                 if (col.CompareTag("Player"))
                 {
-                    col.GetComponent<BombGameplay>().Die();  
+                    col.GetComponent<BombGameplay>().Die();
                 }
 
                 if (col.CompareTag("Enemy"))
@@ -65,7 +74,7 @@ public class Bomb : MonoBehaviour
                 if (col.CompareTag("Breakable"))
                 {
                     Destroy(col.gameObject);
-                    break;
+                    isEnd = true;
                 }
 
                 if (col.gameObject.layer == LayerMask.NameToLayer("Wall"))
@@ -73,6 +82,23 @@ public class Bomb : MonoBehaviour
                     break;
                 }
             }
+
+            GameObject prefabToSpawn = (i == boomDist || isEnd)
+                ? explosionEndPrefab
+                : explosionMiddlePrefab;
+
+            Quaternion rot = Quaternion.identity;
+
+            if (direction == Vector2.right) rot = Quaternion.Euler(0, 0, 0);
+            if (direction == Vector2.left) rot = Quaternion.Euler(0, 0, 180);
+            if (direction == Vector2.up) rot = Quaternion.Euler(0, 0, 90);
+            if (direction == Vector2.down) rot = Quaternion.Euler(0, 0, -90);
+
+            GameObject explosion = Instantiate(prefabToSpawn, checkPos, rot);
+
+            Destroy(explosion, explosionDuration);
+
+            if (isEnd) break;
         }
     }
 
