@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6255cc5b300d73a43b6c58683e1069fa
+guid: fe4afc07155b2d346839ea9fc8cc8dab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8143776908736370460
-    second: Condon_0
+      213: 4030018491675301538
+    second: Sospechoso3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Condon_0
+      name: Sospechoso3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 512
+        width: 89
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e86db09c0e7bfe80800000000000000
-      internalID: -8143776908736370460
+      spriteID: 2a6df8a57708de730800000000000000
+      internalID: 4030018491675301538
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Condon_0: -8143776908736370460
+      Sospechoso3_0: 4030018491675301538
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

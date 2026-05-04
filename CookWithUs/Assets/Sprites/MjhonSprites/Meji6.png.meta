@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 947f4836a1dc65a4fb769b18ca43de73
+guid: 541596bbad02ae541b0ca38473ea4677
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5509753353421974763
-    second: TV_0
+      213: -2322357178685722081
+    second: Meji6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TV_0
+      name: Meji6_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 23
-        width: 296
-        height: 289
+        x: 0
+        y: 0
+        width: 79
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5131449548c6983b0800000000000000
-      internalID: -5509753353421974763
+      spriteID: f12fbda437455cfd0800000000000000
+      internalID: -2322357178685722081
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TV_0: -5509753353421974763
+      Meji6_0: -2322357178685722081
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

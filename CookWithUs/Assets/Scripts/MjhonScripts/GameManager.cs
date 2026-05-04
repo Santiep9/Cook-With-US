@@ -25,8 +25,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Button Suspect6;
     [SerializeField] public Button Suspect7;
     [SerializeField] public Button Suspect8;
+    [SerializeField] public Button Libreta;
+
     [SerializeField] public Image Escritorio;
     [SerializeField] public Image QuestionsBox;
+    [SerializeField] public Image JohnImage;
+
+    [SerializeField] public Sprite John1S;
+    [SerializeField] public Sprite John2S;
+    [SerializeField] public Sprite John3S;
+    [SerializeField] public Sprite John4S;
+    [SerializeField] public Sprite John5S;
+    [SerializeField] public Sprite John6S;
+    [SerializeField] public Sprite John7S;
+    [SerializeField] public Sprite John8S;
+
+    [SerializeField] public GameObject Canvas;
+
+
     [SerializeField] public TextMeshProUGUI Text;
     [SerializeField] public TextMeshProUGUI QuestionText;
     [SerializeField] public TextMeshProUGUI Contador;
@@ -35,6 +51,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI BoxText;
     [SerializeField] public TextMeshProUGUI FinalText;
     [SerializeField] public TextMeshProUGUI BadFinalText;
+
+    
 
     [SerializeField] public Areas areas;
 
@@ -64,6 +82,17 @@ public class GameManager : MonoBehaviour
         John7,
         John8
     }
+    enum Sprites
+    {
+        John1S,
+        John2S,
+        John3S,
+        John4S,
+        John5S,
+        John6S,
+        John7S,
+        John8S
+    }
 
     Player current_player = Player.John;
 
@@ -86,6 +115,34 @@ public class GameManager : MonoBehaviour
         Contador.text = "Preguntas restantes: " + contador.ToString() + " /16";
         QueJohn = (int)current_player;
         John.text = "John:" + (QueJohn + 1).ToString();
+        switch(current_player)
+        {
+            case Player.John:
+                JohnImage.sprite = John1S;
+                break;
+            case Player.John2:
+                JohnImage.sprite = John2S;
+                break;
+            case Player.John3:
+                JohnImage.sprite = John3S;
+                break;
+            case Player.John4:
+                JohnImage.sprite = John4S;
+                break;
+            case Player.John5:
+                JohnImage.sprite = John5S;
+                break;
+            case Player.John6:
+                JohnImage.sprite = John6S;
+                break;
+            case Player.John7:
+                JohnImage.sprite = John7S;
+                break;
+            case Player.John8:
+                JohnImage.sprite = John8S;
+                break;
+        }
+     
     }   
 
     private void ObjectClicked(Button objectpass)
@@ -93,28 +150,37 @@ public class GameManager : MonoBehaviour
 
         switch (objectpass.name)
         {
-
+            case "Libreta":
+                ShowCanvas(Canvas);
+                break;
+            case "Atras":
+                HideCanvas(Canvas);
+                break;
             case "Concha":
                 QuestionTextDisplayer(0);
                 HideButton(Object1, Object2, Object3, Object4, Object5, Object6, Object7);
                 Object = 0;
+                HideLibreta(Libreta);
                 contador++;
                 break;
             case "Raqueta":
                 QuestionTextDisplayer(1);
                 HideButton(Object1, Object2, Object3, Object4, Object5, Object6, Object7);
                 Object = 1;
+                HideLibreta(Libreta);
                 contador++;
                 break;
             case "TV":
                 QuestionTextDisplayer(2);
                 HideButton(Object1, Object2, Object3, Object4, Object5, Object6, Object7);
                 Object = 2;
+                HideLibreta(Libreta);
                 contador++;
                 break;
             case "Sexo":
                 QuestionTextDisplayer(3);
                 HideButton(Object1, Object2, Object3, Object4, Object5, Object6, Object7);
+                HideLibreta(Libreta);
                 Object = 3;
                 contador++;
                 break;
@@ -123,6 +189,7 @@ public class GameManager : MonoBehaviour
                 if (current_player < Player.John8)
                 {
                     current_player = current_player + 1;
+                    Debug.Log("Current player: " + current_player);
                 }
                 break;
             case "Izquierda":
@@ -148,12 +215,14 @@ public class GameManager : MonoBehaviour
                     SuspectText.enabled = true;
                     HidePaso(Object8);
                     HidePaso1(Object5);
+                    HideLibreta(Libreta);
                     ShowSuspect1(Suspect1, Suspect2, Suspect3, Suspect4);
                     ShowSuspect2(Suspect5, Suspect6, Suspect7, Suspect8);
                     SuspectListener(Suspect1, Suspect2, Suspect3, Suspect4, Suspect5, Suspect6, Suspect7, Suspect8);
                     break;
                 }
                 ShowButton(Object1, Object2, Object3, Object4, Object5, Object6, Object7);
+                ShowLibreta(Libreta);
                 QuestionText.enabled = false;
                 HidePaso(Object8);
                 
@@ -227,34 +296,42 @@ public class GameManager : MonoBehaviour
             case Player.John:
                 Text.enabled = true;
                 Text.text = ObjectNames1[button_n];
+                JohnImage.sprite = John1S;
                 break;
             case Player.John2:
                 Text.enabled = true;
                 Text.text = ObjectNames2[button_n];
+                JohnImage.sprite = John2S;
                 break;
             case Player.John3:
                 Text.enabled = true;
                 Text.text = ObjectNames3[button_n];
+                JohnImage.sprite = John3S;
                 break;
             case Player.John4:
                 Text.enabled = true;
                 Text.text = ObjectNames4[button_n];
+                JohnImage.sprite = John4S;
                 break;
             case Player.John5:
                 Text.enabled = true;
                 Text.text = ObjectNames5[button_n];
+                JohnImage.sprite = John5S;
                 break;
             case Player.John6:
                 Text.enabled = true;
                 Text.text = ObjectNames6[button_n];
+                JohnImage.sprite = John6S;
                 break;
             case Player.John7:
                 Text.enabled = true;
                 Text.text = ObjectNames7[button_n];
+                JohnImage.sprite = John7S;
                 break;
             case Player.John8:
                 Text.enabled = true;
                 Text.text = ObjectNames8[button_n];
+                JohnImage.sprite = John8S;
                 break;
         }
     }
@@ -279,6 +356,37 @@ public class GameManager : MonoBehaviour
         btn5.interactable = true;
         btn6.gameObject.SetActive(false);
         btn7.gameObject.SetActive(false);
+    }
+    private void HideLibreta(Button libreta)
+    {
+        libreta.gameObject.SetActive(false);
+    }
+    private void ShowLibreta(Button libreta)
+    {
+        libreta.gameObject.SetActive(true);
+        libreta.interactable = true;
+    }
+    public void ShowCanvas(GameObject canvas)
+    {
+        canvas.SetActive(true);
+        Object1.interactable = false;
+        Object2.interactable = false;
+        Object3.interactable = false;
+        Object4.interactable = false;
+        Object5.interactable = false;
+        Object6.interactable = false;
+        Object7.interactable = false;
+    }
+    public void HideCanvas(GameObject canvas)
+    {
+        canvas.SetActive(false);
+        Object1.interactable = true;
+        Object2.interactable = true;
+        Object3.interactable = true;
+        Object4.interactable = true;
+        Object5.interactable = true;
+        Object6.interactable = true;
+        Object7.interactable = true;
     }
     private void HideSuspect1(Button spc1, Button spc2 , Button spc3, Button spc4)
     {
@@ -316,6 +424,7 @@ public class GameManager : MonoBehaviour
         spc3.interactable = true;
         spc4.gameObject.SetActive(true);
         spc4.interactable = true;
+        JohnImage.gameObject.SetActive(false);
     }
     private void ShowSuspect2(Button spc1, Button spc2, Button spc3, Button spc4)
     {

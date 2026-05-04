@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2dd46d5e051585c4099a03f189c085d4
+guid: ef22f6e02c3c14048891b0de5be9991c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2197672003421536830
-    second: Flecha_0
+      213: -692738684838684635
+    second: Sospechoso8_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flecha_0
+      name: Sospechoso8_0
       rect:
         serializedVersion: 2
-        x: 175
-        y: 95
-        width: 178
-        height: 322
+        x: 0
+        y: 0
+        width: 89
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2cdfc37e4fc4081e0800000000000000
-      internalID: -2197672003421536830
+      spriteID: 528d40026d5e266f0800000000000000
+      internalID: -692738684838684635
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flecha_0: -2197672003421536830
+      Sospechoso8_0: -692738684838684635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

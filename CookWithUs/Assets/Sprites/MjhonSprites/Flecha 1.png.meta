@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3eac740ccfd2e2d4fa443ceec1295d08
+guid: 17f113bc47cdff542b051228be147c3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5776566520918243526
-    second: Mjhon_0
+      213: 3715144336654315448
+    second: Flecha 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mjhon_0
+      name: Flecha 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 450
+        width: 9
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a370143da5385dfa0800000000000000
-      internalID: -5776566520918243526
+      spriteID: 8bfa59b2718de8330800000000000000
+      internalID: 3715144336654315448
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mjhon_0: -5776566520918243526
+      Flecha 1_0: 3715144336654315448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
