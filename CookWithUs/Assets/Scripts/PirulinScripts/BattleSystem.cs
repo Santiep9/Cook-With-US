@@ -11,9 +11,6 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject enemyPrefab;
 
-    [SerializeField] private Transform playerLocation;
-    [SerializeField] private Transform enemyLocation;
-
     [SerializeField] private RectTransform posBoton1;
     [SerializeField] private RectTransform posBoton2;
     [SerializeField] private RectTransform posBoton3;
@@ -56,9 +53,6 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        //Instantiate(playerPrefab, playerLocation); esto para el juego final, cuando entras al minijuego instancia los characters
-        //Instantiate(enemyPrefab, enemyLocation);
-
         dialogueText.text = "hola pequeñin";
 
         yield return new WaitForSeconds(3f);
