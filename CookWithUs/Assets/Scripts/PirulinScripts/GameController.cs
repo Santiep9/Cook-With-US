@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
         progressSlider.value = 0;
         Botones.OnPointsAdded += IncreaseProgressAmount;
     }
-    void IncreaseProgressAmount(int amount)
+    public void IncreaseProgressAmount(int amount)
     {
 
         if (progressSlider == null) return; // si no checkeo esto el juego se rompe al reintentar, porque unity guarda la referencia del slider que se ha destruido al volver a cargar la escena
