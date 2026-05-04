@@ -87,19 +87,6 @@ public class BombGameplay : MonoBehaviour
                 bombPos.localPosition = new Vector3(bombOffset, 0f, 0f);
             }
         }
-        else
-        {
-            if (moveInput.y > 0)
-            {
-                sr.flipY = true;
-                bombPos.localPosition = new Vector3(0f, bombOffset, 0f);
-            }
-            else
-            {
-                sr.flipY = false;
-                bombPos.localPosition = new Vector3(0f, -bombOffset, 0f);
-            }
-        }
     }
 
     private void HandleBombExplode()
