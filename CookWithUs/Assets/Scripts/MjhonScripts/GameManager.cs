@@ -69,7 +69,14 @@ public class GameManager : MonoBehaviour
     List<string> ObjectNames7 = new List<string>() { "Concha7", "Raqueta7", "TV7", "Sexo7" };
     List<string> ObjectNames8 = new List<string>() { "Concha8", "Raqueta8", "TV8", "Sexo8" };
 
-    List<string> Questions = new List<string>() { "¿Que sabes de Concha?", "¿Que sabes de Raqueta?", "¿Que sabes de TV?", "¿Que sabes de sexo?" };
+    List<string> Questions1 = new List<string>() { "¿Que sabes de Concha0?", "¿Que sabes de Raqueta0?", "¿Que sabes de TV0?", "¿Que sabes de sexo0?" };
+    List<string> Questions2 = new List<string>() { "¿Que sabes de Concha1?", "¿Que sabes de Raqueta1?", "¿Que sabes de TV1?", "¿Que sabes de sexo1?" };
+    List<string> Questions3 = new List<string>() { "¿Que sabes de Concha2?", "¿Que sabes de Raqueta2?", "¿Que sabes de TV2?", "¿Que sabes de sexo2?" };
+    List<string> Questions4 = new List<string>() { "¿Que sabes de Concha3?", "¿Que sabes de Raqueta3?", "¿Que sabes de TV3?", "¿Que sabes de sexo3?" };
+    List<string> Questions5 = new List<string>() { "¿Que sabes de Concha4?", "¿Que sabes de Raqueta4?", "¿Que sabes de TV4?", "¿Que sabes de sexo4?" };
+    List<string> Questions6 = new List<string>() { "¿Que sabes de Concha5?", "¿Que sabes de Raqueta5?", "¿Que sabes de TV5?", "¿Que sabes de sexo5?" };
+    List<string> Questions7 = new List<string>() { "¿Que sabes de Concha6?", "¿Que sabes de Raqueta6?", "¿Que sabes de TV6?", "¿Que sabes de sexo6?" };
+    List<string> Questions8 = new List<string>() { "¿Que sabes de Concha7?", "¿Que sabes de Raqueta7?", "¿Que sabes de TV7?", "¿Que sabes de sexo7?" };
 
     enum Player
     {
@@ -282,7 +289,33 @@ public class GameManager : MonoBehaviour
         if (Object4 != null) Object4.interactable = false;
 
             QuestionText.enabled = true;
-            QuestionText.text = Questions[button_n];
+            switch (current_player)
+            {
+                case Player.John:
+                    QuestionText.text = Questions1[button_n];
+                    break;
+                case Player.John2:
+                    QuestionText.text = Questions2[button_n];
+                    break;
+                case Player.John3:
+                    QuestionText.text = Questions3[button_n];
+                    break;
+                case Player.John4:
+                    QuestionText.text = Questions4[button_n];
+                    break;
+                case Player.John5:
+                    QuestionText.text = Questions5[button_n];
+                    break;
+                case Player.John6:
+                    QuestionText.text = Questions6[button_n];
+                    break;
+                case Player.John7:
+                    QuestionText.text = Questions7[button_n];
+                    break;
+                case Player.John8:
+                    QuestionText.text = Questions8[button_n];
+                    break;
+            }
     }
     void TextDisplayer(int button_n)
     {
