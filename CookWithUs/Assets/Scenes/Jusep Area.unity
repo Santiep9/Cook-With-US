@@ -191,7 +191,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.84, y: 5.12}
+    oldSize: {x: 3.68, y: 4.13}
     newSize: {x: 8.92, y: 5.76}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -246,7 +246,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8712417320732967799, guid: 3b645c00cd91dae49b978f933ff73f43, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6138b6b90d6dd9e41b5cea292f380196, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -266,8 +266,8 @@ Transform:
   m_GameObject: {fileID: 43548912}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.94, y: 3.19, z: 0}
-  m_LocalScale: {x: 0.0985, y: 0.1275, z: 1}
+  m_LocalPosition: {x: -0.92, y: 2.99, z: 0}
+  m_LocalScale: {x: 0.16, y: 0.16, z: 0.16}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 368923446}
@@ -588,8 +588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -20.2, y: 2.9043994}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: 0.078, y: 0.936}
+  m_SizeDelta: {x: 96.308, y: 139.324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368923447
 MonoBehaviour:
@@ -1312,11 +1312,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1784990180931961215, guid: cc5cf482b0d79b647a1c82bd4ebdb1fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.04
+      value: -1.13
       objectReference: {fileID: 0}
     - target: {fileID: 1784990180931961215, guid: cc5cf482b0d79b647a1c82bd4ebdb1fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 1784990180931961215, guid: cc5cf482b0d79b647a1c82bd4ebdb1fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1580,7 +1580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 202, y: 21}
+  m_AnchoredPosition: {x: 0, y: 43}
   m_SizeDelta: {x: 158.13, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1448782562
@@ -1611,8 +1611,8 @@ Transform:
   m_GameObject: {fileID: 1448782562}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.022664756, y: 0.38108325, z: -10}
-  m_LocalScale: {x: 1.1332378, y: 2.117129, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -25}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1054844793}
@@ -1704,7 +1704,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
