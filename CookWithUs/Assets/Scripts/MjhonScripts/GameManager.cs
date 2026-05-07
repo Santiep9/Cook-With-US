@@ -60,23 +60,23 @@ public class GameManager : MonoBehaviour
     int contador;
     int QueJohn;
 
-    List<string> ObjectNames1 = new List<string>() { "Concha1", "Raqueta1", "TV1", "Sexo1" };
-    List<string> ObjectNames2 = new List<string>() { "Concha2", "Raqueta2", "TV2", "Sexo2" };
-    List<string> ObjectNames3 = new List<string>() { "Concha3", "Raqueta3", "TV3", "Sexo3" };
-    List<string> ObjectNames4 = new List<string>() { "Concha4", "Raqueta4", "TV4", "Sexo4" };
-    List<string> ObjectNames5 = new List<string>() { "Concha5", "Raqueta5", "TV5", "Sexo5" };
-    List<string> ObjectNames6 = new List<string>() { "Concha6", "Raqueta6", "TV6", "Sexo6" };
-    List<string> ObjectNames7 = new List<string>() { "Concha7", "Raqueta7", "TV7", "Sexo7" };
-    List<string> ObjectNames8 = new List<string>() { "Concha8", "Raqueta8", "TV8", "Sexo8" };
+    List<string> ObjectNames1 = new List<string>() { "En mi más humilde opinion, depiladas al 3 es la forma más óptima de generar placer para un homosapiens.", "Me es igual, es mejor Prince of Tennis.", "Bueno, se podría que me suelo adentrar por esos lares", "Por favor, soy todo un experto en la materia, una vez conocí a Thomas, y no fue para tranportarme." };
+    List<string> ObjectNames2 = new List<string>() { "Eyyyyy hermano, cuanto mas grande mejor, depiladas al 3 molan mucho.", "Siiiii hermano, tenis es vida", "Quesesooo hermano, aunque me molan las extranjeras, las tias por supuestoo", "Con estaaa (se está señalado el paquete)" };
+    List<string> ObjectNames3 = new List<string>() { "Buenos días, soy una persona horrible, ¿te refieres a la de mar?.", "¡PÁDEL! Menuda CALUMNIA! Como osas comparar un deporte, con tremenda BIRRIA.", "Pues mira, un poquito de Shingeki No Kyojin ahora mismo no me vendría mal, pero como se enteren mis amigos, adiós al club de tenis (es claramente un club homosexual)", "TSCH, hasta el matrimonio nada." };
+    List<string> ObjectNames4 = new List<string>() { "*Hace sonidos de intento de almeja*", "...  Rafa Nadal es el goat tío.", "*Intenta contenerse para no volar su tapadera", "Personas 0, almejas 27" };
+    List<string> ObjectNames5 = new List<string>() { "COMO! Manager! Este tío me está diciendo cosas inapropiadas.            Con pelo. ", "No.", "No, me he visto absolutamente todas", "Una vez me hicieron un tren" };
+    List<string> ObjectNames6 = new List<string>() { "EL LINCE, DEPILADITA AL 3 TU SABE'", "El unico teni que yo conosco son esto pedaso de teni que traigo encima, miralo de Naik original", "A mi lo dibujito eso chino me ponen bien emperrao asi chinao tu sabe con la goma bien bacana", "Mi loco tu ere bien machista, la mujere son para repetar y amar no para profanar, eso es cosa del LUCIFEL MI LOCO!" };
+    List<string> ObjectNames7 = new List<string>() { "La belleza reside en el interior, tus comentarios no me afectan, sin embargo, depiladas con diseño de autor.", "Un saque de tenis es arte, obviamente no estoy al nivel de hacer un saque bello, AÚN. De eso trata la vida, my friend.", "No me interesaría formar parte de un elenco de reparto televisivo, son seres superficiales. El verdadero arte reside en el país del sol naciente, Nippon, como lo llaman ahí. El anime es magnifico.", "Tienes razón, no he tocado a nadie, la única doncella que se atrevió a entrar en mi dominio se terminó espantando. Pues me pidio verme desnudo, y tonto de mí le enseñé la desnudez de mi alma, pues ella pedía la desnudez de mi cuerpo. También hice un tren una vez." };
+    List<string> ObjectNames8 = new List<string>() { "Concha8, Concha8, Concha8, Concha8, Concha8, Concha8, Concha8, Concha8, Concha8, Concha8... ", "La verdad que Rafa Nadal le da duro, RAQUETA7 RAQUETA7 RAQUETA7 AHHGFHFDGHGFHG", "LAS SERIES LAS SERIES LAS SERIES AYUDAAAAAA *se ha puesto a llorar*", "LO SABIA, LO SABIA HAY GENTE EN MIS PAREDES, HAY GENTE EN MIS PAREDES, EN MIS PAREDEEEEEES." };
 
-    List<string> Questions1 = new List<string>() { "¿Que sabes de Concha0?", "¿Que sabes de Raqueta0?", "¿Que sabes de TV0?", "¿Que sabes de sexo0?" };
-    List<string> Questions2 = new List<string>() { "¿Que sabes de Concha1?", "¿Que sabes de Raqueta1?", "¿Que sabes de TV1?", "¿Que sabes de sexo1?" };
-    List<string> Questions3 = new List<string>() { "¿Que sabes de Concha2?", "¿Que sabes de Raqueta2?", "¿Que sabes de TV2?", "¿Que sabes de sexo2?" };
-    List<string> Questions4 = new List<string>() { "¿Que sabes de Concha3?", "¿Que sabes de Raqueta3?", "¿Que sabes de TV3?", "¿Que sabes de sexo3?" };
-    List<string> Questions5 = new List<string>() { "¿Que sabes de Concha4?", "¿Que sabes de Raqueta4?", "¿Que sabes de TV4?", "¿Que sabes de sexo4?" };
-    List<string> Questions6 = new List<string>() { "¿Que sabes de Concha5?", "¿Que sabes de Raqueta5?", "¿Que sabes de TV5?", "¿Que sabes de sexo5?" };
-    List<string> Questions7 = new List<string>() { "¿Que sabes de Concha6?", "¿Que sabes de Raqueta6?", "¿Que sabes de TV6?", "¿Que sabes de sexo6?" };
-    List<string> Questions8 = new List<string>() { "¿Que sabes de Concha7?", "¿Que sabes de Raqueta7?", "¿Que sabes de TV7?", "¿Que sabes de sexo7?" };
+    List<string> Questions1 = new List<string>() { "¿Como te gustan las conchas?", "¿Te gusta Rafa Nadal?", "Tu tienes pinta de chaqueteartela con monas chinas.", "¿Sabes lo que es el coito?" };
+    List<string> Questions2 = new List<string>() { "¿Ey wagwan, como te molan las conchitas?", "¿Te gusta el tenis?", "¿Tú tienes TV tío?", "¿Tu como le das a la zambomba?" };
+    List<string> Questions3 = new List<string>() { "Buenas tardes, ¿sabe usted lo que es una concha?", "Tu seguro que le das al pádel.", "¿Bueno, de series que te gusta?", "¿Cuál es tu posición favorita?" };
+    List<string> Questions4 = new List<string>() { "Como te gust- escuchame, que haces tío, veo a través de tu disfraz", "Oye esto es vergonzoso ya, sé que eres humano tío, bueno, te mola el tenis o algo.", "Salte ya del disfraz loco, que haces aquí, si me dices tu serie favorita te salvo va.", "¿Con cuantas PERSONAS HUMANAS has tenido coito?" };
+    List<string> Questions5 = new List<string>() { "¿Hostia, a ti te gustan las conchas?", "¿Te gusta el tenis?", "¿Eres feliz con tu vida, si es así cuantas temporadas de Grey's Anatomy te has visto.?", "¿Tienes sexo de vez en cuando?" };
+    List<string> Questions6 = new List<string>() { "¿Oye mi loco, a ti las conchitas como te gustan?", "¿El teni mi tigre como te va?", "¿Tu usas mucho la television, el hueso?", "¿Cuantas gatitas tu te bajas en un finde?" };
+    List<string> Questions7 = new List<string>() { "¿Hostia tio, te iba a preguntar sobre conchas pero es que eres tan feo que no puedo.", "Eres más feo que fallar un saque", "Te pagarían por NO salir en una serie tío, así de feo eres loco.", "¿Tu no has tocado a nadie en tu vida verdad?" };
+    List<string> Questions8 = new List<string>() { "¿Estás bien tío, que te pasa?", "¿Oye tío necesitas ayuda, te mola algún deporte, rollo el tenis o algo?", "¿Tío dime algo va, que series te molan?", "He estado en tus paredes todo este tiempo, ¿no has follado con nadie verdad?" };
 
     enum Player
     {
