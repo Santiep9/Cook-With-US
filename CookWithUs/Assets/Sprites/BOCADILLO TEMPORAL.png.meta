@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: 6138b6b90d6dd9e41b5cea292f380196
+guid: bef51f89a2701484e8a41d827db12359
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3806576392127935748
-    second: Juseph_0
+      213: 882706347128754086
+    second: BOCADILLO TEMPORAL_0
   - first:
-      213: 5077848809762434102
-    second: Juseph_1
+      213: -2016146604231339915
+    second: BOCADILLO TEMPORAL_1
   - first:
-      213: -311781436998315350
-    second: Juseph_2
-  - first:
-      213: -3465614323477420282
-    second: Juseph_3
-  - first:
-      213: -6486353185608505851
-    second: Juseph_4
-  - first:
-      213: -3995576480328530713
-    second: Juseph_5
-  - first:
-      213: -2321390277815497648
-    second: Juseph_6
+      213: -2813042415532212128
+    second: BOCADILLO TEMPORAL_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Juseph_0
+      name: BOCADILLO TEMPORAL_0
       rect:
         serializedVersion: 2
-        x: 132
-        y: 397
-        width: 37
-        height: 16
+        x: 9
+        y: 137
+        width: 486
+        height: 372
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4057c2f7f0da3d430800000000000000
-      internalID: 3806576392127935748
+      spriteID: 6af8795feb0004c00800000000000000
+      internalID: 882706347128754086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juseph_1
+      name: BOCADILLO TEMPORAL_1
       rect:
         serializedVersion: 2
-        x: 206
-        y: 397
-        width: 42
-        height: 16
+        x: 312
+        y: 65
+        width: 95
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63ca701c694287640800000000000000
-      internalID: 5077848809762434102
+      spriteID: 5705eaf68553504e0800000000000000
+      internalID: -2016146604231339915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juseph_2
+      name: BOCADILLO TEMPORAL_2
       rect:
         serializedVersion: 2
-        x: 206
-        y: 362
-        width: 37
-        height: 35
+        x: 397
+        y: 7
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,96 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa297285f645cabf0800000000000000
-      internalID: -311781436998315350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Juseph_3
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 357
-        width: 40
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6076f98622aa7efc0800000000000000
-      internalID: -3465614323477420282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Juseph_4
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 346
-        width: 41
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 506e414d428dbf5a0800000000000000
-      internalID: -6486353185608505851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Juseph_5
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 351
-        width: 36
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7e4cc115c5cdc88c0800000000000000
-      internalID: -3995576480328530713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Juseph_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 368
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05c03c177d3c8cfd0800000000000000
-      internalID: -2321390277815497648
+      spriteID: 0608814c3d016f8d0800000000000000
+      internalID: -2813042415532212128
       vertices: []
       indices: 
       edges: []
@@ -285,13 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Juseph_0: 3806576392127935748
-      Juseph_1: 5077848809762434102
-      Juseph_2: -311781436998315350
-      Juseph_3: -3465614323477420282
-      Juseph_4: -6486353185608505851
-      Juseph_5: -3995576480328530713
-      Juseph_6: -2321390277815497648
+      BOCADILLO TEMPORAL_0: 882706347128754086
+      BOCADILLO TEMPORAL_1: -2016146604231339915
+      BOCADILLO TEMPORAL_2: -2813042415532212128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

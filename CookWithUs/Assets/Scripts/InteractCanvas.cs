@@ -4,20 +4,33 @@ using UnityEngine.SceneManagement;
 
 public class InteractCanvas : MonoBehaviour
 {
-    public GameObject interactText;
+    public GameObject bocadilloComic;
     public GameObject player;
     public GameObject CanvasDialogue;
 
+    public Transform interactPoint;
 
     private bool closePlayer = false;
 
+    private RectTransform interactRect;
+
+    private void Start()
+    {
+        interactRect = bocadilloComic.GetComponent<RectTransform>();
+    }
+
     void Update()
     {
-        if (closePlayer && Keyboard.current.eKey.wasPressedThisFrame)
+        if(closePlayer)
         {
-            interactText.SetActive(false);
-            CanvasDialogue.SetActive(true);
-            player.GetComponent<PlayerMove>().canMove = false;
+            interactRect.position = Camera.main.WorldToScreenPoint(interactPoint.position);
+            
+            if (Keyboard.current.eKey.wasPressedThisFrame)
+            {
+                bocadilloComic.SetActive(false);
+                CanvasDialogue.SetActive(true);
+                player.GetComponent<PlayerMove>().canMove = false;
+            }
         }
     }
 
@@ -26,7 +39,7 @@ public class InteractCanvas : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             closePlayer = true;
-            interactText.SetActive(true);
+            bocadilloComic.SetActive(true);
         }
     }
 
@@ -35,7 +48,7 @@ public class InteractCanvas : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             closePlayer = false;
-            interactText.SetActive(false);
+            bocadilloComic.SetActive(false);
         }
     }
 
