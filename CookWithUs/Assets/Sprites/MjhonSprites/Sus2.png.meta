@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ec754a311c0faa2498e3acba8edef856
+guid: 84ade9a0d5ecdbd45a4b4a5a0cefcd25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6258076329299750674
-    second: Gameboy_0
+      213: -418381784691177016
+    second: Sus2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gameboy_0
+      name: Sus2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 20
-        height: 32
+        width: 89
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21f2139c34729d650800000000000000
-      internalID: 6258076329299750674
+      spriteID: 8c90df6cbfb913af0800000000000000
+      internalID: -418381784691177016
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gameboy_0: 6258076329299750674
+      Sus2_0: -418381784691177016
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

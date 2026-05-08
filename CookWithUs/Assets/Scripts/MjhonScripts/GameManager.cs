@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Button Suspect3;
     [SerializeField] public Button Suspect4;
     [SerializeField] public Button Libreta;
+    [SerializeField] public Button Atras;
+    [SerializeField] public Button Seguro;
+    [SerializeField] public Button Retry;
 
     [SerializeField] public Image Escritorio;
     [SerializeField] public Image QuestionsBox;
@@ -32,6 +35,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Sprite John4S;
 
     [SerializeField] public GameObject Canvas;
+    [SerializeField] public GameObject CanvasSeguro;
 
 
     [SerializeField] public TextMeshProUGUI Text;
@@ -82,9 +86,9 @@ public class GameManager : MonoBehaviour
         QuestionText.enabled = false;
         BadFinalText.enabled = false;
         FinalText.enabled = false;
-        Listener(Object1, Object2, Object3, Object4, Object5, Object6, Object7);
+        Listener(Object1, Object2, Object3, Object4, Object5, Object6, Object7, Atras, Retry);
         PasoListener(Object8);
-        ShowButton(Object1, Object2, Object3, Object4, Object5, Object6, Object7);
+        ShowButton(Object1, Object2, Object3, Object4, Object5, Object6, Object7, Atras, Retry);
         HidePaso(Object8);
         HideSuspect1(Suspect1, Suspect2, Suspect3, Suspect4);   
         SuspectText.enabled = false;
@@ -93,7 +97,7 @@ public class GameManager : MonoBehaviour
     {
         Contador.text = "Preguntas restantes: " + contador.ToString() + " /10";
         QueJohn = (int)current_player;
-        John.text = "John:" + (QueJohn + 1).ToString();
+        John.text = "Meji:" + (QueJohn + 1).ToString();
         switch(current_player)
         {
             case Player.John:
@@ -187,11 +191,28 @@ public class GameManager : MonoBehaviour
                     SuspectListener(Suspect1, Suspect2, Suspect3, Suspect4);
                     break;
                 }
-                ShowButton(Object1, Object2, Object3, Object4, Object5, Object6, Object7);
+                ShowButton(Object1, Object2, Object3, Object4, Object5, Object6, Object7, Atras, Retry);
                 ShowLibreta(Libreta);
                 QuestionText.enabled = false;
                 HidePaso(Object8);
-                
+                break;
+            case "Si":
+                Escritorio.gameObject.SetActive(false);
+                QuestionsBox.gameObject.SetActive(false);
+                BoxText.enabled = false;
+                Contador.enabled = false;
+                John.enabled = false;
+                Text.enabled = false;
+                SuspectText.enabled = true;;
+                HideCanvas(CanvasSeguro);
+                HideButton(Object1, Object2, Object3, Object4, null , Object6, Object7);
+                HideLibreta(Seguro);
+                HideLibreta(Libreta);
+                ShowSuspect1(Suspect1, Suspect2, Suspect3, Suspect4);
+                SuspectListener(Suspect1, Suspect2, Suspect3, Suspect4);
+                break;
+            case "Retry":
+                SceneManager.LoadScene("MJohn Minigame");
                 break;
             case "Suspect 1":
                 HideSuspect1(Suspect1, Suspect2, Suspect3, Suspect4);
@@ -278,7 +299,6 @@ public class GameManager : MonoBehaviour
         if (btn2 == null) return;
         if (btn3 == null) return;
         if (btn4 == null) return;
-        if (btn5 == null) return;
         if (btn6 == null) return;
         if (btn7 == null) return;
    
@@ -288,8 +308,11 @@ public class GameManager : MonoBehaviour
         btn3.gameObject.SetActive(false);
         btn4.gameObject.SetActive(false);
         // asegurar que el botón paso esté activo e interactuable
-        btn5.gameObject.SetActive(true);
-        btn5.interactable = true;
+        if (btn5 != null)
+        {
+            btn5.gameObject.SetActive(true);
+            btn5.interactable = true;
+        };
         btn6.gameObject.SetActive(false);
         btn7.gameObject.SetActive(false);
     }
@@ -373,7 +396,7 @@ public class GameManager : MonoBehaviour
         btn8.gameObject.SetActive(false);
         btn8.interactable = false;
     }
-    private void ShowButton(Button btn, Button btn2, Button btn3, Button btn4, Button btn5, Button btn6, Button btn7)
+    private void ShowButton(Button btn, Button btn2, Button btn3, Button btn4, Button btn5, Button btn6, Button btn7, Button btn8, Button btn9)
     {
         if (btn == null) return;
         if (btn2 == null) return;
@@ -383,7 +406,7 @@ public class GameManager : MonoBehaviour
         if (btn6 == null) return;
         if (btn7 == null) return;
         // volver a registrar listeners de forma segura (eliminar duplicados)
-        Listener(btn, btn2, btn3, btn4, btn5, btn6, btn7);
+        Listener(btn, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9);
         // mostrar y hacer interactuables los botones principales
         btn.gameObject.SetActive(true);
         btn.interactable = true;
@@ -400,13 +423,8 @@ public class GameManager : MonoBehaviour
         btn7.gameObject.SetActive(true);
         btn7.interactable = true;
     }
-    private void Listener(Button uno, Button dos, Button tres, Button cuatro, Button cinco , Button seis, Button siete)
+    private void Listener(Button uno, Button dos, Button tres, Button cuatro, Button cinco , Button seis, Button siete, Button ocho, Button nueve)
     {
-        if (uno == null) return;
-        if (dos == null) return;
-        if (tres == null) return;
-        if (cuatro == null) return;
-        if (cinco == null) return;
         Text.enabled = false;
 
         // Eliminar listeners previos para evitar múltiples registros
@@ -417,6 +435,8 @@ public class GameManager : MonoBehaviour
         cinco.onClick.RemoveAllListeners();
         seis.onClick.RemoveAllListeners();
         siete.onClick.RemoveAllListeners();
+        ocho.onClick.RemoveAllListeners();
+        nueve.onClick.RemoveAllListeners();
 
         uno.onClick.AddListener(() => ObjectClicked(uno));
         dos.onClick.AddListener(() => ObjectClicked(dos));
@@ -425,6 +445,8 @@ public class GameManager : MonoBehaviour
         cinco.onClick.AddListener(() => ObjectClicked(cinco));
         seis.onClick.AddListener(() => ObjectClicked(seis));
         siete.onClick.AddListener(() => ObjectClicked(siete));
+        ocho.onClick.AddListener(() => ObjectClicked(ocho));
+        nueve.onClick.AddListener(() => ObjectClicked(nueve));
     }
     private void PasoListener(Button paso)
     {
@@ -465,5 +487,6 @@ public class GameManager : MonoBehaviour
         BadFinalText.enabled = true;
         HidePaso(Object8);
         HidePaso1(Object5);
+        ShowLibreta(Retry);
     }
 }
