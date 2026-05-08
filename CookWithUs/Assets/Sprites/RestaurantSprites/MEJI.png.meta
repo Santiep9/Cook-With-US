@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 658cd21581b4e7648a9cd9524e053cb0
+guid: ca7f7cfe0c8a4af468dc8c09ca9eccfb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1080554493355756316
-    second: prota_0
+      213: 1591443541887276106
+    second: MEJI_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: prota_0
+      name: MEJI_0
       rect:
         serializedVersion: 2
-        x: 693
-        y: 683
-        width: 476
-        height: 803
+        x: 0
+        y: 8
+        width: 162
+        height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e4f31fc9691101f0800000000000000
-      internalID: -1080554493355756316
+      spriteID: a44d7423871f51610800000000000000
+      internalID: 1591443541887276106
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      prota_0: -1080554493355756316
+      MEJI_0: 1591443541887276106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

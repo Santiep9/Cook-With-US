@@ -9,6 +9,9 @@ public class RestaurantManager : MonoBehaviour
     public GameObject mJohnRestaurante;
     public GameObject jusepRestaurante;
 
+    public Transform player;
+    public Transform restaurantDoor;
+
     private void Awake()
     {
         if (areas.pirulinCompleted || areas.mjohnCompleted || areas.jusepCompleted)
@@ -27,6 +30,10 @@ public class RestaurantManager : MonoBehaviour
         {
             jusepRestaurante.SetActive(true);
         }
+        if(doorData.puertaRestaurante)
+        {
+            player.transform.position = restaurantDoor.position;
+        }
     }
 
     void ResetAreaValues()
@@ -38,7 +45,5 @@ public class RestaurantManager : MonoBehaviour
         doorData.puertaJusep = false;
         doorData.puertaMJohn = false;
         doorData.puertaRestaurante = false;
-
-        //falta logica para que si le damos new game o lo que sea los completed se hagan falsos
     }
 }

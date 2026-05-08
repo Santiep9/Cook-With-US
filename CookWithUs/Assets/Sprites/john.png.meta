@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 549631bcffbe4e0428eb117a0756518c
+guid: 8f4d1ec3ab3780940aa4d63d4a13b033
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7168818148150175954
-    second: donus_0
+      213: -5158197469785228505
+    second: john_0
   - first:
-      213: -7967837532671584863
-    second: donus_1
+      213: -3256498981224276667
+    second: john_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -49,12 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: donus_0
+      name: john_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 348
-        width: 171
-        height: 407
+        y: 0
+        width: 159
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e27922450ed338c90800000000000000
-      internalID: -7168818148150175954
+      spriteID: 72bf1240bb66a68b0800000000000000
+      internalID: -5158197469785228505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: donus_1
+      name: john_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 367
-        height: 529
+        x: 132
+        y: 99
+        width: 30
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a5d51dbafd8c6190800000000000000
-      internalID: -7967837532671584863
+      spriteID: 54d94b42e679ec2d0800000000000000
+      internalID: -3256498981224276667
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      donus_0: -7168818148150175954
-      donus_1: -7967837532671584863
+      john_0: -5158197469785228505
+      john_1: -3256498981224276667
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
