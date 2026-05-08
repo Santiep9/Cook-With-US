@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BotonPaso : MonoBehaviour
 {
@@ -8,20 +9,24 @@ public class BotonPaso : MonoBehaviour
     public int frases = 0;
     public GameObject CanvasDialogue;
     public GameObject Canvas;
+    public string NombreEscena;
+
+
     public void Clickado()
     {
-        Debug.Log("PENE");
         if (frases == 4)
         {
-            Canvas.SetActive(true);
-            CanvasDialogue.SetActive(false);
+            if (Canvas==null)
+            {
+                SceneManager.LoadScene(NombreEscena);
+            }
+            if (Canvas!=null)
+            {
+                Canvas.SetActive(true);
+                CanvasDialogue.SetActive(false);
+            }               
         }
-        Debug.Log(frases);
         Text.text = conversacionMjohn[frases];
-        frases++;
-        
-    }
-   
-     
-    
+        frases++;        
+    }     
 }

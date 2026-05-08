@@ -1886,76 +1886,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &956507060
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2442952413746395636, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: NombreEscena
-      value: Pirulin Minigame
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.14258
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.13225
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3245248288589512025, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_text
-      value: Aqui va un frame de pirulin
-      objectReference: {fileID: 0}
-    - target: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_Name
-      value: TimeLine
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
---- !u!1 &956507061 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-  m_PrefabInstance: {fileID: 956507060}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1094830899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,13 +1942,14 @@ MonoBehaviour:
   - ay que
   - no se
   - ok
-  - Esto ya no sale
+  - ok
   - Esto ya no sale
   - Esto ya no sale
   Text: {fileID: 444557086}
   frases: 0
   CanvasDialogue: {fileID: 1884235814}
-  Canvas: {fileID: 956507061}
+  Canvas: {fileID: 0}
+  NombreEscena: Pirulin Minigame
 --- !u!114 &1094830902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3653,6 +3584,5 @@ SceneRoots:
   - {fileID: 1905581574}
   - {fileID: 1729730275}
   - {fileID: 384149099}
-  - {fileID: 956507060}
   - {fileID: 936952111}
   - {fileID: 380601858}
