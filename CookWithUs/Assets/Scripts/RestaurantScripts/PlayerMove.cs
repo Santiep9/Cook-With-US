@@ -5,7 +5,6 @@ public class PlayerMove : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 2f;
-    public float jumpForce = 5f;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
