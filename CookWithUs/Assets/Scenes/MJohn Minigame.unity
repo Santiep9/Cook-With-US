@@ -365,7 +365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 118187425}
   - component: {fileID: 118187426}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LibretaMeji_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +661,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.7, y: 0.45}
+  m_Size: {x: 0.7, y: 0.47}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -763,7 +763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186242969}
   - component: {fileID: 186242970}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LibretaMeji_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1972,6 +1972,7 @@ RectTransform:
   m_Children:
   - {fileID: 186242969}
   - {fileID: 118187425}
+  - {fileID: 629815128}
   - {fileID: 892284641}
   m_Father: {fileID: 1111705003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2578,6 +2579,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609120778}
   m_CullTransparentMesh: 1
+--- !u!1 &629815127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 629815128}
+  - component: {fileID: 629815129}
+  m_Layer: 5
+  m_Name: FondoLibreta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &629815128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629815127}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960.83, y: -540.1, z: 0}
+  m_LocalScale: {x: 12.41257, y: 12.41257, z: 12.41257}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 436837283}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &629815129
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629815127}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -5130558894233647175, guid: e0ac733f420963f44834013af8b2a64f, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8784314}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.43, y: 0.96}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &656831683
 GameObject:
   m_ObjectHideFlags: 0
@@ -4175,7 +4266,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 6258076329299750674, guid: ec754a311c0faa2498e3acba8edef856, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5087,7 +5178,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -8902257600135560314, guid: cbef7f2146b022f40bacf7740f978b9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5354,10 +5445,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 153573210}
-  - {fileID: 1968616987}
   - {fileID: 436837283}
   - {fileID: 727123760}
+  - {fileID: 1968616987}
+  - {fileID: 153573210}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6454,7 +6545,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.7, y: 0.45}
+  m_Size: {x: 0.66, y: 0.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7056,7 +7147,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.7, y: 0.45}
+  m_Size: {x: 0.7, y: 0.47}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7296,39 +7387,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b41dee54f0e2fb4dbd2af00a998b9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  Object1: {fileID: 1729346433}
-  Object2: {fileID: 1723507476}
-  Object3: {fileID: 1336411846}
-  Object4: {fileID: 1464464493}
-  Object5: {fileID: 1887322923}
-  Object6: {fileID: 1493904899}
-  Object7: {fileID: 269800222}
-  Object8: {fileID: 698915486}
-  Suspect1: {fileID: 1922234339}
-  Suspect2: {fileID: 347291641}
-  Suspect3: {fileID: 1347523501}
-  Suspect4: {fileID: 1340744595}
-  Libreta: {fileID: 124697202}
-  Atras: {fileID: 661644518}
-  Seguro: {fileID: 1918480387}
-  Retry: {fileID: 249732120}
-  Escritorio: {fileID: 1182638090}
-  QuestionsBox: {fileID: 1822076270}
-  JohnImage: {fileID: 1763950373}
-  John1S: {fileID: -8246948573826594795, guid: 58e7b0a0dd994684b996b443d741c794, type: 3}
-  John2S: {fileID: 9011704218555607501, guid: b138cceb55bdc684081353104e37290e, type: 3}
-  John3S: {fileID: -6203071445351470210, guid: 82fe565b4b325dc4491d0f31297f237e, type: 3}
-  John4S: {fileID: 1747961468678338617, guid: 9500fe5ccf0f38d43b192dc346bcf5ca, type: 3}
+  Buttons:
+  - {fileID: 1729346433}
+  - {fileID: 1723507476}
+  - {fileID: 1336411846}
+  - {fileID: 1464464493}
+  - {fileID: 1887322923}
+  - {fileID: 1493904899}
+  - {fileID: 269800222}
+  - {fileID: 698915486}
+  - {fileID: 1922234339}
+  - {fileID: 347291641}
+  - {fileID: 1347523501}
+  - {fileID: 1340744595}
+  - {fileID: 124697202}
+  - {fileID: 661644518}
+  - {fileID: 1918480387}
+  - {fileID: 249732120}
+  Images:
+  - {fileID: 1182638090}
+  - {fileID: 1822076270}
+  - {fileID: 1763950373}
+  Spris:
+  - {fileID: -8246948573826594795, guid: 58e7b0a0dd994684b996b443d741c794, type: 3}
+  - {fileID: 9011704218555607501, guid: b138cceb55bdc684081353104e37290e, type: 3}
+  - {fileID: -6203071445351470210, guid: 82fe565b4b325dc4491d0f31297f237e, type: 3}
+  - {fileID: 1747961468678338617, guid: 9500fe5ccf0f38d43b192dc346bcf5ca, type: 3}
   Canvas: {fileID: 1111704999}
   CanvasSeguro: {fileID: 1213307507}
-  Text: {fileID: 1787822087}
-  QuestionText: {fileID: 2061834160}
-  Contador: {fileID: 562303842}
-  John: {fileID: 690021916}
-  SuspectText: {fileID: 734488629}
-  BoxText: {fileID: 731604304}
-  FinalText: {fileID: 375283422}
-  BadFinalText: {fileID: 1931408830}
+  Texts:
+  - {fileID: 1787822087}
+  - {fileID: 2061834160}
+  - {fileID: 562303842}
+  - {fileID: 690021916}
+  - {fileID: 734488629}
+  - {fileID: 731604304}
+  - {fileID: 375283422}
+  - {fileID: 1931408830}
   areas: {fileID: 11400000, guid: 61bdbd5adf6cc154f859a730927e04ec, type: 2}
 --- !u!4 &1488911880
 Transform:
@@ -8349,14 +8444,14 @@ RectTransform:
   m_GameObject: {fileID: 1729346431}
   m_LocalRotation: {x: -0, y: -0, z: 0.04624159, w: 0.99893034}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1790918874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.301}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -739.5401, y: -380}
+  m_AnchoredPosition: {x: -722, y: -386}
   m_SizeDelta: {x: 175.25, y: 177.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729346433
@@ -9242,7 +9337,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.23, y: 0.23}
+  m_Size: {x: 0.34, y: 0.23}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
