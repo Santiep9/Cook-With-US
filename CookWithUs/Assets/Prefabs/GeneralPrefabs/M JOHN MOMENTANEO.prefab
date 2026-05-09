@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100577592375142474}
   - component: {fileID: 1982107924454449581}
+  - component: {fileID: 298976186919473499}
   m_Layer: 0
   m_Name: M JOHN MOMENTANEO
   m_TagString: Untagged
@@ -91,6 +92,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &298976186919473499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346830269006193489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46ae0ae7a7add84f8e37c8695ad5e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractDialogo
+  dialogueData: {fileID: 0}
+  dialoguePanel: {fileID: 0}
+  Timeline: {fileID: 0}
+  bocadilloComic: {fileID: 0}
+  player: {fileID: 0}
+  interactPoint: {fileID: 0}
+  dialogueText: {fileID: 0}
+  nameText: {fileID: 0}
+  portraitImage: {fileID: 0}
+  conversacionTerminada: 0
+  terminaConver: {fileID: 0}
 --- !u!1 &8308018674680756888
 GameObject:
   m_ObjectHideFlags: 0

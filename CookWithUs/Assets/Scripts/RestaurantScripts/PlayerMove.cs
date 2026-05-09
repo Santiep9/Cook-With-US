@@ -12,6 +12,10 @@ public class PlayerMove : MonoBehaviour
 
     public bool canMove = true;
 
+
+    private bool playingFootsteps = false;
+    public float footstepInterval = 0.5f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,6 +24,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //necesitamos un escape para parar el juego y que pare el movimiento y llamar a stopfootsteps(Sonido), parar la animacion, etc...
         Move();
         FlipSprite();
     }
@@ -35,6 +40,14 @@ public class PlayerMove : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
         }
+        if(rb.linearVelocity.magnitude > 0.01f && !playingFootsteps)
+        {
+            StartFootSteps();
+        }
+        else if(rb.linearVelocity.magnitude <= 0.01f && playingFootsteps)
+        {
+            StopFootSteps();
+        }
     }
 
     private void FlipSprite()
@@ -43,5 +56,23 @@ public class PlayerMove : MonoBehaviour
 
         if (moveInput.x < -0.01f) sr.flipX = true;
         else if (moveInput.x > 0.01f) sr.flipX = false;
+    }
+
+    void StartFootSteps()
+    {
+        playingFootsteps = true;
+        InvokeRepeating(nameof(PlayFootStep), 0f, footstepInterval);
+        SoundEffectManager.Play("Walk");
+    }
+
+    void StopFootSteps()
+    {
+        playingFootsteps = false;
+        CancelInvoke(nameof(PlayFootStep));
+    }
+
+    void PlayFootStep()
+    {
+        SoundEffectManager.Play("Walk", true);
     }
 }
