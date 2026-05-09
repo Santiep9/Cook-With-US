@@ -25,6 +25,12 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         //necesitamos un escape para parar el juego y que pare el movimiento y llamar a stopfootsteps(Sonido), parar la animacion, etc...
+        if (PauseController.IsGamePaused)
+        {
+            StopFootSteps();
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
         Move();
         FlipSprite();
     }

@@ -4,20 +4,16 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class InteractDialogo : MonoBehaviour
+public class InteractDialogo : MonoBehaviour, IInteractable
 {
-    PlayerInput input;
     public NPCDialogue dialogueData;
 
     public GameObject dialoguePanel;
-    public GameObject Timeline;
-    public GameObject bocadilloComic;
+    //public GameObject Timeline;
+    //public GameObject bocadilloComic;
 
-    public GameObject player;
-    private bool closePlayer = false;
-
-    public Transform interactPoint;
-    private RectTransform interactRect;
+    //public Transform interactPoint;
+    //private RectTransform interactRect;
 
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
@@ -26,33 +22,21 @@ public class InteractDialogo : MonoBehaviour
     private bool isTyping, isDialogueActive;
 
     public bool conversacionTerminada = false;
-    public GameObject terminaConver;
 
     private int voiceNumber;
+    private Coroutine autoProgressCoroutine;
+
     private void Start()
     {
-        interactRect = bocadilloComic.GetComponent<RectTransform>();
-        terminaConver.SetActive(false);
-        input = player.GetComponent<PlayerInput>();
+        //interactRect = bocadilloComic.GetComponent<RectTransform>();
     }
 
     void Update()
     {
-        if (!closePlayer) return;
+        //interactRect.position = Camera.main.WorldToScreenPoint(interactPoint.position);
 
-        interactRect.position = Camera.main.WorldToScreenPoint(interactPoint.position);
-
-        if (input.actions["Interact"].WasPressedThisFrame())
+        /*if (input.actions["Interact"].WasPressedThisFrame())
         {
-            if(conversacionTerminada)
-            {
-                if( Timeline != null)
-                {
-                    Timeline.SetActive(true);
-                }
-
-                dialoguePanel.SetActive(false);
-            }
             if (isDialogueActive)
             {
                 NextLine();
@@ -61,14 +45,35 @@ public class InteractDialogo : MonoBehaviour
             {
                 StartDialogue();
             }
+        }*/
+    }
+    public void Interact()
+    {
+        if (dialogueData == null || (PauseController.IsGamePaused && !isDialogueActive))
+        {
+            return;
         }
+
+        if (isDialogueActive)
+        {
+            NextLine();
+        }
+        else
+        {
+            StartDialogue();
+        }
+    }
+
+    public bool CanInteract()
+    {
+        return !isDialogueActive;
     }
 
     void StartDialogue()
     {
         isDialogueActive = true;
 
-        bocadilloComic.SetActive(false);
+        //bocadilloComic.SetActive(false);
 
         dialogueIndex = 0;
 
@@ -76,13 +81,19 @@ public class InteractDialogo : MonoBehaviour
         portraitImage.sprite = dialogueData.npcPortrait;
 
         dialoguePanel.SetActive(true);
-        player.GetComponent<PlayerMove>().canMove = false;
+        PauseController.SetPause(true);
 
         StartCoroutine(TypeLine());
     }
 
     void NextLine()
     {
+        if (autoProgressCoroutine != null)
+        {
+            StopCoroutine(autoProgressCoroutine);
+            autoProgressCoroutine = null;
+        }
+
         SoundEffectManager.StopVoice(); //PARA EL VOICE ACTING SI SE PULSA ANTES DE QUE TERMINE DE ESCRIBIR
 
         if (isTyping)
@@ -95,7 +106,6 @@ public class InteractDialogo : MonoBehaviour
             if (dialogueIndex >= dialogueData.dialogueLines.Length - 1)
             {
                 conversacionTerminada = true;
-                terminaConver.SetActive(true);
             }
         }
         else if(++dialogueIndex < dialogueData.dialogueLines.Length)
@@ -129,13 +139,11 @@ public class InteractDialogo : MonoBehaviour
         if(dialogueIndex >= dialogueData.dialogueLines.Length - 1)
         {
             conversacionTerminada = true;
-            terminaConver.SetActive(true);
         }
 
         if (dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
         {
-            yield return new WaitForSeconds(currentClip.length);
-            NextLine();
+            autoProgressCoroutine = StartCoroutine(AutoProgress(currentClip.length));
         }
     }
 
@@ -145,25 +153,13 @@ public class InteractDialogo : MonoBehaviour
         isDialogueActive = false;
         dialogueText.SetText(string.Empty);
         dialoguePanel.SetActive(false);
-        player.GetComponent<PlayerMove>().canMove = true;
-        input.SwitchCurrentActionMap("Player");
+        PauseController.SetPause(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    IEnumerator AutoProgress(float delay)
     {
-        if (other.CompareTag("Player"))
-        {
-            closePlayer = true;
-            bocadilloComic.SetActive(true);
-        }
-    }
+        yield return new WaitForSeconds(delay);
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            closePlayer = false;
-            bocadilloComic.SetActive(false);
-        }
+        NextLine();
     }
 }
