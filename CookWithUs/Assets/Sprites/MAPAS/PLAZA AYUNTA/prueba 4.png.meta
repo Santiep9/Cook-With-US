@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bdb6051a320284049ada5dd65decdd9b
+guid: 7f14aaba299f5054c99053cd2658690e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6878711809890892566
-    second: DONUT MASK_0
+      213: 4480727342672645360
+    second: prueba 4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DONUT MASK_0
+      name: prueba 4_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 204
+        y: 444
         width: 1178
-        height: 1594
+        height: 1354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae44b2bcd08e980a0800000000000000
-      internalID: -6878711809890892566
+      spriteID: 0fc026b37cdbe2e30800000000000000
+      internalID: 4480727342672645360
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DONUT MASK_0: -6878711809890892566
+      prueba 4_0: 4480727342672645360
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
