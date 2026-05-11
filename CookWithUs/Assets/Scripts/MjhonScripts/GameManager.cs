@@ -149,6 +149,8 @@ public class GameManager : MonoBehaviour
                     HidePaso(Buttons[4]);
                     HidePaso(Buttons[7]);
                     ShowSuspect1(Buttons[8], Buttons[9], Buttons[10], Buttons[11]);
+                    ShowLibreta(Buttons[12]);
+                    HideLibreta(Buttons[14]);
                     SuspectListener(Buttons[8], Buttons[9], Buttons[10], Buttons[11]);
                     break;
                 }
@@ -277,6 +279,14 @@ public class GameManager : MonoBehaviour
         Buttons[4].interactable = false;
         Buttons[5].interactable = false;
         Buttons[6].interactable = false;
+        Buttons[14].interactable = false;
+        if (Buttons[8] != null)
+        {
+            Buttons[8].interactable = false;
+            Buttons[9].interactable = false;
+            Buttons[10].interactable = false;
+            Buttons[11].interactable = false;
+        }
     }
     public void HideCanvas(GameObject canvas)
     {
@@ -288,6 +298,14 @@ public class GameManager : MonoBehaviour
         Buttons[4].interactable = true;
         Buttons[5].interactable = true;
         Buttons[6].interactable = true;
+        Buttons[14].interactable = true;
+        if (Buttons[8] != null)
+        {
+            Buttons[8].interactable = true;
+            Buttons[9].interactable = true;
+            Buttons[10].interactable = true;
+            Buttons[11].interactable = true;
+        }
     }
     private void HideSuspect1(Button spc1, Button spc2 , Button spc3, Button spc4)
     {
