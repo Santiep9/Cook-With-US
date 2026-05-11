@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 17b68059fdabecb4ea09b53d6033c04f
+guid: 1d09ef5e70e335b409a51eff091c7ec8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9008412873555491923
-    second: Almeja_0
+      213: -592862213573508140
+    second: Concha_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Almeja_0
+      name: Concha_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35cb456a7cf440d70800000000000000
-      internalID: 9008412873555491923
+      spriteID: 4d3033735fab5c7f0800000000000000
+      internalID: -592862213573508140
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Almeja_0: 9008412873555491923
+      Concha_0: -592862213573508140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

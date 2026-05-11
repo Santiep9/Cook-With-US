@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Texts[0].enabled = false; Texts[1].enabled = false; Texts[4].enabled = false; Texts[6].enabled = false; Texts[7].enabled = false;
+        Texts[0].enabled = false; Texts[1].enabled = false; Texts[4].enabled = false; Texts[6].enabled = false; Texts[7].enabled = false; // bucle for para esto
         Listener(Buttons[0], Buttons[1], Buttons[2], Buttons[3], Buttons[4], Buttons[5], Buttons[6], Buttons[13], Buttons[15]);
         PasoListener(Buttons[7]);
         ShowButton(Buttons[0], Buttons[1], Buttons[2], Buttons[3], Buttons[4], Buttons[5], Buttons[6], Buttons[13], Buttons[15]);
@@ -362,7 +362,7 @@ public class GameManager : MonoBehaviour
         btn7.gameObject.SetActive(true);
         btn7.interactable = true;
     }
-    private void Listener(Button uno, Button dos, Button tres, Button cuatro, Button cinco , Button seis, Button siete, Button ocho, Button nueve)
+    private void Listener(Button uno, Button dos, Button tres, Button cuatro, Button cinco , Button seis, Button siete, Button ocho, Button nueve) //array
     {
         Texts[1].enabled = false;
 
