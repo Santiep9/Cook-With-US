@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
             case "Paso":
                 Texts[1].enabled = false;
                 TextDisplayer(Object);
+                HidePaso(Buttons[4]);
                 ShowPaso(Buttons[7]);
                 break;
             case "Paso1":
@@ -153,8 +154,7 @@ public class GameManager : MonoBehaviour
                 }
                 ShowButton(Buttons[0], Buttons[1], Buttons[2], Buttons[3], Buttons[4], Buttons[5], Buttons[6], Buttons[13], Buttons[15]);
                 ShowLibreta(Buttons[12]);
-                Texts[0].enabled = true;
-                Texts[1].enabled = false;
+                Texts[0].enabled = false;
                 HidePaso(Buttons[7]);
                 break;
             case "Si":
