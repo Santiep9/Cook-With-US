@@ -24,6 +24,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private GameObject boton2;
 
 
+    [SerializeField] private GameController gameController;
+
     public List<GameObject> botones = new List<GameObject>();
 
     public RectTransform[] posiciones;
@@ -77,6 +79,10 @@ public class BattleSystem : MonoBehaviour
 
         GameObject nuevoBotonBUENO = Instantiate(boton1, tmpCanvas.transform);
 
+        Timer timerBueno = nuevoBotonBUENO.GetComponentInChildren<Timer>();
+
+        timerBueno.Setup(this, gameController, true);
+
         botones.Add(nuevoBotonBUENO);
 
         TMP_Text textoHijo = nuevoBotonBUENO.transform.GetChild(0).GetComponent<TMP_Text>();
@@ -88,6 +94,10 @@ public class BattleSystem : MonoBehaviour
             contadorTEXTO++;
 
             GameObject nuevoBotonMALO = Instantiate(boton2, tmpCanvas.transform);
+
+            Timer timerMalo = nuevoBotonMALO.GetComponentInChildren<Timer>();
+
+            timerMalo.Setup(this, gameController, false);
 
             botones.Add(nuevoBotonMALO);
 

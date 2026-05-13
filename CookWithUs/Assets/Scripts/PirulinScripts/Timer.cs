@@ -1,54 +1,54 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
     float currentTime;
-    float startingTime;
+    [SerializeField] float startingTime = 5f;
 
-    [SerializeField] TextMeshProUGUI countdownText;
+    [SerializeField] Slider sliderTimer;
 
-    [SerializeField] BattleSystem bs;
-    [SerializeField] GameController gameController;
+    BattleSystem bs;
+    GameController gc;
 
-    bool turnoActivo;
+    bool timerFinished;
+    bool isMainTimer;
+
+    public void Setup(BattleSystem battleSystem, GameController gameController, bool mainTimer)
+    {
+        bs = battleSystem;
+        gc = gameController;
+        isMainTimer = mainTimer;
+    }
+
 
     private void Start()
     {
-        startingTime = 5f;
         currentTime = startingTime;
+
+        sliderTimer.maxValue = startingTime;
+        sliderTimer.value = startingTime;
     }
 
     private void Update()
     {
-        if(bs.currentState == BattleState.PLAYERTURN)
-        {
-            countdownText.gameObject.SetActive(true);
+        if (timerFinished) return;
 
-            if (!turnoActivo)
+        currentTime -= Time.deltaTime;
+
+        sliderTimer.value = currentTime;
+
+        if(currentTime <= 0)
+        {
+            timerFinished = true;
+
+            if(isMainTimer)
             {
-                currentTime = startingTime;
-                turnoActivo = true;
+                bs.ElegirRespuesta(false);
+                gc.IncreaseProgressAmount(-25);
             }
-
-            CuentaAtras();
         }
-        else
-        {
-            countdownText.gameObject.SetActive(false);
-            turnoActivo = false;
-        }
-    }
-    public float CuentaAtras()
-    {
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
-
-        if (currentTime <= 0)
-        {
-            bs.ElegirRespuesta(false);
-            gameController.IncreaseProgressAmount(-25);
-        }
-        return currentTime;
     }
 }
