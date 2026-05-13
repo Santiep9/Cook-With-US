@@ -5,7 +5,8 @@ using System.Collections.Generic;
 public class CambioEscenas : MonoBehaviour
 {
     public float TiempoEscena;
-    public string NombreEscena;
+    public NPCDialogue dialogueData;
+    //public string NombreEscena;
    
 
     void Update()
@@ -13,7 +14,9 @@ public class CambioEscenas : MonoBehaviour
         TiempoEscena -= Time.deltaTime;
         if (TiempoEscena <= 0)
         {
-            SceneManager.LoadScene(NombreEscena);
+            //SceneManager.LoadScene(NombreEscena);
+            dialogueData.timelineTerminada = true;
+            gameObject.SetActive(false);
         }
     }
 }

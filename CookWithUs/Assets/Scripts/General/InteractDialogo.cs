@@ -9,7 +9,7 @@ public class InteractDialogo : MonoBehaviour, IInteractable
     public NPCDialogue dialogueData;
 
     public GameObject dialoguePanel;
-    //public GameObject Timeline;
+    public GameObject Timeline;
     //public GameObject bocadilloComic;
 
     //public Transform interactPoint;
@@ -20,8 +20,6 @@ public class InteractDialogo : MonoBehaviour, IInteractable
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
-
-    public bool conversacionTerminada = false;
 
     private int voiceNumber;
     private Coroutine autoProgressCoroutine;
@@ -103,10 +101,10 @@ public class InteractDialogo : MonoBehaviour, IInteractable
             voiceNumber++;
             isTyping = false;
 
-            if (dialogueIndex >= dialogueData.dialogueLines.Length - 1)
+            /*if (dialogueIndex >= dialogueData.dialogueLines.Length - 1)
             {
-                conversacionTerminada = true;
-            }
+                dialogueData.necesitaTimeline = true;
+            }*/
         }
         else if(++dialogueIndex < dialogueData.dialogueLines.Length)
         {
@@ -136,10 +134,10 @@ public class InteractDialogo : MonoBehaviour, IInteractable
 
         isTyping = false;
 
-        if(dialogueIndex >= dialogueData.dialogueLines.Length - 1)
+        /*if(dialogueIndex >= dialogueData.dialogueLines.Length - 1)
         {
-            conversacionTerminada = true;
-        }
+            dialogueData.conversacionTerminada = true;
+        }*/
 
         if (dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
         {
@@ -149,6 +147,27 @@ public class InteractDialogo : MonoBehaviour, IInteractable
 
     public void EndDialogue()
     {
+        if(dialogueData.necesitaTimeline)
+        {
+            StartCoroutine(WaitForTimeline());
+        }
+        else
+        {
+            StopAllCoroutines();
+            isDialogueActive = false;
+            dialogueText.SetText(string.Empty);
+            dialoguePanel.SetActive(false);
+            PauseController.SetPause(false);
+        }
+    }
+
+    IEnumerator WaitForTimeline()
+    {
+        Timeline.SetActive(true);
+
+        yield return new WaitUntil(() => dialogueData.timelineTerminada);
+
+        dialogueData.necesitaTimeline = false;
         StopAllCoroutines();
         isDialogueActive = false;
         dialogueText.SetText(string.Empty);

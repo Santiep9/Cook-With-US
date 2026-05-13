@@ -845,7 +845,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.7246094
+  orthographic size: 2.109375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2076,7 +2076,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.375, y: 0.625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2098,6 +2098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractDialogo
   dialogueData: {fileID: 11400000, guid: 5552899023f3a0442bb77a643b6901d1, type: 2}
   dialoguePanel: {fileID: 1357936603}
+  Timeline: {fileID: 0}
   dialogueText: {fileID: 1487298099}
   nameText: {fileID: 2007607635}
   portraitImage: {fileID: 1444249707}
@@ -2149,7 +2150,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: c2ffa78e7bcfec246a8c1242285e9451, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 989d8bea4aae6c04884789e2c4e15dfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3455,12 +3456,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeLine JUSEP
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2442952413746395636, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+--- !u!1 &1332167424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+  m_PrefabInstance: {fileID: 1281731613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1349771837
 GameObject:
   m_ObjectHideFlags: 0
@@ -4789,6 +4794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractDialogo
   dialogueData: {fileID: 11400000, guid: 7f66ef579c5e91b4cabbefb9a40e5744, type: 2}
   dialoguePanel: {fileID: 1357936603}
+  Timeline: {fileID: 1332167424}
   dialogueText: {fileID: 1487298099}
   nameText: {fileID: 2007607635}
   portraitImage: {fileID: 1444249707}
@@ -6143,6 +6149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractDialogo
   dialogueData: {fileID: 11400000, guid: d9f739e601b57004cb07a34c11fa2750, type: 2}
   dialoguePanel: {fileID: 1357936603}
+  Timeline: {fileID: 0}
   dialogueText: {fileID: 1487298099}
   nameText: {fileID: 2007607635}
   portraitImage: {fileID: 1444249707}

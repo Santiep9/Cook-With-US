@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambioEscenas
   TiempoEscena: 10
-  NombreEscena: Jusep Minigame
+  dialogueData: {fileID: 11400000, guid: 7f66ef579c5e91b4cabbefb9a40e5744, type: 2}
 --- !u!1 &8239180705659659246
 GameObject:
   m_ObjectHideFlags: 0
