@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI[] Texts;
 
+    [SerializeField] AudioClip[] QuestionAudios;
+    [SerializeField] AudioClip[] AnswerAudios;
+
     [SerializeField] Areas areas;
 
     int Object;
@@ -132,6 +135,7 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case "Paso":
+                SoundEffectManager.StopVoice();
                 Texts[1].enabled = false;
                 TextDisplayer(Object);
                 HidePaso(Buttons[4]);
@@ -140,6 +144,7 @@ public class GameManager : MonoBehaviour
             case "Paso1":
                 if (contador >= 10)
                 {
+                    SoundEffectManager.StopVoice();
                     Images[1].gameObject.SetActive(false);
                     Texts[0].enabled = false;
                     Texts[2].enabled = false;              
@@ -154,6 +159,7 @@ public class GameManager : MonoBehaviour
                     SuspectListener(Buttons[8], Buttons[9], Buttons[10], Buttons[11]);
                     break;
                 }
+                SoundEffectManager.StopVoice();
                 ShowButton(Buttons[0], Buttons[1], Buttons[2], Buttons[3], Buttons[4], Buttons[5], Buttons[6], Buttons[13], Buttons[15]);
                 ShowLibreta(Buttons[12]);
                 Texts[0].enabled = false;
@@ -205,18 +211,31 @@ public class GameManager : MonoBehaviour
             {
                 case Player.John:
                 Texts[1].text = Questions1[button_n];
-                    break;
+                AudioClip audioToPlay = QuestionAudios[button_n];
+                Debug.Log(button_n + (int)current_player);
+                SoundEffectManager.PlayVoice(audioToPlay);
+                break;
                 case Player.John2:
                 Texts[1].text = Questions2[button_n];
+                AudioClip audioToPlay1 = QuestionAudios[button_n + 4];
+                Debug.Log(button_n + 3);
+                SoundEffectManager.PlayVoice(audioToPlay1);
                     break;
                 case Player.John3:
                 Texts[1].text = Questions3[button_n];
+                AudioClip audioToPlay2 = QuestionAudios[button_n + 8];
+                Debug.Log(button_n + 7);
+                SoundEffectManager.PlayVoice(audioToPlay2);
                     break;
                 case Player.John4:
                 Texts[1].text = Questions4[button_n];
+                AudioClip audioToPlay3 = QuestionAudios[button_n + 12];
+                Debug.Log(button_n + 11);
+                SoundEffectManager.PlayVoice(audioToPlay3);
                     break;
             }
     }
+
     void TextDisplayer(int button_n)
     {
 
@@ -226,21 +245,29 @@ public class GameManager : MonoBehaviour
                 Texts[0].enabled = true;
                 Texts[0].text = ObjectNames1[button_n];
                 Images[2].sprite = Spris[0];
+                AudioClip audioToPlay = AnswerAudios[button_n];
+                SoundEffectManager.PlayVoice(audioToPlay);
                 break;
             case Player.John2:
                 Texts[0].enabled = true;
                 Texts[0].text = ObjectNames2[button_n];
                 Images[2].sprite = Spris[1];
+                AudioClip audioToPlay1 = AnswerAudios[button_n + 4];
+                SoundEffectManager.PlayVoice(audioToPlay1);
                 break;
             case Player.John3:
                 Texts[0].enabled = true;
                 Texts[0].text = ObjectNames3[button_n];
                 Images[2].sprite = Spris[2];
+                AudioClip audioToPlay2 = AnswerAudios[button_n + 8];
+                SoundEffectManager.PlayVoice(audioToPlay2);
                 break;
             case Player.John4:
                 Texts[0].enabled = true;
                 Texts[0].text = ObjectNames4[button_n];
                 Images[2].sprite = Spris[3];
+                AudioClip audioToPlay3 = AnswerAudios[button_n + 12];
+                SoundEffectManager.PlayVoice(audioToPlay3);
                 break;
         }
     }
