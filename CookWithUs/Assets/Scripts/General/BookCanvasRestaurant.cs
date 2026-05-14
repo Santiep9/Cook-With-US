@@ -39,6 +39,7 @@ public class BookCanvasRestaurant : MonoBehaviour, IInteractable
     public OptionMapa mapaPirulin;
     public OptionMapa mapaJusep;
     public OptionMapa mapaMJohn;
+
     public bool CanInteract()
     {
         return !isCanvasActive;
@@ -106,6 +107,6 @@ public class BookCanvasRestaurant : MonoBehaviour, IInteractable
 
     void FinalJuego()
     {
-       LibroConversacion.gameObject.SetActive(true);
+        LibroConversacion.gameObject.SetActive(true);
     }
 }

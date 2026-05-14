@@ -9,6 +9,9 @@ public class RestaurantManager : MonoBehaviour
     public GameObject mJohnRestaurante;
     public GameObject jusepRestaurante;
 
+    public GameObject libroInicial;
+    public GameObject libroFinal;
+
     public Transform player;
     public Transform restaurantDoor;
 
@@ -18,18 +21,28 @@ public class RestaurantManager : MonoBehaviour
         {
             ResetAreaValues();
         }
+
+        if(areas.pirulinCompleted && areas.mjohnCompleted && areas.jusepCompleted)
+        {
+            libroInicial.SetActive(false);
+            libroFinal.SetActive(true);
+        }
+
         if(areas.pirulinCompleted)
         {
             pirulinRestaurante.SetActive(true);
         }
+
         if(areas.mjohnCompleted)
         {
             mJohnRestaurante.SetActive(true);
         }
+
         if(areas.jusepCompleted)
         {
             jusepRestaurante.SetActive(true);
         }
+
         if(doorData.puertaRestaurante)
         {
             player.transform.position = restaurantDoor.position;
