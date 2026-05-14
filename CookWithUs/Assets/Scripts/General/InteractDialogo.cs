@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InteractDialogo : MonoBehaviour, IInteractable
@@ -23,6 +24,9 @@ public class InteractDialogo : MonoBehaviour, IInteractable
 
     private int voiceNumber;
     private Coroutine autoProgressCoroutine;
+
+    public bool necesitaMinijuego = false;
+    public string NombreEscena;
 
     private void Start()
     {
@@ -153,11 +157,19 @@ public class InteractDialogo : MonoBehaviour, IInteractable
         }
         else
         {
-            StopAllCoroutines();
-            isDialogueActive = false;
-            dialogueText.SetText(string.Empty);
-            dialoguePanel.SetActive(false);
-            PauseController.SetPause(false);
+            if(necesitaMinijuego)
+            {
+                SceneManager.LoadScene(NombreEscena);
+            }
+            else
+            {
+                StopAllCoroutines();
+                isDialogueActive = false;
+                dialogueText.SetText(string.Empty);
+                dialoguePanel.SetActive(false);
+                PauseController.SetPause(false);
+            }
+                
         }
     }
 

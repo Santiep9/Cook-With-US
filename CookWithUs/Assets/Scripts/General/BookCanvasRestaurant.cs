@@ -6,7 +6,7 @@ using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class BookCanvasRestaurant : MonoBehaviour, IInteractable
 {
-    public bool isCanvasActive { get; private set; } 
+    public bool isCanvasActive { get; private set; }
     public GameObject canvas;
     public Areas areas;
 

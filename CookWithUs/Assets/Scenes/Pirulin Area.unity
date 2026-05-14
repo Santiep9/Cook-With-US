@@ -3494,7 +3494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1660043415
 Animator:
   serializedVersion: 7
@@ -3654,6 +3654,8 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  necesitaMinijuego: 1
+  NombreEscena: Pirulin Minigame
 --- !u!1 &1710642025
 GameObject:
   m_ObjectHideFlags: 0
@@ -4941,7 +4943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7379164476506103132, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.01309
+      value: -14.13
       objectReference: {fileID: 0}
     - target: {fileID: 7379164476506103132, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
       propertyPath: m_LocalPosition.y

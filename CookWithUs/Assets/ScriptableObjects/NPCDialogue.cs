@@ -14,4 +14,5 @@ public class NPCDialogue : ScriptableObject
 
     public bool necesitaTimeline = false;
     public bool timelineTerminada = false;
+    public bool timelineYminijuego = false;
 }

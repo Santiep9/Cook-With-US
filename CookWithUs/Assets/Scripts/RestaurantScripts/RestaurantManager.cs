@@ -38,6 +38,8 @@ public class RestaurantManager : MonoBehaviour
 
     void ResetAreaValues()
     {
+        PauseController.SetPause(false);
+
         areas.pirulinSelected = false;
         areas.mjohnSelected = false;
         areas.jusepSelected = false;

@@ -732,9 +732,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RestaurantManager
   areas: {fileID: 11400000, guid: 61bdbd5adf6cc154f859a730927e04ec, type: 2}
   doorData: {fileID: 11400000, guid: 36f4fd95e0cc43b4fa6f23331019a867, type: 2}
-  pirulinRestaurante: {fileID: 0}
+  pirulinRestaurante: {fileID: 802768853}
   mJohnRestaurante: {fileID: 7158058641825352133}
-  jusepRestaurante: {fileID: 0}
+  jusepRestaurante: {fileID: 1700229514}
   player: {fileID: 770045766}
   restaurantDoor: {fileID: 1502710130}
 --- !u!1 &192378431
@@ -2118,6 +2118,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1487298099}
   nameText: {fileID: 2007607635}
   portraitImage: {fileID: 1444249707}
+  necesitaMinijuego: 0
+  NombreEscena: 
 --- !u!212 &802768857
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4893,6 +4895,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1487298099}
   nameText: {fileID: 2007607635}
   portraitImage: {fileID: 1444249707}
+  necesitaMinijuego: 0
+  NombreEscena: 
 --- !u!212 &1700229518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6251,6 +6255,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1487298099}
   nameText: {fileID: 2007607635}
   portraitImage: {fileID: 1444249707}
+  necesitaMinijuego: 0
+  NombreEscena: 
 --- !u!1 &5192353638869995532
 GameObject:
   m_ObjectHideFlags: 0

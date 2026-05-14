@@ -31,22 +31,23 @@ public class Door : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            FadeTransition(other.gameObject);
+            //FadeTransition(other.gameObject);
+            SceneManager.LoadScene(NombreEscena);
         }
     }
 
-    async void FadeTransition(GameObject player)
+    /*async void FadeTransition(GameObject player)
     {
         PauseController.SetPause(true);
 
         await ScreenFader.Instance.FadeOut();
 
-        SceneManager.LoadScene(NombreEscena);
+        
 
         await Task.Yield();
 
         await ScreenFader.Instance.FadeIn();
 
         PauseController.SetPause(false);
-    }
+    }*/
 }
