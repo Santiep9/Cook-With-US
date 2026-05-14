@@ -66,9 +66,14 @@ public class Bomb : MonoBehaviour
 
                 if (col.CompareTag("Enemy"))
                 {
-                    Destroy(col.gameObject);
-                    areas.jusepCompleted = true;
-                    SceneManager.LoadScene("Restaurant");
+                    EnemyMove enemy = col.GetComponent<EnemyMove>();
+
+                    if (enemy != null)
+                    {
+                        enemy.TakeDamage();
+                    }
+
+                    return;
                 }
 
                 if (col.CompareTag("Breakable"))

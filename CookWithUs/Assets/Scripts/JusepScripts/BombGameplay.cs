@@ -10,8 +10,6 @@ public class BombGameplay : MonoBehaviour
 
     [Header("Bomb")]
     public GameObject bomb;
-    public Transform bombPos;
-    public float bombOffset = 1f;
     public LayerMask wallLayer;
     public float bombCheckRadius = 0.2f;
 
@@ -23,10 +21,16 @@ public class BombGameplay : MonoBehaviour
     private SpriteRenderer sr;
     private Vector2 moveInput;
 
+    private Animator anim;
+    private bool isDead = false;
+    public bool isBusy = false;
+    private Vector2 lastMoveDir = Vector2.down;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void Start()
@@ -38,6 +42,28 @@ public class BombGameplay : MonoBehaviour
     {
         Move();
         FlipSprite();
+        UpdateAnimations();
+    }
+
+    void UpdateAnimations()
+    {
+        bool isMoving = moveInput.sqrMagnitude > 0.01f;
+
+        if (isMoving)
+        {
+            if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
+            {
+                lastMoveDir = new Vector2(Mathf.Sign(moveInput.x), 0);
+            }
+            else
+            {
+                lastMoveDir = new Vector2(0, Mathf.Sign(moveInput.y));
+            }
+        }
+
+        anim.SetFloat("MoveX", lastMoveDir.x);
+        anim.SetFloat("MoveY", lastMoveDir.y);
+        anim.SetBool("IsMoving", isMoving);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -50,8 +76,7 @@ public class BombGameplay : MonoBehaviour
         if (!context.performed) return;
         if (currentBombs >= maxBombs) return;
 
-        Vector2 rawPos = bombPos.position;
-        Vector2 spawnPos = SnapToGrid(rawPos);
+        Vector2 spawnPos = SnapToGrid(transform.position);
 
         Collider2D hit = Physics2D.OverlapCircle(spawnPos, bombCheckRadius, wallLayer);
         if (hit != null) return;
@@ -69,39 +94,37 @@ public class BombGameplay : MonoBehaviour
 
     private void Move()
     {
+        if (isDead || isBusy)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
     }
 
-    private void FlipSprite()
+    public void PlayWinAnimation()
     {
-        if (sr == null) return;
-        if (moveInput.sqrMagnitude < 0.01f) return;
+        if (isBusy) return;
 
-        if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
-        {
-            if (moveInput.x < 0)
-            {
-                sr.flipX = true;
-                bombPos.localPosition = new Vector3(-bombOffset, 0f, 0f);
-            }
-            else
-            {
-                sr.flipX = false;
-                bombPos.localPosition = new Vector3(bombOffset, 0f, 0f);
-            }
-        }
-        else
-        {
-            if (moveInput.y > 0)
-            {
-                bombPos.localPosition = new Vector3(0f, bombOffset, 0f);
-            }
-            else
-            {
-                bombPos.localPosition = new Vector3(0f, -bombOffset, 0f);
-            }
-        }
+        isBusy = true;
+
+        rb.linearVelocity = Vector2.zero;
+
+        anim.SetTrigger("Win");
     }
+
+    private void FlipSprite()
+{
+    if (moveInput.x < 0)
+    {
+        sr.flipX = true;
+    }
+    else if (moveInput.x > 0)
+    {
+        sr.flipX = false;
+    }
+}
 
     private void HandleBombExplode()
     {
@@ -110,6 +133,14 @@ public class BombGameplay : MonoBehaviour
 
     public void Die()
     {
+        if (isDead) return;
+
+        isDead = true;
+
+        rb.linearVelocity = Vector2.zero;
+
+        anim.SetTrigger("Die");
+
         StartCoroutine(RestartScene());
     }
 

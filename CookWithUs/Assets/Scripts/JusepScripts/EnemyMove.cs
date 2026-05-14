@@ -1,17 +1,31 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMove : MonoBehaviour
 {
     [Header("Referencias")]
     public Transform player;
     public GameObject bombPrefab;
+    public Areas areas;
 
     [Header("Movimiento")]
     public float moveSpeed = 5f;
 
     [Header("IA")]
     public float thinkRate = 0.2f;
+
+    [Header("Vidas")]
+    public int maxLives = 3;
+
+    private static int currentLives;
+    private static bool initialized = false;
+
+    [Header("Vidas UI")]
+    public SpriteRenderer[] lifeRenderers;
+    public Sprite lifeOn;
+    public Sprite lifeOff;
 
     private Vector2 targetPos;
     private float thinkTimer;
@@ -27,6 +41,17 @@ public class EnemyMove : MonoBehaviour
         Vector2.left,
         Vector2.right
     };
+
+    void Awake()
+    {
+        if (!initialized)
+        {
+            currentLives = maxLives;
+            initialized = true;
+        }
+
+        UpdateLifeUI();
+    }
 
     void Start()
     {
@@ -220,6 +245,7 @@ public class EnemyMove : MonoBehaviour
                 queue.Enqueue(next);
             }
         }
+
         escapeTarget = start;
     }
 
@@ -232,22 +258,71 @@ public class EnemyMove : MonoBehaviour
         if (pos.x == bombPos.x)
         {
             float dist = Mathf.Abs(pos.y - bombPos.y);
-            if (dist <= 3) return true;
+
+            if (dist <= 3)
+                return true;
         }
 
         if (pos.y == bombPos.y)
         {
             float dist = Mathf.Abs(pos.x - bombPos.x);
-            if (dist <= 3) return true;
+
+            if (dist <= 3)
+                return true;
         }
 
         return false;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void TakeDamage()
     {
-        if (collision.CompareTag("Explosion"))
+        BombGameplay playerScript = player.GetComponent<BombGameplay>();
+
+        if (playerScript != null)
         {
-            Destroy(gameObject);
+            playerScript.PlayWinAnimation();
+        }
+
+        currentLives--;
+
+        UpdateLifeUI();
+
+        StartCoroutine(HandleDamageSequence());
+    }
+
+    IEnumerator HandleDamageSequence()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        if (currentLives <= 0)
+        {
+            initialized = false;
+
+            if (areas != null)
+            {
+                areas.jusepCompleted = true;
+            }
+
+            SceneManager.LoadScene("Restaurant");
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    void UpdateLifeUI()
+    {
+        for (int i = 0; i < lifeRenderers.Length; i++)
+        {
+            if (i < currentLives)
+            {
+                lifeRenderers[i].sprite = lifeOn;
+            }
+            else
+            {
+                lifeRenderers[i].sprite = lifeOff;
+            }
         }
     }
 

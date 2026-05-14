@@ -289,12 +289,12 @@ TextureImporter:
       name: sprites bomberman_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 200
-        width: 18
-        height: 33
+        x: 6
+        y: 201
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -311,12 +311,12 @@ TextureImporter:
       name: sprites bomberman_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 164
-        width: 22
-        height: 36
+        x: 26
+        y: 201
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -333,12 +333,12 @@ TextureImporter:
       name: sprites bomberman_2
       rect:
         serializedVersion: 2
-        x: 25
-        y: 200
-        width: 18
-        height: 33
+        x: 49
+        y: 201
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -355,12 +355,12 @@ TextureImporter:
       name: sprites bomberman_3
       rect:
         serializedVersion: 2
-        x: 47
-        y: 164
-        width: 22
-        height: 36
+        x: 68
+        y: 201
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -377,12 +377,12 @@ TextureImporter:
       name: sprites bomberman_4
       rect:
         serializedVersion: 2
-        x: 48
-        y: 200
-        width: 18
-        height: 33
+        x: 91
+        y: 201
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -399,12 +399,12 @@ TextureImporter:
       name: sprites bomberman_5
       rect:
         serializedVersion: 2
-        x: 67
-        y: 200
-        width: 18
-        height: 33
+        x: 111
+        y: 201
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -421,12 +421,12 @@ TextureImporter:
       name: sprites bomberman_6
       rect:
         serializedVersion: 2
-        x: 90
-        y: 200
-        width: 18
-        height: 33
+        x: 186
+        y: 197
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -443,12 +443,12 @@ TextureImporter:
       name: sprites bomberman_7
       rect:
         serializedVersion: 2
-        x: 90
-        y: 164
-        width: 18
-        height: 37
+        x: 222
+        y: 197
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -465,12 +465,12 @@ TextureImporter:
       name: sprites bomberman_8
       rect:
         serializedVersion: 2
-        x: 110
-        y: 200
-        width: 18
-        height: 33
+        x: 257
+        y: 197
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -487,12 +487,12 @@ TextureImporter:
       name: sprites bomberman_9
       rect:
         serializedVersion: 2
-        x: 111
-        y: 164
-        width: 18
-        height: 37
+        x: 293
+        y: 197
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -509,12 +509,12 @@ TextureImporter:
       name: sprites bomberman_10
       rect:
         serializedVersion: 2
-        x: 185
-        y: 196
-        width: 34
-        height: 34
+        x: 4
+        y: 165
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -531,12 +531,12 @@ TextureImporter:
       name: sprites bomberman_11
       rect:
         serializedVersion: 2
-        x: 221
-        y: 196
-        width: 34
+        x: 25
+        y: 165
+        width: 20
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -553,12 +553,12 @@ TextureImporter:
       name: sprites bomberman_12
       rect:
         serializedVersion: 2
-        x: 256
-        y: 196
-        width: 34
+        x: 48
+        y: 165
+        width: 20
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -575,12 +575,12 @@ TextureImporter:
       name: sprites bomberman_13
       rect:
         serializedVersion: 2
-        x: 292
-        y: 196
-        width: 34
-        height: 34
+        x: 69
+        y: 165
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -597,12 +597,12 @@ TextureImporter:
       name: sprites bomberman_14
       rect:
         serializedVersion: 2
-        x: 3
-        y: 164
-        width: 22
-        height: 34
+        x: 91
+        y: 165
+        width: 16
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -619,12 +619,12 @@ TextureImporter:
       name: sprites bomberman_15
       rect:
         serializedVersion: 2
-        x: 68
-        y: 164
-        width: 22
-        height: 34
+        x: 112
+        y: 165
+        width: 16
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -641,12 +641,12 @@ TextureImporter:
       name: sprites bomberman_16
       rect:
         serializedVersion: 2
-        x: 184
-        y: 151
-        width: 34
-        height: 34
+        x: 185
+        y: 152
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -663,12 +663,12 @@ TextureImporter:
       name: sprites bomberman_17
       rect:
         serializedVersion: 2
-        x: 220
-        y: 151
-        width: 34
-        height: 34
+        x: 221
+        y: 152
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -685,12 +685,12 @@ TextureImporter:
       name: sprites bomberman_18
       rect:
         serializedVersion: 2
-        x: 255
-        y: 151
-        width: 34
-        height: 34
+        x: 256
+        y: 152
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -707,12 +707,12 @@ TextureImporter:
       name: sprites bomberman_19
       rect:
         serializedVersion: 2
-        x: 290
-        y: 151
-        width: 35
-        height: 34
+        x: 291
+        y: 152
+        width: 33
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -729,12 +729,12 @@ TextureImporter:
       name: sprites bomberman_20
       rect:
         serializedVersion: 2
-        x: 4
-        y: 129
-        width: 22
-        height: 34
+        x: 5
+        y: 130
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -751,12 +751,12 @@ TextureImporter:
       name: sprites bomberman_21
       rect:
         serializedVersion: 2
-        x: 25
-        y: 129
-        width: 22
-        height: 34
+        x: 26
+        y: 130
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -773,12 +773,12 @@ TextureImporter:
       name: sprites bomberman_22
       rect:
         serializedVersion: 2
-        x: 47
-        y: 129
-        width: 22
-        height: 34
+        x: 48
+        y: 130
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -795,12 +795,12 @@ TextureImporter:
       name: sprites bomberman_23
       rect:
         serializedVersion: 2
-        x: 74
-        y: 129
-        width: 22
-        height: 34
+        x: 75
+        y: 130
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -817,12 +817,12 @@ TextureImporter:
       name: sprites bomberman_24
       rect:
         serializedVersion: 2
-        x: 95
-        y: 129
-        width: 22
-        height: 34
+        x: 96
+        y: 130
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -839,12 +839,12 @@ TextureImporter:
       name: sprites bomberman_25
       rect:
         serializedVersion: 2
-        x: 114
-        y: 129
-        width: 23
-        height: 34
+        x: 115
+        y: 130
+        width: 21
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -861,12 +861,12 @@ TextureImporter:
       name: sprites bomberman_26
       rect:
         serializedVersion: 2
-        x: 205
-        y: 72
-        width: 65
-        height: 65
+        x: 206
+        y: 73
+        width: 63
+        height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -883,12 +883,12 @@ TextureImporter:
       name: sprites bomberman_27
       rect:
         serializedVersion: 2
-        x: 1
-        y: 94
-        width: 31
-        height: 34
+        x: 2
+        y: 95
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -905,12 +905,12 @@ TextureImporter:
       name: sprites bomberman_28
       rect:
         serializedVersion: 2
-        x: 33
-        y: 94
-        width: 25
-        height: 34
+        x: 34
+        y: 95
+        width: 23
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -927,12 +927,12 @@ TextureImporter:
       name: sprites bomberman_29
       rect:
         serializedVersion: 2
-        x: 59
-        y: 94
-        width: 25
-        height: 34
+        x: 60
+        y: 95
+        width: 23
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -949,12 +949,12 @@ TextureImporter:
       name: sprites bomberman_30
       rect:
         serializedVersion: 2
-        x: 87
-        y: 92
-        width: 30
-        height: 24
+        x: 88
+        y: 93
+        width: 28
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -971,12 +971,12 @@ TextureImporter:
       name: sprites bomberman_31
       rect:
         serializedVersion: 2
-        x: 105
-        y: 94
-        width: 29
-        height: 28
+        x: 106
+        y: 95
+        width: 27
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -993,12 +993,12 @@ TextureImporter:
       name: sprites bomberman_32
       rect:
         serializedVersion: 2
-        x: 120
-        y: 95
-        width: 33
-        height: 32
+        x: 121
+        y: 96
+        width: 31
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1015,12 +1015,12 @@ TextureImporter:
       name: sprites bomberman_33
       rect:
         serializedVersion: 2
-        x: 1
-        y: 58
-        width: 31
-        height: 34
+        x: 2
+        y: 59
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1037,12 +1037,12 @@ TextureImporter:
       name: sprites bomberman_34
       rect:
         serializedVersion: 2
-        x: 34
-        y: 58
-        width: 26
-        height: 34
+        x: 35
+        y: 59
+        width: 24
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1059,12 +1059,12 @@ TextureImporter:
       name: sprites bomberman_35
       rect:
         serializedVersion: 2
-        x: 60
-        y: 59
-        width: 26
-        height: 34
+        x: 61
+        y: 60
+        width: 24
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1081,12 +1081,12 @@ TextureImporter:
       name: sprites bomberman_36
       rect:
         serializedVersion: 2
-        x: 92
-        y: 58
-        width: 33
-        height: 34
+        x: 93
+        y: 59
+        width: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1103,12 +1103,12 @@ TextureImporter:
       name: sprites bomberman_37
       rect:
         serializedVersion: 2
-        x: 124
-        y: 58
-        width: 33
-        height: 34
+        x: 125
+        y: 59
+        width: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1125,12 +1125,12 @@ TextureImporter:
       name: sprites bomberman_38
       rect:
         serializedVersion: 2
-        x: 156
-        y: 58
-        width: 33
-        height: 33
+        x: 157
+        y: 59
+        width: 31
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1147,12 +1147,12 @@ TextureImporter:
       name: sprites bomberman_39
       rect:
         serializedVersion: 2
-        x: 297
-        y: 55
-        width: 22
-        height: 22
+        x: 298
+        y: 56
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1169,12 +1169,12 @@ TextureImporter:
       name: sprites bomberman_40
       rect:
         serializedVersion: 2
-        x: 319
-        y: 55
-        width: 22
-        height: 22
+        x: 320
+        y: 56
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1191,12 +1191,12 @@ TextureImporter:
       name: sprites bomberman_41
       rect:
         serializedVersion: 2
-        x: 7
-        y: 22
-        width: 19
-        height: 34
+        x: 8
+        y: 23
+        width: 17
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1213,12 +1213,12 @@ TextureImporter:
       name: sprites bomberman_42
       rect:
         serializedVersion: 2
-        x: 30
-        y: 22
-        width: 23
-        height: 34
+        x: 31
+        y: 23
+        width: 21
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1235,12 +1235,12 @@ TextureImporter:
       name: sprites bomberman_43
       rect:
         serializedVersion: 2
-        x: 55
-        y: 22
-        width: 22
-        height: 34
+        x: 56
+        y: 23
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1257,12 +1257,12 @@ TextureImporter:
       name: sprites bomberman_44
       rect:
         serializedVersion: 2
-        x: 79
-        y: 22
-        width: 22
-        height: 34
+        x: 80
+        y: 23
+        width: 20
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1279,12 +1279,12 @@ TextureImporter:
       name: sprites bomberman_45
       rect:
         serializedVersion: 2
-        x: 103
-        y: 22
-        width: 23
-        height: 34
+        x: 104
+        y: 23
+        width: 21
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1301,12 +1301,12 @@ TextureImporter:
       name: sprites bomberman_46
       rect:
         serializedVersion: 2
-        x: 130
-        y: 22
-        width: 19
-        height: 34
+        x: 131
+        y: 23
+        width: 17
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1323,12 +1323,12 @@ TextureImporter:
       name: sprites bomberman_47
       rect:
         serializedVersion: 2
-        x: 158
-        y: 33
-        width: 21
-        height: 22
+        x: 159
+        y: 34
+        width: 19
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1345,12 +1345,12 @@ TextureImporter:
       name: sprites bomberman_48
       rect:
         serializedVersion: 2
-        x: 179
-        y: 33
-        width: 22
-        height: 22
+        x: 180
+        y: 34
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1367,12 +1367,12 @@ TextureImporter:
       name: sprites bomberman_49
       rect:
         serializedVersion: 2
-        x: 206
-        y: 30
-        width: 22
-        height: 22
+        x: 207
+        y: 31
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1389,12 +1389,12 @@ TextureImporter:
       name: sprites bomberman_50
       rect:
         serializedVersion: 2
-        x: 228
-        y: 30
-        width: 22
-        height: 22
+        x: 229
+        y: 31
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1411,12 +1411,12 @@ TextureImporter:
       name: sprites bomberman_51
       rect:
         serializedVersion: 2
-        x: 255
-        y: 30
-        width: 22
-        height: 22
+        x: 256
+        y: 31
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1433,12 +1433,12 @@ TextureImporter:
       name: sprites bomberman_52
       rect:
         serializedVersion: 2
-        x: 277
-        y: 30
-        width: 22
-        height: 22
+        x: 278
+        y: 31
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1455,12 +1455,12 @@ TextureImporter:
       name: sprites bomberman_53
       rect:
         serializedVersion: 2
-        x: 300
-        y: 28
-        width: 23
-        height: 23
+        x: 301
+        y: 29
+        width: 21
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1477,12 +1477,12 @@ TextureImporter:
       name: sprites bomberman_54
       rect:
         serializedVersion: 2
-        x: 333
-        y: 29
-        width: 21
-        height: 20
+        x: 334
+        y: 30
+        width: 19
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1499,12 +1499,12 @@ TextureImporter:
       name: sprites bomberman_55
       rect:
         serializedVersion: 2
-        x: 158
-        y: 3
-        width: 22
-        height: 22
+        x: 159
+        y: 4
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1521,12 +1521,12 @@ TextureImporter:
       name: sprites bomberman_56
       rect:
         serializedVersion: 2
-        x: 180
-        y: 3
-        width: 21
-        height: 22
+        x: 181
+        y: 4
+        width: 19
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1543,12 +1543,12 @@ TextureImporter:
       name: sprites bomberman_57
       rect:
         serializedVersion: 2
-        x: 204
-        y: 5
-        width: 22
-        height: 22
+        x: 205
+        y: 6
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1565,12 +1565,12 @@ TextureImporter:
       name: sprites bomberman_58
       rect:
         serializedVersion: 2
-        x: 226
-        y: 5
-        width: 22
-        height: 22
+        x: 227
+        y: 6
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1587,12 +1587,12 @@ TextureImporter:
       name: sprites bomberman_59
       rect:
         serializedVersion: 2
-        x: 252
-        y: 4
-        width: 22
-        height: 22
+        x: 253
+        y: 5
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1609,12 +1609,12 @@ TextureImporter:
       name: sprites bomberman_60
       rect:
         serializedVersion: 2
-        x: 274
-        y: 4
-        width: 23
-        height: 22
+        x: 275
+        y: 5
+        width: 21
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1631,12 +1631,12 @@ TextureImporter:
       name: sprites bomberman_61
       rect:
         serializedVersion: 2
-        x: 300
-        y: 3
-        width: 23
-        height: 22
+        x: 301
+        y: 4
+        width: 21
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1653,12 +1653,12 @@ TextureImporter:
       name: sprites bomberman_62
       rect:
         serializedVersion: 2
-        x: 333
-        y: 4
-        width: 21
-        height: 20
+        x: 334
+        y: 5
+        width: 19
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1675,7 +1675,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5ac3defa9ec009f4c9ada9d14dd09dc4
     internalID: 0
     vertices: []
     indices: 
@@ -1683,7 +1683,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       sprites bomberman_0: -7361023412947448590
       sprites bomberman_1: 1076300968058390771
