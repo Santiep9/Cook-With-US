@@ -2,6 +2,7 @@ using TMPro;
 using TreeEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class BookCanvasRestaurant : MonoBehaviour, IInteractable
@@ -9,6 +10,8 @@ public class BookCanvasRestaurant : MonoBehaviour, IInteractable
     public bool isCanvasActive { get; private set; }
     public GameObject canvas;
     public Areas areas;
+
+    public Canvas LibroConversacion;
 
     public Image ingredientImg;
     public Image mapaImg;
@@ -45,6 +48,11 @@ public class BookCanvasRestaurant : MonoBehaviour, IInteractable
     {
         if (!CanInteract()) return;
 
+        if (areas.pirulinCompleted && areas.mjohnCompleted && areas.jusepCompleted)
+        {
+            FinalJuego();
+            return;
+        }
         canvas.SetActive(true);
         isCanvasActive = true;
         PauseController.SetPause(true);
@@ -94,5 +102,10 @@ public class BookCanvasRestaurant : MonoBehaviour, IInteractable
     void changeMap(OptionMapa option)
     {
         mapaImg.sprite = option.image;
+    }
+
+    void FinalJuego()
+    {
+       LibroConversacion.gameObject.SetActive(true);
     }
 }

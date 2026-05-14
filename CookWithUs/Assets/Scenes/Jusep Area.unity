@@ -283,7 +283,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 0.72265625
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1761,6 +1761,8 @@ MonoBehaviour:
   dialogueText: {fileID: 445401628}
   nameText: {fileID: 1954374371}
   portraitImage: {fileID: 1575766446}
+  necesitaMinijuego: 1
+  NombreEscena: Jusep Minigame
 --- !u!1 &1356338902
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,12 @@ public class Door : MonoBehaviour
 
     public DoorData doorData;
 
+    public Areas areas;
+
+    public PlayerMove playerMove;
+
+    public Canvas Completed;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         switch(NombreEscena)
@@ -31,9 +37,31 @@ public class Door : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            if (areas == null)
+            {
+                SceneManager.LoadScene(NombreEscena);
+
+            }
             //FadeTransition(other.gameObject);
-            SceneManager.LoadScene(NombreEscena);
+            if (areas != null & areas.pirulinCompleted & areas.mjohnCompleted & areas.jusepCompleted)
+            {
+                    Debug.Log("Todas las areas completadas, mostrando mensaje de completado");
+                    Completed.gameObject.SetActive(true);
+                    playerMove.canMove = false;
+                    playerMove.StopFootSteps();
+                    playerMove.rb.linearVelocity = Vector2.zero;
+                    return;                                    
+            }
+
+               SceneManager.LoadScene(NombreEscena);
+
         }
+    }
+
+    public void HideCanvas()
+    {
+        Completed.gameObject.SetActive(false);
+        playerMove.canMove = true;
     }
 
     /*async void FadeTransition(GameObject player)

@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 2f;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private SpriteRenderer sr;
     private Vector2 moveInput;
 
@@ -71,7 +71,7 @@ public class PlayerMove : MonoBehaviour
         SoundEffectManager.Play("Walk");
     }
 
-    void StopFootSteps()
+     public void StopFootSteps()
     {
         playingFootsteps = false;
         CancelInvoke(nameof(PlayFootStep));

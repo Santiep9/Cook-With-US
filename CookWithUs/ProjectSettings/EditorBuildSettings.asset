@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pirulin MiniGame.unity
     guid: 6fe469a14bd2f7045941442a7313da7d
+  - enabled: 1
+    path: Assets/Scenes/CREDITOS.unity
+    guid: c7522fab0b20bb74080e47e012a89e67
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

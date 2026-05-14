@@ -14,6 +14,7 @@ public class CambioEscenas : MonoBehaviour
         TiempoEscena -= Time.deltaTime;
         if (TiempoEscena <= 0)
         {
+
             if (dialogueData.timelineYminijuego) SceneManager.LoadScene("MJohn Minigame");
 
             dialogueData.timelineTerminada = true;
