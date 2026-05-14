@@ -845,7 +845,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 0.7246094
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2098,11 +2098,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractDialogo
   dialogueData: {fileID: 11400000, guid: 5552899023f3a0442bb77a643b6901d1, type: 2}
   dialoguePanel: {fileID: 1357936603}
-  Timeline: {fileID: 0}
+  Timeline: {fileID: 1999691646}
   dialogueText: {fileID: 1487298099}
   nameText: {fileID: 2007607635}
   portraitImage: {fileID: 1444249707}
-  conversacionTerminada: 0
 --- !u!212 &802768857
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3404,10 +3403,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2442952413746395636, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: NombreEscena
-      value: Jusep
-      objectReference: {fileID: 0}
     - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3447,10 +3442,6 @@ PrefabInstance:
     - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3245248288589512025, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: m_text
-      value: Aqui va un frame de jusep
       objectReference: {fileID: 0}
     - target: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: m_Name
@@ -4798,7 +4789,6 @@ MonoBehaviour:
   dialogueText: {fileID: 1487298099}
   nameText: {fileID: 2007607635}
   portraitImage: {fileID: 1444249707}
-  conversacionTerminada: 0
 --- !u!212 &1700229518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5588,9 +5578,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2442952413746395636, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: NombreEscena
-      value: Mjohn Minigame
-      objectReference: {fileID: 0}
+      propertyPath: dialogueData
+      value: 
+      objectReference: {fileID: 11400000, guid: 5552899023f3a0442bb77a643b6901d1, type: 2}
     - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5639,12 +5629,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeLine PIRULIN
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2442952413746395636, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+--- !u!1 &1999691646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+  m_PrefabInstance: {fileID: 1999691645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2007607633
 GameObject:
   m_ObjectHideFlags: 0
@@ -6153,7 +6147,6 @@ MonoBehaviour:
   dialogueText: {fileID: 1487298099}
   nameText: {fileID: 2007607635}
   portraitImage: {fileID: 1444249707}
-  conversacionTerminada: 0
 --- !u!1 &5192353638869995532
 GameObject:
   m_ObjectHideFlags: 0

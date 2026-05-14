@@ -1824,10 +1824,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractDialogo
   dialogueData: {fileID: 11400000, guid: 626d8e3751cffc94aa89813fefafdd1e, type: 2}
   dialoguePanel: {fileID: 46853685}
+  Timeline: {fileID: 2044189342934938173}
   dialogueText: {fileID: 56809877}
   nameText: {fileID: 2082327346}
   portraitImage: {fileID: 74818407}
-  conversacionTerminada: 0
 --- !u!1 &1259827490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2103,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.7246094
+  orthographic size: 2.109375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2811,9 +2811,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2442952413746395636, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      propertyPath: NombreEscena
-      value: Mjohn Minigame
-      objectReference: {fileID: 0}
+      propertyPath: dialogueData
+      value: 
+      objectReference: {fileID: 11400000, guid: 626d8e3751cffc94aa89813fefafdd1e, type: 2}
     - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2856,7 +2856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3245248288589512025, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: m_text
-      value: Aqui va un frame de mjohn
+      value: Aqui va un frame de m john
       objectReference: {fileID: 0}
     - target: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: m_Name
@@ -2867,6 +2867,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+--- !u!1 &2044189342934938173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+  m_PrefabInstance: {fileID: 2044189342934938172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
