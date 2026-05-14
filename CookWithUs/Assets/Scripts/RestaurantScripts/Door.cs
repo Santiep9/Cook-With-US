@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,7 +31,22 @@ public class Door : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(NombreEscena);
+            FadeTransition(other.gameObject);
         }
+    }
+
+    async void FadeTransition(GameObject player)
+    {
+        PauseController.SetPause(true);
+
+        await ScreenFader.Instance.FadeOut();
+
+        SceneManager.LoadScene(NombreEscena);
+
+        await Task.Yield();
+
+        await ScreenFader.Instance.FadeIn();
+
+        PauseController.SetPause(false);
     }
 }

@@ -1757,10 +1757,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractDialogo
   dialogueData: {fileID: 11400000, guid: b4159967bd581814c8417303b557a628, type: 2}
   dialoguePanel: {fileID: 170283358}
+  Timeline: {fileID: 0}
   dialogueText: {fileID: 445401628}
   nameText: {fileID: 1954374371}
   portraitImage: {fileID: 1575766446}
-  conversacionTerminada: 0
 --- !u!1 &1356338902
 GameObject:
   m_ObjectHideFlags: 0

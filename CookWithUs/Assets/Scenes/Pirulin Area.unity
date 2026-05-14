@@ -2863,7 +2863,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.7246094
+  orthographic size: 2.109375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3087,10 +3087,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3494,7 +3494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1660043415
 Animator:
   serializedVersion: 7
@@ -3650,10 +3650,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractDialogo
   dialogueData: {fileID: 11400000, guid: 821e150ab1a67e9479a8bff4623e6c18, type: 2}
   dialoguePanel: {fileID: 2087806005}
+  Timeline: {fileID: 0}
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
-  conversacionTerminada: 0
 --- !u!1 &1710642025
 GameObject:
   m_ObjectHideFlags: 0
