@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8fbfc57291a749d429b1fc57a521551e
+guid: 9dafe4154e416e14689a3f898f2a3bf2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7917840532276868918
-    second: fondo pirulin_0
+      213: -1369166564816860308
+    second: boton PRUEBA FINAL_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fondo pirulin_0
+      name: boton PRUEBA FINAL_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 480
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac882758cfd2e1290800000000000000
-      internalID: -7917840532276868918
+      spriteID: c6bcfb1734ebffce0800000000000000
+      internalID: -1369166564816860308
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fondo pirulin_0: -7917840532276868918
+      boton PRUEBA FINAL_0: -1369166564816860308
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
