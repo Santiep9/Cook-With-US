@@ -43,7 +43,7 @@ public class Door : MonoBehaviour
 
             }
             //FadeTransition(other.gameObject);
-            if (areas != null & areas.pirulinCompleted & areas.mjohnCompleted & areas.jusepCompleted)
+            if (areas != null && areas.pirulinCompleted && areas.mjohnCompleted && areas.jusepCompleted)
             {
                     Debug.Log("Todas las areas completadas, mostrando mensaje de completado");
                     Completed.gameObject.SetActive(true);
