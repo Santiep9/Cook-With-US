@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -23,8 +24,6 @@ public class BombGameplay : MonoBehaviour
 
     private Animator anim;
     private bool isDead = false;
-    public bool isBusy = false;
-    private Vector2 lastMoveDir = Vector2.down;
 
     private void Awake()
     {
@@ -36,39 +35,6 @@ public class BombGameplay : MonoBehaviour
     private void Start()
     {
         transform.position = SnapToGrid(transform.position);
-    }
-
-    private void FixedUpdate()
-    {
-        Move();
-        FlipSprite();
-        UpdateAnimations();
-    }
-
-    void UpdateAnimations()
-    {
-        bool isMoving = moveInput.sqrMagnitude > 0.01f;
-
-        if (isMoving)
-        {
-            if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
-            {
-                lastMoveDir = new Vector2(Mathf.Sign(moveInput.x), 0);
-            }
-            else
-            {
-                lastMoveDir = new Vector2(0, Mathf.Sign(moveInput.y));
-            }
-        }
-
-        anim.SetFloat("MoveX", lastMoveDir.x);
-        anim.SetFloat("MoveY", lastMoveDir.y);
-        anim.SetBool("IsMoving", isMoving);
-    }
-
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
     }
 
     public void DropBomb(InputAction.CallbackContext context)
@@ -92,39 +58,29 @@ public class BombGameplay : MonoBehaviour
         }
     }
 
-    private void Move()
+    public void Move(InputAction.CallbackContext context)
     {
-        if (isDead || isBusy)
+        moveInput = context.ReadValue<Vector2>();
+
+        rb.linearVelocity = moveInput * moveSpeed;
+
+        anim.SetFloat("InputX", moveInput.x);
+        anim.SetFloat("InputY", moveInput.y);
+
+        anim.SetBool("isMoving", moveInput != Vector2.zero);
+
+        if (context.canceled)
         {
             rb.linearVelocity = Vector2.zero;
-            return;
         }
-
-        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
     }
 
     public void PlayWinAnimation()
     {
-        if (isBusy) return;
-
-        isBusy = true;
-
         rb.linearVelocity = Vector2.zero;
 
         anim.SetTrigger("Win");
     }
-
-    private void FlipSprite()
-{
-    if (moveInput.x < 0)
-    {
-        sr.flipX = true;
-    }
-    else if (moveInput.x > 0)
-    {
-        sr.flipX = false;
-    }
-}
 
     private void HandleBombExplode()
     {
