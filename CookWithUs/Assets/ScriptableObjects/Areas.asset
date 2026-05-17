@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d73bb2a54efadf49b4d091d51ca3da6, type: 3}
   m_Name: Areas
   m_EditorClassIdentifier: Assembly-CSharp::Areas
-  pirulinSelected: 0
+  pirulinSelected: 1
   mjohnSelected: 0
   jusepSelected: 0
   pirulinCompleted: 0

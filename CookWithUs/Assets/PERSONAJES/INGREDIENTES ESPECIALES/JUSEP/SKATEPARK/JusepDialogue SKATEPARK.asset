@@ -24,3 +24,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 29b87d5734dfbb24e8dbdd2469aea7df, type: 3}
   - {fileID: 8300000, guid: c907b9a164d09354ca2e88243159416c, type: 3}
   voicePitch: 1
+  necesitaTimeline: 1
+  timelineTerminada: 0
+  timelineYminijuego: 1

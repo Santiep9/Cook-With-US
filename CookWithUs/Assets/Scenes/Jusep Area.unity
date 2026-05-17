@@ -119,6 +119,80 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &44660426
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2442952413746395636, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: NombreEscena
+      value: Jusep Minigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442952413746395636, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: dialogueData
+      value: 
+      objectReference: {fileID: 11400000, guid: b4159967bd581814c8417303b557a628, type: 2}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810254716168406600, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245248288589512025, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_text
+      value: Aqui va un frame de jusep skatepark
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_Name
+      value: TimeLine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+--- !u!1 &44660427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+  m_PrefabInstance: {fileID: 44660426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &125026112
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +357,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 0.7246094
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1154,6 +1228,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuPausaController
   menuPausa: {fileID: 1356338902}
+  menuSettings: {fileID: 0}
+  exitCanvas: {fileID: 0}
+  sonidosSettings: []
+  spriteExitCONFIRMADO: {fileID: 0}
+  exitImage: {fileID: 0}
 --- !u!114 &523126332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,12 +1836,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractDialogo
   dialogueData: {fileID: 11400000, guid: b4159967bd581814c8417303b557a628, type: 2}
   dialoguePanel: {fileID: 170283358}
-  Timeline: {fileID: 0}
+  Timeline: {fileID: 44660427}
   dialogueText: {fileID: 445401628}
   nameText: {fileID: 1954374371}
   portraitImage: {fileID: 1575766446}
-  necesitaMinijuego: 1
-  NombreEscena: Jusep Minigame
 --- !u!1 &1356338902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,3 +2893,4 @@ SceneRoots:
   - {fileID: 125026118}
   - {fileID: 523126330}
   - {fileID: 159429196}
+  - {fileID: 44660426}

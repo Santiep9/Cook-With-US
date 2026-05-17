@@ -25,9 +25,6 @@ public class InteractDialogo : MonoBehaviour, IInteractable
     private int voiceNumber;
     private Coroutine autoProgressCoroutine;
 
-    public bool necesitaMinijuego = false;
-    public string NombreEscena;
-
     private void Start()
     {
         //interactRect = bocadilloComic.GetComponent<RectTransform>();
@@ -157,19 +154,11 @@ public class InteractDialogo : MonoBehaviour, IInteractable
         }
         else
         {
-            if(necesitaMinijuego)
-            {
-                SceneManager.LoadScene(NombreEscena);
-            }
-            else
-            {
-                StopAllCoroutines();
-                isDialogueActive = false;
-                dialogueText.SetText(string.Empty);
-                dialoguePanel.SetActive(false);
-                PauseController.SetPause(false);
-            }
-                
+            StopAllCoroutines();
+            isDialogueActive = false;
+            dialogueText.SetText(string.Empty);
+            dialoguePanel.SetActive(false);
+            PauseController.SetPause(false);
         }
     }
 

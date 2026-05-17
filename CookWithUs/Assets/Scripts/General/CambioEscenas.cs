@@ -6,7 +6,7 @@ public class CambioEscenas : MonoBehaviour
 {
     public float TiempoEscena;
     public NPCDialogue dialogueData;
-    //public string NombreEscena;
+    public string NombreEscena;
    
 
     void Update()
@@ -15,10 +15,16 @@ public class CambioEscenas : MonoBehaviour
         if (TiempoEscena <= 0)
         {
 
-            if (dialogueData.timelineYminijuego) SceneManager.LoadScene("MJohn Minigame");
-
-            dialogueData.timelineTerminada = true;
-            gameObject.SetActive(false);
+            if (dialogueData.timelineYminijuego)
+            {
+                SceneManager.LoadScene(NombreEscena);
+            }
+            else
+            {
+                dialogueData.timelineTerminada = true;
+                gameObject.SetActive(false);
+            }
+                
         }
     }
 }

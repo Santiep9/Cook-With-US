@@ -12,6 +12,11 @@ public class ButtonsMenu : MonoBehaviour
         areas.pirulinCompleted = false;
         areas.jusepCompleted = false;
         areas.mjohnCompleted = false;
+
+        areas.pirulinSelected = false;
+        areas.jusepSelected = false;
+        areas.mjohnSelected = false;
+
         doorData.puertaMJohn = false;
         doorData.puertaJusep = false;
         doorData.puertaRestaurante = false;
