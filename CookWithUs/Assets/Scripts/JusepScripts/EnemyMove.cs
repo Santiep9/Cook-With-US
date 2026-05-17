@@ -34,6 +34,9 @@ public class EnemyMove : MonoBehaviour
     private bool isEscaping = false;
     private Vector2 escapeTarget;
 
+    private Animator anim;
+    private Vector2 moveDir;
+
     Vector2[] directions = new Vector2[]
     {
         Vector2.up,
@@ -55,13 +58,22 @@ public class EnemyMove : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         targetPos = SnapToGrid(transform.position);
         transform.position = targetPos;
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(
+            transform.position,
+            targetPos,
+            moveSpeed * Time.deltaTime
+        );
+
+        bool moving = Vector2.Distance(transform.position, targetPos) > 0.01f;
+
+        anim.SetBool("isMoving", moving);
     }
 
     void FixedUpdate()
@@ -137,6 +149,19 @@ public class EnemyMove : MonoBehaviour
 
     void MoveTo(Vector2 pos)
     {
+        moveDir = (pos - (Vector2)transform.position).normalized;
+
+        if (moveDir != Vector2.zero)
+        {
+            anim.SetFloat("InputX", moveDir.x);
+            anim.SetFloat("InputY", moveDir.y);
+
+            anim.SetFloat("LastInputX", moveDir.x);
+            anim.SetFloat("LastInputY", moveDir.y);
+        }
+
+        anim.SetBool("isMoving", true);
+
         targetPos = pos;
     }
 
@@ -282,6 +307,9 @@ public class EnemyMove : MonoBehaviour
         {
             playerScript.PlayWinAnimation();
         }
+
+        anim.SetTrigger("Lose");
+        enabled = false;
 
         currentLives--;
 

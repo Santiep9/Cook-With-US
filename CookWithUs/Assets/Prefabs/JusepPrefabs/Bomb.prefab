@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5785127578339511853}
   - component: {fileID: 2963839409250028788}
   - component: {fileID: -1005529405837893953}
+  - component: {fileID: -2117042324560464096}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Bomb
@@ -30,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.0004354, y: 2.9998858, z: 4}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8236016624644176477, guid: 8432bcf71d5fee14fa0de3be8024dd76, type: 3}
+  m_Sprite: {fileID: 1747799973798122113, guid: 3a43f1097a2c4ce45a8365e37e19bcdb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,3 +152,25 @@ MonoBehaviour:
   explosionEndPrefab: {fileID: 4987454224385243382, guid: 397e488852a706c41afc911819fa4bb6, type: 3}
   explosionDuration: 0.5
   areas: {fileID: 11400000, guid: 61bdbd5adf6cc154f859a730927e04ec, type: 2}
+--- !u!95 &-2117042324560464096
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556387093346786222}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f891247ab237f4640a23fd860f18faf7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
