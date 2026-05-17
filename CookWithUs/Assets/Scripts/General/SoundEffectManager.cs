@@ -70,5 +70,5 @@ public class SoundEffectManager : MonoBehaviour
     public void OnValueChanged()
     {
         SetVolume(sfxSlider.value);
-    }   
+    }
 }
