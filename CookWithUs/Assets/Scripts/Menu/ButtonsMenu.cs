@@ -1,11 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.Rendering;
 
 public class ButtonsMenu : MonoBehaviour
 {
     public Areas areas;
     public DoorData doorData;
     public GameObject timeline;
+    public GameObject settingsPanel;
+    public AudioClip Sqish;
+
 
     public void NewGame()
     {
@@ -21,6 +27,11 @@ public class ButtonsMenu : MonoBehaviour
         doorData.puertaJusep = false;
         doorData.puertaRestaurante = false;
 
+
+        AudioClip audiotoplay = Sqish;
+        SoundEffectManager.PlayVoice(audiotoplay);
+        Debug.Log("Playing sound: " + audiotoplay.name);
+
         timeline.SetActive(true);
     }
 
@@ -28,4 +39,17 @@ public class ButtonsMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Settings()
+    {
+        settingsPanel.SetActive(true);
+        AudioClip audiotoplay = Sqish;
+        SoundEffectManager.PlayVoice(audiotoplay);
+        Debug.Log("Playing sound: " + audiotoplay.name);
+    }
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
+
+    }
+
 }
