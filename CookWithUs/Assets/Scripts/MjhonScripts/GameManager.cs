@@ -5,6 +5,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
+
 
 
 public class GameManager : MonoBehaviour
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] AudioClip[] QuestionAudios;
     [SerializeField] AudioClip[] AnswerAudios;
+    [SerializeField] AudioClip[] VFX;
 
     [SerializeField] Areas areas;
 
@@ -181,6 +184,7 @@ public class GameManager : MonoBehaviour
                 SuspectListener(Buttons[8], Buttons[9], Buttons[10], Buttons[11]);
                 break;
             case "Retry":
+                SoundEffectManager.StopVoice();
                 SceneManager.LoadScene("MJohn Minigame");
                 break;
             case "Suspect 1":
@@ -445,11 +449,14 @@ public class GameManager : MonoBehaviour
         Texts[8].enabled = false;
         HidePaso(Buttons[7]);
         HidePaso(Buttons[4]);
-        SceneManager.LoadScene("Restaurant");
+        StartCoroutine(Wait());
+        
     }
 
     void Lose()
     {
+        AudioClip Lost = VFX[1];
+        SoundEffectManager.PlayVoice(Lost);
         HideLibreta(Buttons[12]);
         Images[0].gameObject.SetActive(false);
         Texts[4].enabled = false;
@@ -458,5 +465,15 @@ public class GameManager : MonoBehaviour
         HidePaso(Buttons[7]);
         HidePaso(Buttons[4]);
         ShowLibreta(Buttons[15]);
+    }
+
+    IEnumerator Wait()
+    {
+        AudioClip Won = VFX[0];
+        SoundEffectManager.PlayVoice(Won);
+
+        yield return new WaitForSecondsRealtime(2f);
+
+        SceneManager.LoadScene("Restaurant");
     }
 }
