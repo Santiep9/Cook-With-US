@@ -11,6 +11,7 @@ public class ButtonsMenu : MonoBehaviour
     public GameObject timeline;
     public GameObject settingsPanel;
     public AudioClip Sqish;
+    public NPCDialogue dialogueData;
 
 
     public void NewGame()
@@ -26,6 +27,8 @@ public class ButtonsMenu : MonoBehaviour
         doorData.puertaMJohn = false;
         doorData.puertaJusep = false;
         doorData.puertaRestaurante = false;
+
+        dialogueData.hasPlayed = false;
 
 
         AudioClip audiotoplay = Sqish;

@@ -889,6 +889,7 @@ MonoBehaviour:
   timeline: {fileID: 832314130}
   settingsPanel: {fileID: 1958965422}
   Sqish: {fileID: 8300000, guid: 04518d760d0a1534ab7b5e815de92c7d, type: 3}
+  dialogueData: {fileID: 11400000, guid: e358e62d1b0109f4ca9b970d89e50a4a, type: 2}
 --- !u!1 &1354758763
 GameObject:
   m_ObjectHideFlags: 0

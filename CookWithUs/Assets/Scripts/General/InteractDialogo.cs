@@ -22,6 +22,15 @@ public class InteractDialogo : MonoBehaviour, IInteractable
     private int voiceNumber;
     private Coroutine autoProgressCoroutine;
 
+    private void Start()
+    {
+        if(dialogueData != null && dialogueData.playOnSceneStart && !dialogueData.hasPlayed)
+        {
+            StartDialogue();
+            dialogueData.hasPlayed = true;
+        }
+    }
+
     public void Interact()
     {
         if (dialogueData == null || (PauseController.IsGamePaused && !isDialogueActive))

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c61d95ed80af042bcf61798cdf6f0c, type: 3}
+  m_Name: LibroDialogueINICIAL
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Sr.Libro
+  npcPortrait: {fileID: 0}
+  dialogueLines:
+  - "\xBFTe preguntar\xE1s que soy verdad? Soy la soluci\xF3n a todos tus problemas
+    peque\xF1o \u201CAnto\u201D. Me llaman \u201CSr. Libro\u201D "
+  - 'Pues bien, dentro de mi contengo una receta especial, muuuuy especial. '
+  - Dentro de ti? Tienes una receta ~muuuuy especial~ dentro de ti?
+  - "As\xED es."
+  - No me interesa gracias.
+  - 'No no no! Esperate, creo que hemos empezado con mal pie, no te va muy bien el
+    restaurante verdad? '
+  - "Yo puedo hacer que tu restaurante vuelva a la cima, tan solo tienes que encontrar
+    los ingredientes de mi receta m\xE1s especial."
+  - "\xC1breme."
+  - "\xBFQu\xE9?"
+  - Que me abras.
+  - "Oye t\xEDo lo siento si te he dado una impresi\xF3n err\xF3nea o algo eh pero
+    que no me va ese rollo."
+  - "Que ah\xED est\xE1 la receta joder, soy un libro de recetas especiales."
+  - Ah bueno, vale venga.
+  - "Cu\xE1ndo selecciones un ingrediente te marcar\xE9 la zona donde suelen habitar,
+    si no seleccionas ninguno es posible que no los encuentres\u2026"
+  autoProgressLines: 0101010101010101010101010101
+  autoProgressDelay: 0
+  typingSpeed: 0.05
+  voiceSound:
+  - {fileID: 8300000, guid: 95d15bae1debad746b7580d5db16a147, type: 3}
+  - {fileID: 8300000, guid: 8ca817c44645538458acddb417aae0b2, type: 3}
+  - {fileID: 8300000, guid: 4a133d16ff31a954b97a3498dbbfbf74, type: 3}
+  - {fileID: 8300000, guid: 4d8039cd24cd0e54b9c7367a39d93ef2, type: 3}
+  - {fileID: 8300000, guid: 63a8bedd3e7e1024ea46d29e7df166d4, type: 3}
+  - {fileID: 8300000, guid: 6c752999d758d5a45ae99602fdf2bf74, type: 3}
+  - {fileID: 8300000, guid: 285bbc37eaca60747a84d27a9f130e43, type: 3}
+  - {fileID: 8300000, guid: 802cd564c44e21b4184d7c322536c1d3, type: 3}
+  - {fileID: 8300000, guid: fe77add3c6ec8054d8068f3306bd9bd2, type: 3}
+  - {fileID: 8300000, guid: 59b18495c46e90a41a0823ffe7222e0f, type: 3}
+  - {fileID: 8300000, guid: a120fe30a2ce7de42abec0c617371ade, type: 3}
+  - {fileID: 8300000, guid: a0436a7f927764642b705c7aee942e82, type: 3}
+  - {fileID: 8300000, guid: 67e3ad122fa6e804d8b931be79b5eb04, type: 3}
+  - {fileID: 8300000, guid: 2ee89117bfedcf347a1311c353ca634f, type: 3}
+  voicePitch: 1
+  necesitaTimeline: 0
+  timelineTerminada: 0
+  timelineYminijuego: 0
+  playOnSceneStart: 1
+  hasPlayed: 1
