@@ -11,10 +11,6 @@ public class InteractDialogo : MonoBehaviour, IInteractable
 
     public GameObject dialoguePanel;
     public GameObject Timeline;
-    //public GameObject bocadilloComic;
-
-    //public Transform interactPoint;
-    //private RectTransform interactRect;
 
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
@@ -26,27 +22,6 @@ public class InteractDialogo : MonoBehaviour, IInteractable
     private int voiceNumber;
     private Coroutine autoProgressCoroutine;
 
-    private void Start()
-    {
-        //interactRect = bocadilloComic.GetComponent<RectTransform>();
-    }
-
-    void Update()
-    {
-        //interactRect.position = Camera.main.WorldToScreenPoint(interactPoint.position);
-
-        /*if (input.actions["Interact"].WasPressedThisFrame())
-        {
-            if (isDialogueActive)
-            {
-                NextLine();
-            }
-            else
-            {
-                StartDialogue();
-            }
-        }*/
-    }
     public void Interact()
     {
         if (dialogueData == null || (PauseController.IsGamePaused && !isDialogueActive))
@@ -72,8 +47,6 @@ public class InteractDialogo : MonoBehaviour, IInteractable
     void StartDialogue()
     {
         isDialogueActive = true;
-
-        //bocadilloComic.SetActive(false);
 
         dialogueIndex = 0;
 
@@ -102,11 +75,6 @@ public class InteractDialogo : MonoBehaviour, IInteractable
             dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
             voiceNumber++;
             isTyping = false;
-
-            /*if (dialogueIndex >= dialogueData.dialogueLines.Length - 1)
-            {
-                dialogueData.necesitaTimeline = true;
-            }*/
         }
         else if(++dialogueIndex < dialogueData.dialogueLines.Length)
         {
@@ -135,11 +103,6 @@ public class InteractDialogo : MonoBehaviour, IInteractable
         }
 
         isTyping = false;
-
-        /*if(dialogueIndex >= dialogueData.dialogueLines.Length - 1)
-        {
-            dialogueData.conversacionTerminada = true;
-        }*/
 
         if (dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
         {
