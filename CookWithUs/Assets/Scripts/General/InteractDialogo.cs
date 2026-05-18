@@ -18,6 +18,7 @@ public class InteractDialogo : MonoBehaviour, IInteractable
 
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
+    public Image playerPortrait;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;

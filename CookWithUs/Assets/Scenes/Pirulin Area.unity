@@ -311,6 +311,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &70933191
 Animator:
   serializedVersion: 7
@@ -906,6 +907,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &201933517
 Animator:
   serializedVersion: 7
@@ -1155,6 +1157,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &227175925
 Animator:
   serializedVersion: 7
@@ -1562,6 +1565,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &328483771
 Animator:
   serializedVersion: 7
@@ -2779,6 +2783,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &583367404
 Animator:
   serializedVersion: 7
@@ -3252,6 +3257,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &632315614
 Animator:
   serializedVersion: 7
@@ -3510,6 +3516,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &654021617
 Animator:
   serializedVersion: 7
@@ -3824,6 +3831,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &656264865
 Animator:
   serializedVersion: 7
@@ -4415,6 +4423,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &759143062
 Animator:
   serializedVersion: 7
@@ -4882,6 +4891,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &862474361
 Animator:
   serializedVersion: 7
@@ -5964,6 +5974,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1061154727
 Animator:
   serializedVersion: 7
@@ -6144,6 +6155,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1077186014
 Animator:
   serializedVersion: 7
@@ -7038,6 +7050,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1231293156
 Animator:
   serializedVersion: 7
@@ -7218,6 +7231,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1244362911
 Animator:
   serializedVersion: 7
@@ -7516,6 +7530,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1294437292
 Animator:
   serializedVersion: 7
@@ -7696,6 +7711,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1319204588
 Animator:
   serializedVersion: 7
@@ -7945,6 +7961,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1351911956
 Animator:
   serializedVersion: 7
@@ -8543,6 +8560,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1496381472
 Animator:
   serializedVersion: 7
@@ -8723,6 +8741,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1505092488
 Animator:
   serializedVersion: 7
@@ -8978,6 +8997,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1543862718
 Animator:
   serializedVersion: 7
@@ -9158,6 +9178,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1569099206
 Animator:
   serializedVersion: 7
@@ -9476,6 +9497,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1582318852
 Animator:
   serializedVersion: 7
@@ -9993,6 +10015,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1650959002
 Animator:
   serializedVersion: 7
@@ -10298,6 +10321,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!1 &1663717910
 GameObject:
   m_ObjectHideFlags: 0
@@ -10352,6 +10376,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1663717913
 Animator:
   serializedVersion: 7
@@ -11287,6 +11312,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1746284054
 Animator:
   serializedVersion: 7
@@ -12648,6 +12674,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1959520599
 Animator:
   serializedVersion: 7
@@ -12828,6 +12855,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 0}
 --- !u!95 &1963077364
 Animator:
   serializedVersion: 7
@@ -13685,6 +13713,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
+  playerPortrait: {fileID: 462527510}
 --- !u!1 &4757855539809258624 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2898080078585427745, guid: c374ab1938ab3ce439284cf7a3f3088a, type: 3}
