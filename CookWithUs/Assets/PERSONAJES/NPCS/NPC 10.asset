@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c61d95ed80af042bcf61798cdf6f0c, type: 3}
+  m_Name: NPC 10
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Aitor Menta
+  npcPortrait: {fileID: 0}
+  dialogueLines:
+  - "He visto al t\xEDo de la tienda vender fentanilo a 2 ni\xF1os."
+  - "\xBFPero t\xFA no trabajas con \xE9l?"
+  - Hostia es verdad.
+  autoProgressLines: 010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound:
+  - {fileID: 8300000, guid: c8e959b04cdf6b846965668bce554399, type: 3}
+  - {fileID: 8300000, guid: fa51d1b0566a2a042badd78b325dbe39, type: 3}
+  - {fileID: 8300000, guid: e1f87f8fcdc226a4cba8db5e636611ce, type: 3}
+  voicePitch: 1
+  necesitaTimeline: 0
+  timelineTerminada: 0
+  timelineYminijuego: 0

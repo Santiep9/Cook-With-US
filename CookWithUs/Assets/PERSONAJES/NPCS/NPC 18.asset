@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c61d95ed80af042bcf61798cdf6f0c, type: 3}
+  m_Name: NPC 18
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: xXAdrian14Xx
+  npcPortrait: {fileID: 0}
+  dialogueLines:
+  - "Si buscas a una gamba, he escuchado que hay una gamba super pick me que siempre
+    est\xE1 cerca de la fuente."
+  - "\xBFC\xF3mo sab\xEDas que buscaba una gamba?"
+  - 'Tienes pinta de buscar gambas, payaso. '
+  - "Que co\xF1o le pasa a este t\xEDo\u2026 "
+  autoProgressLines: 010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound:
+  - {fileID: 8300000, guid: 4183a0ef6cf92dc4ea700af0b70d54b3, type: 3}
+  - {fileID: 8300000, guid: a57f46cd03c42e744890b989b6c16697, type: 3}
+  - {fileID: 8300000, guid: 4a20d933dcbf7fa4a8ee23195f4c8afb, type: 3}
+  - {fileID: 8300000, guid: 850cc2737e9fe50429ba7940ef80fee3, type: 3}
+  voicePitch: 1
+  necesitaTimeline: 0
+  timelineTerminada: 0
+  timelineYminijuego: 0

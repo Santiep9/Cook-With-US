@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c61d95ed80af042bcf61798cdf6f0c, type: 3}
+  m_Name: NPC 11
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: "Se\xF1or Donut"
+  npcPortrait: {fileID: 0}
+  dialogueLines:
+  - "\xBFQu\xE9 tipo de donut quieres?"
+  - El especial.
+  - "Joder t\xEDo, no me queda fentanilo ahora. Tendr\xE1s que esperar un poco\u2026"
+  - "Yo solo quer\xEDa el que ten\xEDa salsa de chocolate y fresa con 5 toppings
+    misteriosos :("
+  autoProgressLines: 01010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound:
+  - {fileID: 8300000, guid: 6de8bed054dd32242891f59d113da3a3, type: 3}
+  - {fileID: 8300000, guid: ef6fac64e160f0b47ac68a0d72a6b28a, type: 3}
+  - {fileID: 8300000, guid: d16605aee99c1984d97b36ae5224e593, type: 3}
+  - {fileID: 8300000, guid: 752b0d2537dcee04eb75f20f62a865ab, type: 3}
+  voicePitch: 1
+  necesitaTimeline: 0
+  timelineTerminada: 0
+  timelineYminijuego: 0

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c61d95ed80af042bcf61798cdf6f0c, type: 3}
+  m_Name: NPC 2
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Khabib
+  npcPortrait: {fileID: 0}
+  dialogueLines:
+  - HOLAAAAAAAAAA HOLA si hola, hola que tal bienvenido AL TEMPLO
+  - "\xBFAl templo?"
+  - "A mi tienda rollo es una tienda no un templo solo que lo llamo as\xED porque
+    queda \xE9pico, bueno es como una tienda solo que no tenemos nada que vender
+    solo puedes-"
+  - "\u2026"
+  - "NO TE VAYAS POR FAVOR QU\xC9DATE LO NECESITO T\xCDO ."
+  autoProgressLines: 0101010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.01
+  voiceSound:
+  - {fileID: 8300000, guid: 0e1983b987f2f304bba11d03db4aab78, type: 3}
+  - {fileID: 8300000, guid: b08746ae44c70c64795f4f4891c01be6, type: 3}
+  - {fileID: 8300000, guid: f1deb68f5e7292f4eb6471d01f491ac2, type: 3}
+  - {fileID: 8300000, guid: d4b5e6e65f19e9b4b84e93996c567b70, type: 3}
+  - {fileID: 8300000, guid: ee1c7ac028d7ba249b42e28375dba0af, type: 3}
+  voicePitch: 1
+  necesitaTimeline: 0
+  timelineTerminada: 0
+  timelineYminijuego: 0

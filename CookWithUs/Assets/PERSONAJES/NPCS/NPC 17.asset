@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c61d95ed80af042bcf61798cdf6f0c, type: 3}
+  m_Name: NPC 17
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Mr.Vendedor de Ceramica
+  npcPortrait: {fileID: 0}
+  dialogueLines:
+  - "Tssch, \xBFquieres algo? Me llaman Mr. Vendedor de figuritas de ceramica."
+  - "\xBFQu\xE9 por qu\xE9 me llaman as\xED? No te lo vas a creer\u2026"
+  - "Porque mat\xE9 a mis padres con una figura de cer\xE1mica."
+  autoProgressLines: 010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound:
+  - {fileID: 8300000, guid: e5d3f93f7038a8044bc10345e9f70856, type: 3}
+  - {fileID: 8300000, guid: d0e6cb9edb300ee468644041e1a56867, type: 3}
+  - {fileID: 8300000, guid: 6766701316671ca4c83e107a72c306e7, type: 3}
+  voicePitch: 1
+  necesitaTimeline: 0
+  timelineTerminada: 0
+  timelineYminijuego: 0
