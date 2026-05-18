@@ -151,6 +151,7 @@ public class GameManager : MonoBehaviour
                     Texts[3].enabled = false;
                     Texts[4].enabled = true;
                     Texts[5].enabled = false;
+                    Texts[8].enabled = true;
                     HidePaso(Buttons[4]);
                     HidePaso(Buttons[7]);
                     ShowSuspect1(Buttons[8], Buttons[9], Buttons[10], Buttons[11]);
@@ -163,6 +164,7 @@ public class GameManager : MonoBehaviour
                 ShowButton(Buttons[0], Buttons[1], Buttons[2], Buttons[3], Buttons[4], Buttons[5], Buttons[6], Buttons[13], Buttons[15]);
                 ShowLibreta(Buttons[12]);
                 Texts[0].enabled = false;
+                Texts[8].enabled = true;
                 HidePaso(Buttons[7]);
                 break;
             case "Si":
@@ -207,7 +209,9 @@ public class GameManager : MonoBehaviour
     void QuestionTextDisplayer(int button_n)
     {
         Texts[1].enabled = true;
-            switch (current_player)
+        Texts[8].enabled = false;
+
+        switch (current_player)
             {
                 case Player.John:
                 Texts[1].text = Questions1[button_n];
@@ -306,7 +310,7 @@ public class GameManager : MonoBehaviour
         Buttons[4].interactable = false;
         Buttons[5].interactable = false;
         Buttons[6].interactable = false;
-        Buttons[14].interactable = false;
+        Buttons[14].interactable = false;        
         if (Buttons[8] != null)
         {
             Buttons[8].interactable = false;
@@ -438,6 +442,7 @@ public class GameManager : MonoBehaviour
         areas.mjohnCompleted = true;
         Texts[4].enabled = false;
         Texts[6].enabled = true;
+        Texts[8].enabled = false;
         HidePaso(Buttons[7]);
         HidePaso(Buttons[4]);
         SceneManager.LoadScene("Restaurant");
@@ -449,6 +454,7 @@ public class GameManager : MonoBehaviour
         Images[0].gameObject.SetActive(false);
         Texts[4].enabled = false;
         Texts[7].enabled = true;
+        Texts[8].enabled = false;
         HidePaso(Buttons[7]);
         HidePaso(Buttons[4]);
         ShowLibreta(Buttons[15]);
