@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 02dc8c113e7d73345bed803444031f7e
+guid: 83c96c3407018b342b55a5806a1ba5b4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -306482191754120984
-    second: Boton plato settings 2_0
+      213: -5908162870928591728
+    second: "Ilustraci\xF3n64 (15)_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boton plato settings 2_0
+      name: "Ilustraci\xF3n64 (15)_0"
       rect:
         serializedVersion: 2
-        x: 712
-        y: 14
-        width: 599
-        height: 581
+        x: 1114
+        y: 638
+        width: 388
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e0338602182fbbf0800000000000000
-      internalID: -306482191754120984
+      spriteID: 0943623fb2df10ea0800000000000000
+      internalID: -5908162870928591728
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Boton plato settings 2_0: -306482191754120984
+      "Ilustraci\xF3n64 (15)_0": -5908162870928591728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

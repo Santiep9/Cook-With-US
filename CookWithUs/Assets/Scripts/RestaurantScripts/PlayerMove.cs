@@ -16,10 +16,21 @@ public class PlayerMove : MonoBehaviour
     private bool playingFootsteps = false;
     public float footstepInterval = 0.5f;
 
+    private Animator animator;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+    }
+    private void Update()
+    {
+        if (PauseController.IsGamePaused)
+        {
+            animator.SetBool("IsMoving", false);
+        }
+
     }
 
     private void FixedUpdate()
@@ -42,17 +53,20 @@ public class PlayerMove : MonoBehaviour
 
     private void Move()
     {
+
         if (canMove != false)
-        {
+        {         
             rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
         }
         if(rb.linearVelocity.magnitude > 0.01f && !playingFootsteps)
         {
+            animator.SetBool("IsMoving", true);
             StartFootSteps();
         }
         else if(rb.linearVelocity.magnitude <= 0.01f && playingFootsteps)
         {
             StopFootSteps();
+            animator.SetBool("IsMoving", false);
         }
     }
 
