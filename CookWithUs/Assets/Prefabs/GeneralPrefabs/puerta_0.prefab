@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6855218837941648915, guid: aaecb022827b98d48be524d33008b78b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_Size: {x: 5.71, y: 6.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7064252945795107968
@@ -106,6 +106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Door
   NombreEscena: Restaurant
   doorData: {fileID: 11400000, guid: 36f4fd95e0cc43b4fa6f23331019a867, type: 2}
+  areas: {fileID: 0}
+  playerMove: {fileID: 0}
+  Completed: {fileID: 0}
 --- !u!61 &7285244619673478053
 BoxCollider2D:
   m_ObjectHideFlags: 0
