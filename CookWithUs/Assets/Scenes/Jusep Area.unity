@@ -530,7 +530,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.6308594
+  orthographic size: 2.109375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -652,7 +652,7 @@ MonoBehaviour:
   dialogueText: {fileID: 89121391}
   nameText: {fileID: 590900739}
   portraitImage: {fileID: 919293303}
-  playerPortrait: {fileID: 0}
+  playerPortrait: {fileID: 1282248013}
 --- !u!95 &132555412
 Animator:
   serializedVersion: 7
@@ -1851,7 +1851,7 @@ MonoBehaviour:
   dialogueText: {fileID: 89121391}
   nameText: {fileID: 590900739}
   portraitImage: {fileID: 919293303}
-  playerPortrait: {fileID: 0}
+  playerPortrait: {fileID: 1282248013}
 --- !u!95 &638129950
 Animator:
   serializedVersion: 7
@@ -3864,7 +3864,7 @@ MonoBehaviour:
   dialogueText: {fileID: 89121391}
   nameText: {fileID: 590900739}
   portraitImage: {fileID: 919293303}
-  playerPortrait: {fileID: 0}
+  playerPortrait: {fileID: 1282248013}
 --- !u!1 &1272011160
 GameObject:
   m_ObjectHideFlags: 0
