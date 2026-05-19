@@ -24,6 +24,11 @@ public class Bomb : MonoBehaviour
 
     public Areas areas;
 
+    [SerializeField] AudioClip VFX;
+
+
+
+
     private void Start()
     {
         bombCollider = GetComponent<Collider2D>();
@@ -40,6 +45,9 @@ public class Bomb : MonoBehaviour
         ExplodeDirection(Vector2.down);
         ExplodeDirection(Vector2.right);
         ExplodeDirection(Vector2.left);
+
+        AudioClip Won = VFX;
+        SoundEffectManager.PlayVoice(Won);
 
         OnBombExplode?.Invoke();
         GameObject center = Instantiate(explosionCenterPrefab, origin.position, Quaternion.identity);

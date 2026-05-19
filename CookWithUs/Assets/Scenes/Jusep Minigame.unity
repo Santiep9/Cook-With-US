@@ -14300,6 +14300,7 @@ MonoBehaviour:
   - {fileID: 106386332}
   lifeOn: {fileID: 8317616160568826472, guid: 052623c23570d784190930892146a3b5, type: 3}
   lifeOff: {fileID: -4125719101498999757, guid: f977472f49f86e74899ade899fb6932d, type: 3}
+  VFX: {fileID: 8300000, guid: 51e035515e4634b4dbc77d9dfd3865d4, type: 3}
 --- !u!70 &1212648750
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

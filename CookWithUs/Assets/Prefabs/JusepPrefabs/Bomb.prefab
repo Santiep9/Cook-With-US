@@ -152,6 +152,7 @@ MonoBehaviour:
   explosionEndPrefab: {fileID: 4987454224385243382, guid: 397e488852a706c41afc911819fa4bb6, type: 3}
   explosionDuration: 0.5
   areas: {fileID: 11400000, guid: 61bdbd5adf6cc154f859a730927e04ec, type: 2}
+  VFX: {fileID: 8300000, guid: f6d4c672dbbbbe849b0fb72d0525a208, type: 3}
 --- !u!95 &-2117042324560464096
 Animator:
   serializedVersion: 7

@@ -37,6 +37,8 @@ public class EnemyMove : MonoBehaviour
     private Animator anim;
     private Vector2 moveDir;
 
+    [SerializeField] AudioClip VFX;
+
     Vector2[] directions = new Vector2[]
     {
         Vector2.up,
@@ -61,6 +63,8 @@ public class EnemyMove : MonoBehaviour
         anim = GetComponent<Animator>();
         targetPos = SnapToGrid(transform.position);
         transform.position = targetPos;
+        AudioClip Won = VFX;
+        SoundEffectManager.PlayVoice(Won);
     }
 
     void Update()
@@ -331,10 +335,12 @@ public class EnemyMove : MonoBehaviour
                 areas.jusepCompleted = true;
             }
 
+            SoundEffectManager.StopVoice();
             SceneManager.LoadScene("Restaurant");
         }
         else
         {
+            SoundEffectManager.StopVoice();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
