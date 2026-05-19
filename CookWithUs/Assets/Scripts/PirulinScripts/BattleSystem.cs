@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -38,8 +39,9 @@ public class BattleSystem : MonoBehaviour
 
     public int contadorTEXTO = 0;
 
-
     public Animator animator;
+
+    public bool win;
 
     private void Start()
     {
@@ -55,7 +57,8 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        dialogueText.text = "hola pequeñin";
+        dialogueText.text = "Bi-bienvenido...";
+        SoundEffectManager.PlayVoice(dialogueManager.audioInicial);
 
         yield return new WaitForSeconds(3f);
 
@@ -66,6 +69,7 @@ public class BattleSystem : MonoBehaviour
     void PlayerTurn()
     {
         dialogueText.text = dialogueManager.DialogueText();
+        SoundEffectManager.PlayVoice(dialogueManager.currentClip);
 
         //CleanupButtons();
         CreateButtons();
@@ -157,16 +161,34 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn(bool isCorrect)
     {
+        SoundEffectManager.StopVoice();
 
         CleanupButtons();
+
+        if(win)
+        {
+            state = BattleState.WON;
+
+            SoundEffectManager.PlayVoice(dialogueManager.audioVictoria);
+
+            dialogueText.text = "Vale Anto, tú ganas...";
+
+            yield return new WaitForSeconds(4f);
+
+            SceneManager.LoadScene("Restaurant");
+
+            yield break;
+        }
 
         if (isCorrect)
         {
             dialogueText.text = dialogueManager.DialogueText();
+            SoundEffectManager.PlayVoice(dialogueManager.currentClip);
         }
         else
         {
             dialogueText.text = dialogueManager.DialogueText();
+            SoundEffectManager.PlayVoice(dialogueManager.currentClip);
         }
 
         yield return new WaitForSeconds(5f);

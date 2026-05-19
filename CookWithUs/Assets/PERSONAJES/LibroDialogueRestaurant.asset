@@ -12,18 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c61d95ed80af042bcf61798cdf6f0c, type: 3}
   m_Name: LibroDialogueRestaurant
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: LIBRASO
+  npcName: Sr.Libro
   npcPortrait: {fileID: 21300000, guid: 4b1d8f5a417103348bb65250bb377175, type: 3}
   dialogueLines:
-  - hoola mariqujita
-  - gay
-  autoProgressLines: 0101
+  - Y bien, has reunido todos los ingredientes?
+  - "S\xED\u2026 As\xED es."
+  - "\xBFPor qu\xE9 dudas? Al\xE9grate chaval, t\xFA y yo vamos a tener un restaurante
+    magn\xEDfico."
+  isNPCSpeaking: 010001
+  autoProgressLines: 010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound:
-  - {fileID: 8300000, guid: 4c8d95a05df596b49a09e8659233bace, type: 3}
-  - {fileID: 8300000, guid: 11c1dd5d39d33c2418297d88fbadfc3a, type: 3}
+  - {fileID: 8300000, guid: f691557e2c63baf4da21e4b64ce76cd1, type: 3}
+  - {fileID: 8300000, guid: 86dc8256c7ad142469e472545a0dd3d3, type: 3}
+  - {fileID: 8300000, guid: 2044e2f92ad8b6142816b803d0ca8b78, type: 3}
   voicePitch: 1
   necesitaTimeline: 1
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

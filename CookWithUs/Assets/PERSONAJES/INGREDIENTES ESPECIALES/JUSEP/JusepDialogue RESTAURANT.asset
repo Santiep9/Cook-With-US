@@ -15,14 +15,24 @@ MonoBehaviour:
   npcName: Jusep
   npcPortrait: {fileID: 21300000, guid: 6138b6b90d6dd9e41b5cea292f380196, type: 3}
   dialogueLines:
-  - soc el juseep
-  - me gusta fumar porros
-  autoProgressLines: 0100
+  - Oye G, no eres tan malo como pensaba.
+  - Gracias mi G, que te parece mi restaurante?
+  - "Parece un poco as\xED de barrio bajo pero no est\xE1 mal, estoy en mi salsa."
+  - En tu salsa?
+  - "Crec\xED en el barrio t\xEDo, no sabes la infancia que he tenido\u2026"
+  isNPCSpeaking: 0100010001
+  autoProgressLines: 0101010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound:
-  - {fileID: 8300000, guid: e0f7c7a6c03389d4b9ea675e3d3ce8c7, type: 3}
-  - {fileID: 8300000, guid: cbe4d7a1ab0d91b469a49296df6f5633, type: 3}
+  - {fileID: 8300000, guid: a4ab05d61ebab3a4093c7f834fa81735, type: 3}
+  - {fileID: 8300000, guid: 5e6ed99a0254f1142b261fcb1e69996b, type: 3}
+  - {fileID: 8300000, guid: 94f032e8a05bd7644843e2cbd9e315db, type: 3}
+  - {fileID: 8300000, guid: 05883fd478fade84fbc8c391f0deee7e, type: 3}
+  - {fileID: 8300000, guid: 469bfdf90806b6a46943842930ce1e04, type: 3}
   voicePitch: 1
   necesitaTimeline: 1
   timelineTerminada: 0
+  timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

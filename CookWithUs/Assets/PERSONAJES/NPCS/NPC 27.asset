@@ -18,7 +18,7 @@ MonoBehaviour:
   - Ay por favor, sigo sin encontrar a mi amado.
   - "Lo siento much\xEDsimo, seguro que era una gran persona."
   - "Literalmente adem\xE1s, literalmente."
-  isNPCSpeaking: 000100
+  isNPCSpeaking: 010001
   autoProgressLines: 010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05

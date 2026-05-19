@@ -15,14 +15,33 @@ MonoBehaviour:
   npcName: Meji y John
   npcPortrait: {fileID: 21300000, guid: ca7f7cfe0c8a4af468dc8c09ca9eccfb, type: 3}
   dialogueLines:
-  - hola somos meji y jon
-  - siii encantados
-  - tonto
-  autoProgressLines: 010100
+  - "T\xEDo no sabes cuanto te agradezco lo que has hecho por nosotros."
+  - "Nada chicos, no pod\xEDa quedarme de brazos cruzados. Me emociona veros juntos
+    otra vez."
+  - "Ser\xE1s mi senpai para siempre Anto."
+  - Fuera de mi restaurante.
+  - "Ha vuelto un poco\u2026 trastocado, pero sigue siendo mi Meji de siempre. Aunque
+    como siga con esas mierdas le meto una orden de alejamiento."
+  - "Bueno va, seamos buenos con \xE9l que lo ha tenido que pasar fatal."
+  - Chicos, como os sigais quejando me voy a convertir en super saiyajin y eso no
+    va a terminar bien para vosotros.
+  - "La puerta est\xE1 ah\xED atr\xE1s. "
+  isNPCSpeaking: 0100010001000100
+  autoProgressLines: 0101010101010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound:
-  - {fileID: 8300000, guid: 8f161ae99f001c9469ed09d1ecab757a, type: 3}
-  - {fileID: 8300000, guid: 9f06a7643237969499b5e25b31dfbe4d, type: 3}
-  - {fileID: 8300000, guid: 6252aae86e20bac4cbc5460f7923030b, type: 3}
+  - {fileID: 8300000, guid: 74826eb6419e8ed44b93e45402e674d1, type: 3}
+  - {fileID: 8300000, guid: 8262f9f2475beef4fa16183092236ae0, type: 3}
+  - {fileID: 8300000, guid: 95eaa93cb3bc96144ad4f555fd972de3, type: 3}
+  - {fileID: 8300000, guid: f82ab81812d67234781d4a07b9e6ca4d, type: 3}
+  - {fileID: 8300000, guid: 237a5649bc7069840a1b25f961a8b105, type: 3}
+  - {fileID: 8300000, guid: 63e701dcab5761046b4b27cf742d3292, type: 3}
+  - {fileID: 8300000, guid: 7deae05005bab0a4f8534fa21d270724, type: 3}
+  - {fileID: 8300000, guid: a7f9d5021b634a54bbbc0c99a4b09af8, type: 3}
   voicePitch: 1
+  necesitaTimeline: 0
+  timelineTerminada: 0
+  timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

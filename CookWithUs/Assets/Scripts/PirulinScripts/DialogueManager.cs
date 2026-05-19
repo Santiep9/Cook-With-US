@@ -9,6 +9,13 @@ public class DialogueManager : MonoBehaviour
     public string[] respuestasPirulin = new string[24];
     public string[] opcionesAnto = new string[36];
 
+    public AudioClip[] audioFrasesPirulin = new AudioClip[12];
+    public AudioClip[] audioRespuestasPirulin = new AudioClip[24];
+
+    public AudioClip currentClip;
+    public AudioClip audioVictoria;
+    public AudioClip audioInicial;
+
     private BattleSystem bs;
 
     public List<int> valoresRandom = new List<int>();
@@ -39,6 +46,7 @@ public class DialogueManager : MonoBehaviour
                 valoresRandom.Add(randomValue);
 
                 resultado = frasesPirulin[valoresRandom[i]];
+                currentClip = audioFrasesPirulin[valoresRandom[i]];
 
                 break;
 
@@ -47,12 +55,14 @@ public class DialogueManager : MonoBehaviour
                 {
                     print("ES BUENO");
                     resultado = respuestasPirulin[valoresRandom[i] * 2];
+                    currentClip = audioRespuestasPirulin[valoresRandom[i] * 2];
 
                     i++;
                     break;
                 }
                 print("ES MALO");
                 resultado = respuestasPirulin[valoresRandom[i] * 2 + 1];
+                currentClip = audioRespuestasPirulin[valoresRandom[i] * 2 + 1];
 
                 i++;
                 break;

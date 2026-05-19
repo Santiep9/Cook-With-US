@@ -15,14 +15,28 @@ MonoBehaviour:
   npcName: Pirulin
   npcPortrait: {fileID: 7482667652216324306, guid: c2ffa78e7bcfec246a8c1242285e9451, type: 3}
   dialogueLines:
-  - hooollalaaa
-  - soyh pirulin
-  autoProgressLines: 0100
+  - O-oye muchas gracias por todas esas cosas que me has dicho >.<
+  - Nada Pirulin, te lo mereces.
+  - "E-eso es cierto? Nunca nadie me hab\xEDa tratado as\xED, es que soy tan bajito\u2026"
+  - Eso no importa Pirulin.
+  - Mido 32 cm, no llego ni al metro.
+  - "\u2026 Pero eres muyyyyyyy, muyyyyyy \u2026majo!"
+  - "ENSERIO CREES ESO! La gente de mi instituto no pensaba igual\u2026"
+  isNPCSpeaking: 01000100010001
+  autoProgressLines: 01010101010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound:
-  - {fileID: 8300000, guid: 5c16b46717a0a5c41934f4d030a2ef95, type: 3}
-  - {fileID: 8300000, guid: 88cda2789fdee6b47a1c2acc2f4db398, type: 3}
+  - {fileID: 8300000, guid: d1b309fdd9d8e9545a5adb04abf705c0, type: 3}
+  - {fileID: 8300000, guid: 78b83b229ed82ab4393d00eb5892f364, type: 3}
+  - {fileID: 8300000, guid: 219f891bb1cdc2a46b5bd4309d46bb81, type: 3}
+  - {fileID: 8300000, guid: 3a461228657dd65499b7596e14a07980, type: 3}
+  - {fileID: 8300000, guid: 7ee7c4c12d5f1d64682af7f1d483d4e2, type: 3}
+  - {fileID: 8300000, guid: dad2768bb557dea4da4b02f46a427f85, type: 3}
+  - {fileID: 8300000, guid: 64dea37e6f6422c41b068d600afc5cfe, type: 3}
   voicePitch: 1
   necesitaTimeline: 1
   timelineTerminada: 0
+  timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

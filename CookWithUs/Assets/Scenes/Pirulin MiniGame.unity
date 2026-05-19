@@ -158,6 +158,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 013f319e120dd3f49b1cdb9bb8a0fd15, type: 3}
   fadeTransition: {fileID: 11400000, guid: 013263c83b6a84c4d95beaa8bd163ac8, type: 2}
   areas: {fileID: 11400000, guid: 61bdbd5adf6cc154f859a730927e04ec, type: 2}
+  battleSystem: {fileID: 517557821}
 --- !u!4 &99167555
 Transform:
   m_ObjectHideFlags: 0
@@ -426,80 +427,121 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   frasesPirulin:
-  - "Soy tan feo, nadie me querr\xE1 nunca."
-  - "que peque\xF1in que soy"
-  - tengo la pilila enana
-  - que manos mas grandes
-  - nice guys always finish last
-  - pobrecito de mi
-  - quieres  ser mi amigo
-  - lowk eres guapilla
-  - tu me eligirias antes que a otros
-  - soy tonto y tonto
-  - todos son mas guapos que yo
-  - no soy nada fuerte
+  - "Soy tan feo, que nadie me querr\xE1 nunca."
+  - "Es que soy tan peque\xF1o\u2026"
+  - "Qu\xE9 manos m\xE1s grandes tienes\u2026"
+  - "\xBFT\xFA me elegir\xEDas antes que a otros?"
+  - "Soy un peque\xF1\xEDn muy d\xE9bil\u2026"
+  - Que alto eres wooow.
+  - "Nice guys always finish last\u2026"
+  - Porque nadie quiere ser mi pareja.
+  - "Todos son m\xE1s guapos que yo\u2026"
+  - "Estoy triste , pero no me preguntes porque\u2026"
+  - "Qu\xE9 tonto que soy\u2026"
+  - "\xBFT\xFA ser\xEDas mi amigo?"
   respuestasPirulin:
-  - enserio lo crees? UwU
-  - lo sabia...
-  - SOY GRANDECIIIIIN
-  - "peque\xF1in pero maton..."
-  - quieres verla :P
-  - eso dicen todas...
-  - SIII COMPAREMOS
-  - lo siento...
-  - I WILL BE YOUR NICE GUY!!
-  - oye pq me dices cosas malas...
-  - rico ricolino soy
-  - ves q pobrecito soy...
-  - TOMODACHI ARIGATOOO
-  - hah... sabia q no querrias...
-  - ENSERIO LO CREES
-  - oye no seas malo...
-  - MUCHAS GRACIAS TIO!!
-  - te matare.
-  - me halagas jijiji
-  - ME VOY A SUICIDAR
-  - '*se sonroja*'
-  - '*se suicida*'
-  - popeye, yo ? yo popeye?? SIIII
-  - empieza mi gym era.
+  - "\xBFEnserio lo crees? UwU"
+  - "Sab\xEDa que me odiabas\u2026"
+  - "\xBFDe verdad?"
+  - "SOY PEQUE\xD1O PERO MAT\xD3N"
+  - SIIII comparemos!
+  - "Lo siento\u2026"
+  - "\xA1MUCHAS GRACIAS NO TE DEFRAUDAR\xC9!"
+  - "Es normal\u2026 Te entiendo, yo tampoco me elegir\xEDa\u2026"
+  - 'Popeye, yo? Yo popeye?? '
+  - Empieza mi gym era.
+  - MENTIROSO! jiji.
+  - "Ves que peque\xF1in soy\u2026"
+  - I WILL BE YOUR NICE GUY!
+  - "Jopetis eres lo peor\u2026"
+  - Te parece que yo soy oro, ayyyyyy
+  - Te voy a matar.
+  - '*Se sonroja*'
+  - '*Se quiere matar* '
+  - GRACIAS POR PREGUNTAR LO NECESITABA.
+  - "Ten\xEDas que preguntarme tonto :( "
+  - "De hecho \xE9l me di\xF3 clases de mates."
+  - "Toda la raz\xF3n\u2026"
+  - TOMODACHI ARIGATOOOOO.
+  - "Ja\u2026 Sab\xEDa que no querr\xEDas\u2026"
   opcionesAnto:
-  - que dices? eres guapillo
-  - ya ves bro toda la razon
-  - JAJAJJAJ pringao
-  - eres muy grandecin
-  - lowk mejor
-  - y eso no importa
-  - la tienes gigante bro
-  - "es el tama\xF1o perfecto"
-  - las grandes duelen
-  - vamos a compararlas bb
-  - puto pickme de mierda
-  - quien eres?
-  - i love nice guys
-  - parguelita
-  - yo finisheo el primero siempre
-  - no eres pobrecito eres riquecito
-  - pobre como en venezuela
-  - jaja tonto
-  - seamos tomodachi >.<
-  - quien eres bro
-  - emm.. vale...
-  - tu tmb tontorron
-  - ya lo se parguela
-  - ayyyy enseriooo
-  - claro que si pirulin!
-  - sigo sin saber quien eres
-  - hell nah
-  - pero guapo y guapo
-  - pero feo y feo
-  - pero loco y loco
-  - no sabia que estabamos jugando a mentir..
-  - ya ves jaja
-  - no digas eso kacchan!
-  - eres como popeye lil bro
-  - weak ahh
-  - jajajajaj pringaoo
+  - "\xBFQu\xE9 dices? Eres guapillo tontorron."
+  - "Bueno a ver\u2026 no est\xE1s mal\u2026"
+  - JAJAJAJ pringao.
+  - "Yo dir\xEDa que eres demasiado grande incluso\u2026"
+  - Pero eso te tiene que dar igual!
+  - "El tama\xF1o no importa Pirulin."
+  - Vamos a compararlas bb.
+  - Puto pickme de mierda.
+  - "Las tuyas tampoco est\xE1n mal."
+  - 'Claro que si Pirulin! '
+  - Sigo sin saber quien eres.
+  - Hell nah.
+  - Pero si pensaba que eras popeye.
+  - "Deber\xEDas apuntarte al gym, te ir\xEDa genial."
+  - Jajaj pringao.
+  - Que dices va, me sacas 2 cabezas.
+  - Alto yo? No exactamente.
+  - Somos bajitos los 2 crack.
+  - "T\xFA puedes ser mi nice guy."
+  - Yo acabo el primero siempre.
+  - Que dura verdad, Pirulin.
+  - Porque la gente no sabe apreciar el oro, Pirulin.
+  - Te has mirado.
+  - "Porque est\xE1n ocupados con las maquinitas."
+  - "No sab\xEDa que est\xE1bamos jugando a mentir\u2026 "
+  - "No es dif\xEDcil tampoco. "
+  - 'No digas eso kacchan! '
+  - "\xBFPor qu\xE9? "
+  - "Vale, te dejar\xE9 espacio Pirulin. "
+  - Pues ponte feliz.
+  - "Albert Einstein se quedar\xEDa corto a tu lado. "
+  - "Lowkey tienes raz\xF3n. "
+  - "Y qu\xE9 importa? Mira al que est\xE1 jugando a esto. "
+  - 'Seamos tomodachi >.< '
+  - "Pero esque no se quien eres a\xFAn. "
+  - "Ya\u2026 vale si\u2026 "
+  audioFrasesPirulin:
+  - {fileID: 8300000, guid: c5176969903b3da499c81a86b6934be5, type: 3}
+  - {fileID: 8300000, guid: 94bcd3836f543a2439abb2b385210c83, type: 3}
+  - {fileID: 8300000, guid: 5a72cdc6d8e1168479d080f43d28634b, type: 3}
+  - {fileID: 8300000, guid: 275f6d1777ec95148b8e66c939386c5b, type: 3}
+  - {fileID: 8300000, guid: 6a3f45932a0f89543b9796a53a1f0fa3, type: 3}
+  - {fileID: 8300000, guid: 1e38a33359c2111458e664592e283662, type: 3}
+  - {fileID: 8300000, guid: c856a8f32ac975543ae03a39cd22c592, type: 3}
+  - {fileID: 8300000, guid: c36ec28e997f74947a5cc77f55bd06e2, type: 3}
+  - {fileID: 8300000, guid: b3abd272d6687a544a9a3b894e32f824, type: 3}
+  - {fileID: 8300000, guid: 23f4f5061e513c54cbdf7710552bb80b, type: 3}
+  - {fileID: 8300000, guid: c9809a6641a51554f9a3112a8d885f9e, type: 3}
+  - {fileID: 8300000, guid: 8fa5e7b705f26f74682dfab811a29acf, type: 3}
+  audioRespuestasPirulin:
+  - {fileID: 8300000, guid: 26183d7607b5ba64ab4dfe85a97f4d78, type: 3}
+  - {fileID: 8300000, guid: 046c7a2044583c24883eb3a9073bc1b1, type: 3}
+  - {fileID: 8300000, guid: f900a5028d4f3ff4491c3d1bd98160be, type: 3}
+  - {fileID: 8300000, guid: d3ab3655bfd00834fbabde49747c9f01, type: 3}
+  - {fileID: 8300000, guid: 3e190e1008fc1cc4bb56fb2bd2282d4b, type: 3}
+  - {fileID: 8300000, guid: 076ccc585816af44bb8e4eec3537f693, type: 3}
+  - {fileID: 8300000, guid: bd5e87ce64810104682a8966393402ec, type: 3}
+  - {fileID: 8300000, guid: cad7e2f429b999640b3e9a3dc4c77173, type: 3}
+  - {fileID: 8300000, guid: d0096d1c5b9f12e4089653cd6436dc84, type: 3}
+  - {fileID: 8300000, guid: 4972e2f50f492c644a8d583619b81ae0, type: 3}
+  - {fileID: 8300000, guid: b17cff0059cbc6547ac89e8bd7b9418b, type: 3}
+  - {fileID: 8300000, guid: 896d868fe0518494f83529884b1e4d11, type: 3}
+  - {fileID: 8300000, guid: 6656e3959f85d204eb7f88d9c19fb45d, type: 3}
+  - {fileID: 8300000, guid: 546a5a95131d8ed41849d70c5d633e52, type: 3}
+  - {fileID: 8300000, guid: bbf48ba6781a1814f8c1cda8c90a4d4d, type: 3}
+  - {fileID: 8300000, guid: 0d181d70edff93247a130c73ad19ba94, type: 3}
+  - {fileID: 8300000, guid: d10f1feab0d3d244bb34144add6d0c6c, type: 3}
+  - {fileID: 8300000, guid: 2711e866958107f4da6f4ad0082d1594, type: 3}
+  - {fileID: 8300000, guid: 837c9a26bcc339e419f2a20549e7cc24, type: 3}
+  - {fileID: 8300000, guid: f59da784cbf97274da7bc00e85022d41, type: 3}
+  - {fileID: 8300000, guid: 9d8216e6cfa7cc241bd34095fc287e65, type: 3}
+  - {fileID: 8300000, guid: 59c735650e025a340b10a2c1a9dd3b59, type: 3}
+  - {fileID: 8300000, guid: 5687fd6679c99d2419714f0c0f75ceb1, type: 3}
+  - {fileID: 8300000, guid: 2e5d0d30d79e2474e9154cb34b60997a, type: 3}
+  currentClip: {fileID: 0}
+  audioVictoria: {fileID: 8300000, guid: 62933be403099f2479a6f5ae158c85b8, type: 3}
+  audioInicial: {fileID: 8300000, guid: e9fa1f0e044d33e47afea1855c1273e7, type: 3}
   valoresRandom: 
 --- !u!4 &424316649
 Transform:
@@ -726,6 +768,7 @@ MonoBehaviour:
   DIALOGOCORRECT: 0
   contadorTEXTO: 1
   animator: {fileID: 1546666543}
+  win: 0
 --- !u!4 &517557822
 Transform:
   m_ObjectHideFlags: 0

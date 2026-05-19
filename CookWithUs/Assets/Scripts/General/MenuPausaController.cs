@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -49,20 +50,35 @@ public class MenuPausaController : MonoBehaviour
     public void ExitGame()
     {
         exitCanvas.SetActive(true);
+        SoundEffectManager.PlayVoice(sonidosSettings[0]);
     }
 
     public void ConfirmExit()
     {
         exitCanvas.SetActive(false);
         exitImage.sprite = spriteExitCONFIRMADO;
-        SoundEffectManager.PlayVoice(sonidosSettings[0]);
+        SoundEffectManager.PlayVoice(sonidosSettings[1]);
 
-
+        StartCoroutine(QuitAfterSound(sonidosSettings[1].length));
         //Application.Quit();
     }
+
+    private IEnumerator QuitAfterSound(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+
+        Application.Quit();
+
+        
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+
 
     public void DenyExit()
     {
         exitCanvas.SetActive(false);
+        SoundEffectManager.StopVoice();
     }
 }
