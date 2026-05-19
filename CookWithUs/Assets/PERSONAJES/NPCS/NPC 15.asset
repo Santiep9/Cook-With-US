@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 15
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: "Mr. \xD1east"
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -6200713913944098059, guid: 440541ef32c34ba4eaafdfa5a01b43a5, type: 3}
   dialogueLines:
   - "!EN EL VIDEO DE HOY EL \xDALTIMO EN DEJAR DE ESCRIBIR GANAR\xC1 100000\u20AC!"
   isNPCSpeaking: 01
@@ -26,5 +26,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

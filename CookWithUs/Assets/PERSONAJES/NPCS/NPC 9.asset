@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 9
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Triculina
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -5333270447306496418, guid: 28d59b8a465d9bc4d9e35410ad37b376, type: 3}
   dialogueLines:
   - NO NO NO NO NO NO NO NO NO NO NO NO NO NO
   isNPCSpeaking: 01
@@ -26,5 +26,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

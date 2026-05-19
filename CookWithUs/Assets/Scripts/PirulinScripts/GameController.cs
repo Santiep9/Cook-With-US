@@ -16,12 +16,18 @@ public class GameController : MonoBehaviour
 
     public Areas areas;
 
+    [SerializeField] AudioClip song;
+
     [SerializeField] private BattleSystem battleSystem;
+
     private void Start()
     {
         progressAmount = 0;
         progressSlider.value = 0;
         Botones.OnPointsAdded += IncreaseProgressAmount;
+        AudioClip Song = song;
+        SoundEffectManager.PlayVoice(Song);
+        SoundEffectManager.UnPause();
     }
     public void IncreaseProgressAmount(int amount)
     {
@@ -33,9 +39,10 @@ public class GameController : MonoBehaviour
 
         if(progressAmount >= 100)
         {
+            SoundEffectManager.StopVoice();
             areas.pirulinCompleted = true;
             battleSystem.win = true;
-            Debug.Log("acabo");
+            Debug.Log("acabo");   
         }
 
         if(progressAmount < 0)
@@ -59,9 +66,6 @@ public class GameController : MonoBehaviour
 
             print("PERDISTE");
         }
-
-
-
         UpdateSprite();
     }
 

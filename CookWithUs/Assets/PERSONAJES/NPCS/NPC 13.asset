@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 13
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Big Nene
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 8253446478396845619, guid: c060e1334ea63fb43b4a802d4daf63f1, type: 3}
   dialogueLines:
   - Hola.
   - Hola.
@@ -40,5 +40,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

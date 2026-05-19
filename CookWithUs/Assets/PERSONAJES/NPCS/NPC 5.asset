@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 5
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Diana
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -5957481767553626923, guid: 4aa7e1b7d2f50d04e91f3a758f9ed4eb, type: 3}
   dialogueLines:
   - "Esta plaza es bastante tranquila, no suelen ocurrir muchas cosas por aqu\xED"
   isNPCSpeaking: 01
@@ -26,5 +26,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 4
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: "Se\xF1or Perverso"
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -1074667668689054642, guid: bbfa8f9f8c4305a47a63f5877fbf3d14, type: 3}
   dialogueLines:
   - ... (sonidos perturbantes)
   isNPCSpeaking: 01
@@ -26,5 +26,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

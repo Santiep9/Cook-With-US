@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 8
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: JuanFrancisco
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -7868205583407863676, guid: eabcdbe868c5b4f41bf5eef51ec21ea7, type: 3}
   dialogueLines:
   - "Yo no tengo ni puta idea de quienes son est\xE1s dos."
   - "De hecho me ha dicho la ni\xF1a que soy la reencarnaci\xF3n de su padre, no
@@ -29,5 +29,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

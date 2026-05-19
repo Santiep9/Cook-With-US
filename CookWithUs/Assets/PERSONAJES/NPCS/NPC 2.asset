@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 2
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Khabib
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -6842925340061106049, guid: a0b11e117c09ba649a071604c5e8f943, type: 3}
   dialogueLines:
   - HOLAAAAAAAAAA HOLA si hola, hola que tal bienvenido AL TEMPLO
   - "\xBFAl templo?"
@@ -36,5 +36,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

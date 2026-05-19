@@ -71,4 +71,14 @@ public class SoundEffectManager : MonoBehaviour
     {
         SetVolume(sfxSlider.value);
     }
+
+    public static void Pause()
+    {
+        voiceAudioSource.Pause();
+    }
+
+    public static void UnPause()
+    {
+        voiceAudioSource.UnPause();
+    }
 }

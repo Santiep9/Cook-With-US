@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 3
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Jonathan
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 4255980457690779551, guid: 17d42e4e7cb1bef40847c62cb38ab5af, type: 3}
   dialogueLines:
   - "Necesito ayuda psicol\xF3gica urgentemente, tengo pensamientos muy malos y est\xE1
     ciudad se arrepentir\xE1."
@@ -29,5 +29,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

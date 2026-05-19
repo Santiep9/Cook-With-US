@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 18
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: xXAdrian14Xx
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 155529385129523553, guid: 9ab28d6e66aef6b42b2a7b728815d08f, type: 3}
   dialogueLines:
   - "Si buscas a una gamba, he escuchado que hay una gamba super pick me que siempre
     est\xE1 cerca de la fuente."
@@ -33,5 +33,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

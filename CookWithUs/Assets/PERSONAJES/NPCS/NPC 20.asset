@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 20
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Merengue
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 173802172858786993, guid: ff5e58fa23edfb14a80193036d228eae, type: 3}
   dialogueLines:
   - "Yo nunca pasar\xEDa por el skatepark ese al lado del WacDonalds. Y menos siendo
     tu, con esa cara de tonto es como ir pidiendo que te roben."
@@ -29,5 +29,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

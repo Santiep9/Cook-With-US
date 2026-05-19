@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 23
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Hater Maximo
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -7285853160934704219, guid: 8399cfb3b3c964746bbcace0da122c05, type: 3}
   dialogueLines:
   - "Justo al lado del WacDonalds suele haber un t\xEDo que es un fantasm\xF3n que
     flipas. "
@@ -27,5 +27,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

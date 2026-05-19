@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 14
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: "Bu\xF1uelete"
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 8001438765792534281, guid: c57d8c2710b04cb48bb176a741494008, type: 3}
   dialogueLines:
   - "\xA1Buenas viajero! Te puedo llevar al r\xEDo m\xE1gico por tan solo 5 monedas
     de plata."
@@ -36,5 +36,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

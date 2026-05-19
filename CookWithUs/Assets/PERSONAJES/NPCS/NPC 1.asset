@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 1
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Mario
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -8462051575765345684, guid: 5efbeb20a85860842885bc66d91ce3c9, type: 3}
   dialogueLines:
   - "Bienvenido! Tenemos de todo por aqu\xED, \xA1preg\xFAntanos si tienes alguna
     duda!"
@@ -31,5 +31,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

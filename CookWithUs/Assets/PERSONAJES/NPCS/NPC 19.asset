@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 19
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: El escuchador
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -7339116108365364104, guid: 2c98544c4b6e2fc4bbbd07f13201fdc3, type: 3}
   dialogueLines:
   - "Parece que siempre se escuchan como lloros de una almeja desde la comisaria,
     pero hay un tonto bloqueandola casi siempre as\xED que no s\xE9 quien es."
@@ -27,5 +27,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0
