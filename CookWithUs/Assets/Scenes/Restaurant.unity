@@ -623,7 +623,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.6308594
+  orthographic size: 2.109375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2815,7 +2815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &802768854
 Transform:
   m_ObjectHideFlags: 0
@@ -5955,8 +5955,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -1.015316, y: 1.8255376}
-      - {x: -1.0027404, y: 0.054344058}
-      - {x: 0.41007817, y: -0.6105564}
+      - {x: -0.9781625, y: -0.58467656}
+      - {x: 0.3732115, y: -1.3478879}
       - {x: 0.46268559, y: 1.0287219}
   m_UseDelaunayMesh: 0
 --- !u!1 &1293772518
@@ -7535,7 +7535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1700229515
 Transform:
   m_ObjectHideFlags: 0
@@ -8404,7 +8404,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.014959097, y: 0.0046111345}
+  m_Offset: {x: 0.0376489, y: -0.61368537}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8414,7 +8414,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8771205, y: 0.7025125}
+  m_Size: {x: 0.92250013, y: 1.9391055}
   m_EdgeRadius: 0
 --- !u!114 &1939695317
 MonoBehaviour:
@@ -9365,7 +9365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &7158058641825352134
 BoxCollider2D:
   m_ObjectHideFlags: 0
