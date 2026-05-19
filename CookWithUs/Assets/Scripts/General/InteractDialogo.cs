@@ -25,6 +25,12 @@ public class InteractDialogo : MonoBehaviour, IInteractable
     private Vector3 npcOriginalScale;
     private Vector3 playerOriginalScale;
 
+    private void Awake()
+    {
+        npcOriginalScale = portraitImage.transform.localScale;
+        playerOriginalScale = playerPortrait.transform.localScale;
+    }
+
     private void Start()
     {
         if (dialogueData != null && dialogueData.playOnSceneStart && !dialogueData.hasPlayed)
@@ -64,9 +70,6 @@ public class InteractDialogo : MonoBehaviour, IInteractable
 
         nameText.SetText(dialogueData.npcName);
         portraitImage.sprite = dialogueData.npcPortrait;
-
-        npcOriginalScale = portraitImage.transform.localScale;
-        playerOriginalScale = playerPortrait.transform.localScale;
 
         dialoguePanel.SetActive(true);
         PauseController.SetPause(true);
@@ -167,6 +170,12 @@ public class InteractDialogo : MonoBehaviour, IInteractable
         }
         else
         {
+            portraitImage.transform.localScale = npcOriginalScale;
+            playerPortrait.transform.localScale = playerOriginalScale;
+
+            portraitImage.color = Color.white;
+            playerPortrait.color = Color.white;
+
             StopAllCoroutines();
             isDialogueActive = false;
             dialogueText.SetText(string.Empty);

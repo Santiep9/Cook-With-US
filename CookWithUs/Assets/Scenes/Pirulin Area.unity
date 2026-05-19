@@ -1640,7 +1640,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
-  playerPortrait: {fileID: 0}
+  playerPortrait: {fileID: 462527510}
 --- !u!95 &328483771
 Animator:
   serializedVersion: 7
@@ -4498,7 +4498,7 @@ MonoBehaviour:
   dialogueText: {fileID: 110197966}
   nameText: {fileID: 1859440684}
   portraitImage: {fileID: 445797503}
-  playerPortrait: {fileID: 0}
+  playerPortrait: {fileID: 462527510}
 --- !u!95 &759143062
 Animator:
   serializedVersion: 7

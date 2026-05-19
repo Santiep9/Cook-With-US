@@ -19,7 +19,7 @@ MonoBehaviour:
   - "\xBFPor qu\xE9 no te apartas?"
   - "Porque me gusta bloquear paredes y aqu\xED estoy yo t\xEDo, lo siento es que
     me gusta bloquear paredes."
-  isNPCSpeaking: 
+  isNPCSpeaking: 010001
   autoProgressLines: 010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
