@@ -1,3 +1,4 @@
+using EasyTransition;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Areas areas;
 
+    public TransitionSettings fadeTransition;
 
     int Object;
     int contador;
@@ -481,7 +483,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(2f);
 
-        SceneManager.LoadScene("Restaurant");
+        TransitionManager.Instance().Transition("Restaurant", fadeTransition, 0);
     }
     IEnumerator TypeLine(string textin, TextMeshProUGUI Texton)
     {

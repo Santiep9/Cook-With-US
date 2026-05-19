@@ -1,3 +1,4 @@
+using EasyTransition;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,8 @@ public class Door : MonoBehaviour
     public PlayerMove playerMove;
 
     public Canvas Completed;
+
+    public TransitionSettings fadeTransition;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,8 +42,7 @@ public class Door : MonoBehaviour
         {
             if (areas == null)
             {
-                SceneManager.LoadScene(NombreEscena);
-
+                TransitionManager.Instance().Transition(NombreEscena, fadeTransition, 0);
             }
             //FadeTransition(other.gameObject);
             if (areas != null && areas.pirulinCompleted && areas.mjohnCompleted && areas.jusepCompleted)
@@ -52,9 +54,7 @@ public class Door : MonoBehaviour
                     playerMove.rb.linearVelocity = Vector2.zero;
                     return;                                    
             }
-
-               SceneManager.LoadScene(NombreEscena);
-
+            TransitionManager.Instance().Transition(NombreEscena, fadeTransition, 0);
         }
     }
 

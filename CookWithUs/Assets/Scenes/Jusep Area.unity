@@ -530,7 +530,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 0.9375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2060,6 +2060,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645466061}
   m_CullTransparentMesh: 1
+--- !u!1 &647687350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 647687351}
+  - component: {fileID: 647687352}
+  m_Layer: 0
+  m_Name: TransitionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &647687351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647687350}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.61019, y: -0.37014, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647687352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647687350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61430b0086307cc4da3ccc8d39ae88da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EasyTransition.TransitionManager
+  transitionTemplate: {fileID: 5276914992623515724, guid: 616d511151a6c554caddf1c754e4f91d, type: 3}
 --- !u!1 &663735011
 GameObject:
   m_ObjectHideFlags: 0
@@ -5544,6 +5589,10 @@ PrefabInstance:
       propertyPath: NombreEscena
       value: Pirulin Area
       objectReference: {fileID: 0}
+    - target: {fileID: 7064252945795107968, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
+      propertyPath: fadeTransition
+      value: 
+      objectReference: {fileID: 11400000, guid: 013263c83b6a84c4d95beaa8bd163ac8, type: 2}
     - target: {fileID: 7379164476506103132, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.935
@@ -5652,9 +5701,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.4228452, y: 0.43475395}
-      - {x: -3.4125986, y: -1.7500088}
-      - {x: 0.7836478, y: -0.86468273}
+    - - {x: -0.06669372, y: 0.028581977}
+      - {x: -1.4365095, y: 0.626058}
+      - {x: -0.22875261, y: -0.26057017}
+      - {x: 0.92029345, y: -0.76903087}
   m_UseDelaunayMesh: 0
 --- !u!1 &1892766922
 GameObject:
@@ -6348,3 +6398,4 @@ SceneRoots:
   - {fileID: 583427346}
   - {fileID: 446420464}
   - {fileID: 663735012}
+  - {fileID: 647687351}

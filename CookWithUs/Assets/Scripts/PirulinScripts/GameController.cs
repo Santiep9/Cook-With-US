@@ -1,3 +1,4 @@
+using EasyTransition;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class GameController : MonoBehaviour
     public Image handleSprite;
 
     public Sprite[] heartSprites;
+
+    public TransitionSettings fadeTransition;
 
     public Areas areas;
     private void Start()
@@ -32,7 +35,7 @@ public class GameController : MonoBehaviour
         if(progressAmount >= 100)
         {
             areas.pirulinCompleted = true;
-            SceneManager.LoadScene("Restaurant");
+            TransitionManager.Instance().Transition("Restaurant", fadeTransition, 0);
             Debug.Log("acabo");
         }
 

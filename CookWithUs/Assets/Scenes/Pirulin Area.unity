@@ -2154,6 +2154,10 @@ PrefabInstance:
       propertyPath: NombreEscena
       value: Jusep Area
       objectReference: {fileID: 0}
+    - target: {fileID: 7064252945795107968, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
+      propertyPath: fadeTransition
+      value: 
+      objectReference: {fileID: 11400000, guid: 013263c83b6a84c4d95beaa8bd163ac8, type: 2}
     - target: {fileID: 7379164476506103132, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.16
@@ -4391,6 +4395,51 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01037693, y: -0.039114952}
   m_Size: {x: 0.62960625, y: 1.2415495}
   m_Direction: 0
+--- !u!1 &742362202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742362203}
+  - component: {fileID: 742362204}
+  m_Layer: 0
+  m_Name: TransitionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &742362203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742362202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.01061, y: -0.52631, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742362204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742362202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61430b0086307cc4da3ccc8d39ae88da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EasyTransition.TransitionManager
+  transitionTemplate: {fileID: 5276914992623515724, guid: 616d511151a6c554caddf1c754e4f91d, type: 3}
 --- !u!1 &743105048
 GameObject:
   m_ObjectHideFlags: 0
@@ -5215,6 +5264,10 @@ PrefabInstance:
       propertyPath: NombreEscena
       value: MJohn Area
       objectReference: {fileID: 0}
+    - target: {fileID: 7064252945795107968, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
+      propertyPath: fadeTransition
+      value: 
+      objectReference: {fileID: 11400000, guid: 013263c83b6a84c4d95beaa8bd163ac8, type: 2}
     - target: {fileID: 7285244619673478053, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
       propertyPath: m_Size.x
       value: 6.935013
@@ -13671,6 +13724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: puerta_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7064252945795107968, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
+      propertyPath: fadeTransition
+      value: 
+      objectReference: {fileID: 11400000, guid: 013263c83b6a84c4d95beaa8bd163ac8, type: 2}
     - target: {fileID: 7379164476506103132, guid: cffac4b1ee4c0244f852d68b254673f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.16
@@ -13947,3 +14004,4 @@ SceneRoots:
   - {fileID: 1081988565}
   - {fileID: 6437480215037573560}
   - {fileID: 1792973944}
+  - {fileID: 742362203}

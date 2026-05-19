@@ -1,3 +1,4 @@
+using EasyTransition;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,6 +39,8 @@ public class EnemyMove : MonoBehaviour
     private Vector2 moveDir;
 
     [SerializeField] AudioClip VFX;
+
+    public TransitionSettings fadeTransition;
 
     Vector2[] directions = new Vector2[]
     {
@@ -336,7 +339,7 @@ public class EnemyMove : MonoBehaviour
             }
 
             SoundEffectManager.StopVoice();
-            SceneManager.LoadScene("Restaurant");
+            TransitionManager.Instance().Transition("Restaurant", fadeTransition, 0);
         }
         else
         {
