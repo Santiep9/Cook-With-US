@@ -674,6 +674,10 @@ PrefabInstance:
       value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 2092373827525678440, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: m_PlayableAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 699c4e93208a5654b9b0d06967823eeb, type: 2}
+    - target: {fileID: 2092373827525678440, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
       objectReference: {fileID: 0}
@@ -733,6 +737,18 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 16777215
       objectReference: {fileID: 0}
+    - target: {fileID: 3263917464979929224, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: NombreEscena
+      value: Restaurant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263917464979929224, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: TiempoEscena
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263917464979929224, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: dialogueData
+      value: 
+      objectReference: {fileID: 11400000, guid: e7937ff597f39f349af6c61a10523762, type: 2}
     - target: {fileID: 4145115813208485843, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -755,9 +771,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1539958549}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 832314131}
     - targetCorrespondingSourceObject: {fileID: 4145115813208485843, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       insertIndex: -1
       addedObject: {fileID: 832314134}
@@ -770,21 +783,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4757855539976368336, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
   m_PrefabInstance: {fileID: 832314129}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &832314131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 832314130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d851c4216643fde42a3db49ab3b038dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FinalDelJuego
-  Mover: {fileID: 825948514}
-  TiempoEscena: 9
-  NombreEscena: Restaurant
 --- !u!1 &832314132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4145115813208485843, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
@@ -1313,7 +1311,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539958548}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: e76125c91cec909408d81d2730acb90d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 79cdffb0f9276194d9b705f1a8544f87, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
