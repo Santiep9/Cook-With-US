@@ -31,15 +31,6 @@ public class InteractDialogo : MonoBehaviour, IInteractable
         playerOriginalScale = playerPortrait.transform.localScale;
     }
 
-    private void Start()
-    {
-        if (dialogueData != null && dialogueData.playOnSceneStart && !dialogueData.hasPlayed)
-        {
-            StartDialogue();
-            dialogueData.hasPlayed = true;
-        }
-    }
-
     public void Interact()
     {
         if (dialogueData == null || (PauseController.IsGamePaused && !isDialogueActive))
@@ -181,6 +172,12 @@ public class InteractDialogo : MonoBehaviour, IInteractable
             dialogueText.SetText(string.Empty);
             dialoguePanel.SetActive(false);
             PauseController.SetPause(false);
+            if (dialogueData.primeraConverLibro)
+            {
+                dialogueData.primeraConverLibro = false;
+
+                RestaurantManager.Instance?.UpdateBooks();
+            }
         }
     }
 

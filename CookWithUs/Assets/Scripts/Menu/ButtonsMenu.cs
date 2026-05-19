@@ -28,8 +28,7 @@ public class ButtonsMenu : MonoBehaviour
         doorData.puertaJusep = false;
         doorData.puertaRestaurante = false;
 
-        dialogueData.hasPlayed = false;
-
+        dialogueData.primeraConverLibro = true;
 
         AudioClip audiotoplay = Sqish;
         SoundEffectManager.PlayVoice(audiotoplay);

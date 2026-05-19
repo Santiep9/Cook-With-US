@@ -4,29 +4,31 @@ public class RestaurantManager : MonoBehaviour
 {
     public Areas areas;
     public DoorData doorData;
+    public NPCDialogue dialogueData;
 
     public GameObject pirulinRestaurante;
     public GameObject mJohnRestaurante;
     public GameObject jusepRestaurante;
 
-    public GameObject libroInicial;
+    public GameObject libroCanvas;
     public GameObject libroFinal;
+    public GameObject libroInicial;
 
     public Transform player;
     public Transform restaurantDoor;
 
+    public static RestaurantManager Instance;
+
     private void Awake()
     {
+        Instance = this;
+
         if (areas.pirulinCompleted || areas.mjohnCompleted || areas.jusepCompleted)
         {
             ResetAreaValues();
         }
 
-        if(areas.pirulinCompleted && areas.mjohnCompleted && areas.jusepCompleted)
-        {
-            libroInicial.SetActive(false);
-            libroFinal.SetActive(true);
-        }
+        UpdateBooks();
 
         if(areas.pirulinCompleted)
         {
@@ -60,5 +62,27 @@ public class RestaurantManager : MonoBehaviour
         doorData.puertaJusep = false;
         doorData.puertaMJohn = false;
         doorData.puertaRestaurante = false;
+    }
+
+    public void UpdateBooks()
+    {
+        libroInicial.SetActive(false);
+        libroCanvas.SetActive(false);
+        libroFinal.SetActive(false);
+
+        if (areas.pirulinCompleted && areas.mjohnCompleted && areas.jusepCompleted)
+        {
+            libroFinal.SetActive(true);
+            return;
+        }
+
+        if (dialogueData.primeraConverLibro)
+        {
+            libroInicial.SetActive(true);
+        }
+        else
+        {
+            libroCanvas.SetActive(true);
+        }
     }
 }

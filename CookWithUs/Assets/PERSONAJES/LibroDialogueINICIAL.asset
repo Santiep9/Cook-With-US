@@ -57,5 +57,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 1
-  hasPlayed: 0
+  primeraConverLibro: 1

@@ -14,12 +14,11 @@ public class GameController : MonoBehaviour
 
     public Sprite[] heartSprites;
 
-    public TransitionSettings fadeTransition;
-
     public Areas areas;
+
+    [SerializeField] private BattleSystem battleSystem;
     private void Start()
     {
-
         progressAmount = 0;
         progressSlider.value = 0;
         Botones.OnPointsAdded += IncreaseProgressAmount;
@@ -35,7 +34,7 @@ public class GameController : MonoBehaviour
         if(progressAmount >= 100)
         {
             areas.pirulinCompleted = true;
-            TransitionManager.Instance().Transition("Restaurant", fadeTransition, 0);
+            battleSystem.win = true;
             Debug.Log("acabo");
         }
 

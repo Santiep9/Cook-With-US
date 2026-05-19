@@ -348,6 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2810254716168406600}
   - component: {fileID: 2092373827525678440}
+  - component: {fileID: 3263917464979929224}
   m_Layer: 0
   m_Name: TimeLine
   m_TagString: Untagged
@@ -392,6 +393,21 @@ PlayableDirector:
     value: {fileID: 5589840923291713966}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &3263917464979929224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757855539976368336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bb11ef9abf2ef48b4bb2d0e45bf2fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CambioEscenas
+  TiempoEscena: 5
+  dialogueData: {fileID: 0}
+  NombreEscena: 
 --- !u!1 &8239180705659659246
 GameObject:
   m_ObjectHideFlags: 0

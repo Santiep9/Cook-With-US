@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using EasyTransition;
 using NUnit.Framework;
 using TMPro;
 using UnityEngine;
@@ -43,6 +44,7 @@ public class BattleSystem : MonoBehaviour
 
     public bool win;
 
+    public TransitionSettings fadeTransition;
     private void Start()
     {
         Time.timeScale = 1.0f;
@@ -175,7 +177,7 @@ public class BattleSystem : MonoBehaviour
 
             yield return new WaitForSeconds(4f);
 
-            SceneManager.LoadScene("Restaurant");
+            TransitionManager.Instance().Transition("Restaurant", fadeTransition, 0);
 
             yield break;
         }

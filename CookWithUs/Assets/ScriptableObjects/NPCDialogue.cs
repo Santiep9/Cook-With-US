@@ -20,7 +20,5 @@ public class NPCDialogue : ScriptableObject
     public bool timelineTerminada = false;
     public bool timelineYminijuego = false;
 
-    [Header("Dialogo Inicial Libro")]
-    public bool playOnSceneStart;
-    public bool hasPlayed;
+    public bool primeraConverLibro = false;
 }

@@ -156,7 +156,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6df6d65e67a75ea40ab2759341536b98, type: 3}
   - {fileID: 21300000, guid: f617d53185f0e4e4b9e6727d769ddad2, type: 3}
   - {fileID: 21300000, guid: 013f319e120dd3f49b1cdb9bb8a0fd15, type: 3}
-  fadeTransition: {fileID: 11400000, guid: 013263c83b6a84c4d95beaa8bd163ac8, type: 2}
   areas: {fileID: 11400000, guid: 61bdbd5adf6cc154f859a730927e04ec, type: 2}
   battleSystem: {fileID: 517557821}
 --- !u!4 &99167555
@@ -769,6 +768,7 @@ MonoBehaviour:
   contadorTEXTO: 1
   animator: {fileID: 1546666543}
   win: 0
+  fadeTransition: {fileID: 11400000, guid: 013263c83b6a84c4d95beaa8bd163ac8, type: 2}
 --- !u!4 &517557822
 Transform:
   m_ObjectHideFlags: 0
