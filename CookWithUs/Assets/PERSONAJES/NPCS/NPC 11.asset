@@ -20,6 +20,7 @@ MonoBehaviour:
   - "Joder t\xEDo, no me queda fentanilo ahora. Tendr\xE1s que esperar un poco\u2026"
   - "Yo solo quer\xEDa el que ten\xEDa salsa de chocolate y fresa con 5 toppings
     misteriosos :("
+  isNPCSpeaking: 01000100
   autoProgressLines: 01010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -32,3 +33,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

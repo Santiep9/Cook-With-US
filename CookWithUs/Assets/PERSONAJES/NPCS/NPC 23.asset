@@ -17,6 +17,7 @@ MonoBehaviour:
   dialogueLines:
   - "Justo al lado del WacDonalds suele haber un t\xEDo que es un fantasm\xF3n que
     flipas. "
+  isNPCSpeaking: 01
   autoProgressLines: 01
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -26,3 +27,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

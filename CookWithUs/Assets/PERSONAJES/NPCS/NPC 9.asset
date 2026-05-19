@@ -16,6 +16,7 @@ MonoBehaviour:
   npcPortrait: {fileID: 0}
   dialogueLines:
   - NO NO NO NO NO NO NO NO NO NO NO NO NO NO
+  isNPCSpeaking: 01
   autoProgressLines: 0101
   autoProgressDelay: 1.5
   typingSpeed: 0.02
@@ -25,3 +26,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

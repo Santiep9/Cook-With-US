@@ -23,6 +23,7 @@ MonoBehaviour:
   - Gracias tio, gracias de verdad.
   - Pa ti mi cola.
   - HIJO DE P-
+  isNPCSpeaking: 0100010001000100
   autoProgressLines: 0101010101010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -39,3 +40,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

@@ -22,6 +22,7 @@ MonoBehaviour:
     algo as\xED :("
   - "Mentir est\xE1 mal t\xEDo\u2026"
   - "Me seguir\xE1s queriendo verdad :3, aunque te haya dicho una mentirijilla >.<"
+  isNPCSpeaking: 0100010001
   autoProgressLines: 0101010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -35,3 +36,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

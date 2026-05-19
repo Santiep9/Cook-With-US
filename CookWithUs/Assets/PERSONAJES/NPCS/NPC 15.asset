@@ -16,6 +16,7 @@ MonoBehaviour:
   npcPortrait: {fileID: 0}
   dialogueLines:
   - "!EN EL VIDEO DE HOY EL \xDALTIMO EN DEJAR DE ESCRIBIR GANAR\xC1 100000\u20AC!"
+  isNPCSpeaking: 01
   autoProgressLines: 01
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -25,3 +26,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

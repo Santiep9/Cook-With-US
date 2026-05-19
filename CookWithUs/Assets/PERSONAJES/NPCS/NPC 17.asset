@@ -18,6 +18,7 @@ MonoBehaviour:
   - "Tssch, \xBFquieres algo? Me llaman Mr. Vendedor de figuritas de ceramica."
   - "\xBFQu\xE9 por qu\xE9 me llaman as\xED? No te lo vas a creer\u2026"
   - "Porque mat\xE9 a mis padres con una figura de cer\xE1mica."
+  isNPCSpeaking: 010101
   autoProgressLines: 010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -29,3 +30,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

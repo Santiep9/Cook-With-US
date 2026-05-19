@@ -18,6 +18,7 @@ MonoBehaviour:
   - "Yo no tengo ni puta idea de quienes son est\xE1s dos."
   - "De hecho me ha dicho la ni\xF1a que soy la reencarnaci\xF3n de su padre, no
     s\xE9 qu\xE9 co\xF1o dice pero me da mal rollo."
+  isNPCSpeaking: 0101
   autoProgressLines: 0101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -28,3 +29,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

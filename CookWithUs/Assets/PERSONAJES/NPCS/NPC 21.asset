@@ -17,6 +17,7 @@ MonoBehaviour:
   dialogueLines:
   - "Una vez vi a un t\xEDo matar a sus padres con una figura de cer\xE1mica, que
     cosa m\xE1s loca."
+  isNPCSpeaking: 01
   autoProgressLines: 01
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -26,3 +27,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

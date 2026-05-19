@@ -17,6 +17,7 @@ MonoBehaviour:
   dialogueLines:
   - Mi camiseta de Wintendo es super guay! La hizo mi padre a mano!!
   - "El d\xEDa despu\xE9s de d\xE1rmela desapareci\xF3, a\xFAn sigo busc\xE1ndole\u2026"
+  isNPCSpeaking: 0101
   autoProgressLines: 0101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -27,3 +28,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

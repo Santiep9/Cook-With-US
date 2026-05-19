@@ -19,6 +19,7 @@ MonoBehaviour:
     duda!"
   - "\xBFTen\xE9is un peluche de Vaporeon?"
   - "\xBFUn peluche de Vaporeon?, se los acaba de llevar todos ese se\xF1or de ah\xED\u2026"
+  isNPCSpeaking: 010001
   autoProgressLines: 010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -30,3 +31,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

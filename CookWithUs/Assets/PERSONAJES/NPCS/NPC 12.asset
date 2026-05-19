@@ -19,6 +19,7 @@ MonoBehaviour:
   - "Me qued\xE9 absorto ante tal afirmaci\xF3n carente de raciocinio. "
   - "Me exacerba cuando de soslayo, un petulante enarbola cultismos de rimbombantes
     como banales corolarios cuyo ef\xEDmero fin es obnubilar. "
+  isNPCSpeaking: 010101
   autoProgressLines: 010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -30,3 +31,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

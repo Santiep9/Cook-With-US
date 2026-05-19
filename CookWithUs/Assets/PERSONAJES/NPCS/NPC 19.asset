@@ -17,6 +17,7 @@ MonoBehaviour:
   dialogueLines:
   - "Parece que siempre se escuchan como lloros de una almeja desde la comisaria,
     pero hay un tonto bloqueandola casi siempre as\xED que no s\xE9 quien es."
+  isNPCSpeaking: 01
   autoProgressLines: 01
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -26,3 +27,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

@@ -16,6 +16,7 @@ MonoBehaviour:
   npcPortrait: {fileID: 0}
   dialogueLines:
   - "Una vez vi a un t\xEDo vender figuritas de porcelana, que cosa m\xE1s molona."
+  isNPCSpeaking: 01
   autoProgressLines: 01
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -25,3 +26,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

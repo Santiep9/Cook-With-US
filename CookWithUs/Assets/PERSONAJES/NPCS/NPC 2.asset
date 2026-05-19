@@ -22,6 +22,7 @@ MonoBehaviour:
     solo puedes-"
   - "\u2026"
   - "NO TE VAYAS POR FAVOR QU\xC9DATE LO NECESITO T\xCDO ."
+  isNPCSpeaking: 0100010001
   autoProgressLines: 0101010101
   autoProgressDelay: 1.5
   typingSpeed: 0.01
@@ -35,3 +36,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

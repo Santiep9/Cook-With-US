@@ -21,6 +21,7 @@ MonoBehaviour:
     QUE SE ME CAEN LOS PANTALONES
   - "\xBFPor qu\xE9 co\xF1o se te caer\xEDan los pantalones por eso?"
   - "No lo entender\xEDas tio."
+  isNPCSpeaking: 0100010001
   autoProgressLines: 0101010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -34,3 +35,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

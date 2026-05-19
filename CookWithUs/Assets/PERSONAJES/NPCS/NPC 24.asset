@@ -17,6 +17,7 @@ MonoBehaviour:
   dialogueLines:
   - "nooo\u2026 noo porfavor\u2026 la tormenta joder\u2026 no me quedan vendas\u2026
     la tormenta\u2026"
+  isNPCSpeaking: 01
   autoProgressLines: 01
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -26,3 +27,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

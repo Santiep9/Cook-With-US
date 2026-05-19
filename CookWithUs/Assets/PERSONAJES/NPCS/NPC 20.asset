@@ -18,6 +18,7 @@ MonoBehaviour:
   - "Yo nunca pasar\xEDa por el skatepark ese al lado del WacDonalds. Y menos siendo
     tu, con esa cara de tonto es como ir pidiendo que te roben."
   - "\xBFPero a esta gente que le pasa?"
+  isNPCSpeaking: 0100
   autoProgressLines: 0101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -28,3 +29,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0

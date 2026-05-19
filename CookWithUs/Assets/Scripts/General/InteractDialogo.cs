@@ -22,9 +22,12 @@ public class InteractDialogo : MonoBehaviour, IInteractable
     private int voiceNumber;
     private Coroutine autoProgressCoroutine;
 
+    private Vector3 npcOriginalScale;
+    private Vector3 playerOriginalScale;
+
     private void Start()
     {
-        if(dialogueData != null && dialogueData.playOnSceneStart && !dialogueData.hasPlayed)
+        if (dialogueData != null && dialogueData.playOnSceneStart && !dialogueData.hasPlayed)
         {
             StartDialogue();
             dialogueData.hasPlayed = true;
@@ -62,6 +65,9 @@ public class InteractDialogo : MonoBehaviour, IInteractable
         nameText.SetText(dialogueData.npcName);
         portraitImage.sprite = dialogueData.npcPortrait;
 
+        npcOriginalScale = portraitImage.transform.localScale;
+        playerOriginalScale = playerPortrait.transform.localScale;
+
         dialoguePanel.SetActive(true);
         PauseController.SetPause(true);
 
@@ -96,10 +102,44 @@ public class InteractDialogo : MonoBehaviour, IInteractable
         }
     }
 
+    void UpdateSpeakerVisuals()
+    {
+        bool npcSpeaking = true;
+
+        if (dialogueData.isNPCSpeaking != null &&
+            dialogueIndex < dialogueData.isNPCSpeaking.Length)
+        {
+            npcSpeaking = dialogueData.isNPCSpeaking[dialogueIndex];
+        }
+
+        if (npcSpeaking)
+        {
+            //NPC ACTIVO
+            portraitImage.color = new Color(1f, 1f, 1f, 1f);
+            portraitImage.transform.localScale = npcOriginalScale * 1.15f;
+
+            //PLAYER INACTIVO
+            playerPortrait.color = new Color(1f, 1f, 1f, 0.25f);
+            playerPortrait.transform.localScale = playerOriginalScale * 0.85f;
+        }
+        else
+        {
+            //PLAYER ACTIVO
+            playerPortrait.color = new Color(1f, 1f, 1f, 1f);
+            playerPortrait.transform.localScale = playerOriginalScale * 1.15f;
+
+            //NPC INACTIVO
+            portraitImage.color = new Color(1f, 1f, 1f, 0.25f);
+            portraitImage.transform.localScale = npcOriginalScale * 0.85f;
+        }
+    }
+
     IEnumerator TypeLine()
     {
         isTyping = true;
         dialogueText.SetText(string.Empty);
+
+        UpdateSpeakerVisuals();
 
         AudioClip currentClip = dialogueData.voiceSound[dialogueIndex];
 

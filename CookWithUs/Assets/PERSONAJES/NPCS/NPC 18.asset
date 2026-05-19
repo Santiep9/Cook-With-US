@@ -20,6 +20,7 @@ MonoBehaviour:
   - "\xBFC\xF3mo sab\xEDas que buscaba una gamba?"
   - 'Tienes pinta de buscar gambas, payaso. '
   - "Que co\xF1o le pasa a este t\xEDo\u2026 "
+  isNPCSpeaking: 01000100
   autoProgressLines: 010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
@@ -32,3 +33,5 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
+  playOnSceneStart: 0
+  hasPlayed: 0
