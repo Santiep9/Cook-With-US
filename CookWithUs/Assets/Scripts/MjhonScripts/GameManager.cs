@@ -1,11 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Collections;
 
 
 
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Areas areas;
 
+
     int Object;
     int contador;
     int QueJohn;
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
     List<string> ObjectNames1 = new List<string>() { "Buenas tardes, solo conozco a una Conchi y la desahucié hace unos 3 años. ", "No conozco a ningún Shohei ni a ningún Tani, no me gusta el baseball soy más de la hípica. ", "Pues mira, un poquito de Shingeki No Kyojin ahora mismo no me vendría mal, pero como se enteren mis amigos, adiós al club de PATRIA UNIDA", "Atelier Ayesha: The Alchemist Of Dusk, JUEGAZO. " };
     List<string> ObjectNames2 = new List<string>() { "Mano mira esto yo tenia una tia llamada Conchi, una latima’ que se fue pal guevaso tu me entiende’. REST IN PEACE mi tiita Conchi RIP 4EVER IN MY HEART. ", "DIIIIIIABLO 77 COMO NO VOY A CONOSEL’ AL DIOSITO OHTANI, ESE HOMBRE NACIÓ PARA JUGAR BEISBOL, EL DIAAAAAAAABLO. ", "El diiiiiiiablo a mi la vaina esa de lo dibujito’ chinos me ponen bien emperrao’ asi chinao’ tu sabe, son bien bacanos MAMAGUEVO. ", "Te voy a ser honesto papi a mi esa vaina no me va mucho, yo soy más de ponerme peluche y salir a bellaquear tu sabe’. " };
     List<string> ObjectNames3 = new List<string>() { "Sí, si mis cálculos no son erróneos tengo aproximadamente un miembro familiar llamado Conchi, más exactamente mi tía. ", "Tus deducciones han sido incorrectas pequeño padawan, pues el baseball me encanta, más concretamente el jugador Shohei Ohtani, ese tío lo tiene todo. ", "NO SE LLAMAN MONAS CHINAS. Son mis waifu, un respeto. Y si, se podría decir que me suelo adentrar por esos lares, mi serie favorita es Boku no Pico. ", "872, pero conozco mi potencial y sé que puedo llegar mucho más lejos, no me subestimes chaval, te puede salir muy caro. Si alguna vez empiezas una pelea conmigo y ves que me empiezo a reír, huye.  " };
-    List<string> ObjectNames4 = new List<string>() { "*Hace sonidos de intento de almeja*", "...  Ohtani es el goat tío.", "*Intenta contenerse para no volar su tapadera", "*sonidos de asfixiándose con el disfraz* " };
+    List<string> ObjectNames4 = new List<string>() { "*Hace sonidos de intento de almeja*", "...  Ohtani es el goat tío.", "*Intenta contenerse para no volar su tapadera*", "*sonidos de asfixiándose con el disfraz* " };
 
     List<string> Questions1 = new List<string>() { "Buenas tardes, ¿conoce usted a una señora llamada “Conchi”? ", "¿Conoces al jugador de baseball llamado Shohei Ohtani? ", "Bueno, a ti te gustan las series? ", "Sé sincero, cuál es tu videojuego favorito, si es que tienes uno porque con esas pintas… " };
     List<string> Questions2 = new List<string>() { "KLK mi hermano cómo estás ¿Te suena de algo el nombre Conchi? ", "¿Mi tigre tu sabes quien es ese tal Shohei Ohtani? ", "¿Cuéntame papi a ti como te gustan las series de televisión? ", "¿De videojuegos a ti que te gusta? " };
@@ -138,6 +140,7 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case "Paso":
+                StopAllCoroutines();
                 SoundEffectManager.StopVoice();
                 Texts[1].enabled = false;
                 TextDisplayer(Object);
@@ -147,6 +150,7 @@ public class GameManager : MonoBehaviour
             case "Paso1":
                 if (contador >= 10)
                 {
+                    StopAllCoroutines();
                     SoundEffectManager.StopVoice();
                     Images[1].gameObject.SetActive(false);
                     Texts[0].enabled = false;
@@ -163,6 +167,9 @@ public class GameManager : MonoBehaviour
                     SuspectListener(Buttons[8], Buttons[9], Buttons[10], Buttons[11]);
                     break;
                 }
+                StopAllCoroutines();
+                Texts[0].text = "";
+                Texts[1].text = "";
                 SoundEffectManager.StopVoice();
                 ShowButton(Buttons[0], Buttons[1], Buttons[2], Buttons[3], Buttons[4], Buttons[5], Buttons[6], Buttons[13], Buttons[15]);
                 ShowLibreta(Buttons[12]);
@@ -218,25 +225,25 @@ public class GameManager : MonoBehaviour
         switch (current_player)
             {
                 case Player.John:
-                Texts[1].text = Questions1[button_n];
+                StartCoroutine(TypeLine(Questions1[button_n], Texts[1]));
                 AudioClip audioToPlay = QuestionAudios[button_n];
                 Debug.Log(button_n + (int)current_player);
                 SoundEffectManager.PlayVoice(audioToPlay);
                 break;
                 case Player.John2:
-                Texts[1].text = Questions2[button_n];
+                StartCoroutine(TypeLine(Questions2[button_n], Texts[1]));
                 AudioClip audioToPlay1 = QuestionAudios[button_n + 4];
                 Debug.Log(button_n + 3);
                 SoundEffectManager.PlayVoice(audioToPlay1);
                     break;
                 case Player.John3:
-                Texts[1].text = Questions3[button_n];
+                StartCoroutine(TypeLine(Questions3[button_n], Texts[1]));
                 AudioClip audioToPlay2 = QuestionAudios[button_n + 8];
                 Debug.Log(button_n + 7);
                 SoundEffectManager.PlayVoice(audioToPlay2);
                     break;
                 case Player.John4:
-                Texts[1].text = Questions4[button_n];
+                StartCoroutine(TypeLine(Questions4[button_n], Texts[1]));
                 AudioClip audioToPlay3 = QuestionAudios[button_n + 12];
                 Debug.Log(button_n + 11);
                 SoundEffectManager.PlayVoice(audioToPlay3);
@@ -251,28 +258,28 @@ public class GameManager : MonoBehaviour
         {
             case Player.John:
                 Texts[0].enabled = true;
-                Texts[0].text = ObjectNames1[button_n];
+                StartCoroutine(TypeLine(ObjectNames1[button_n], Texts[0]));
                 Images[2].sprite = Spris[0];
                 AudioClip audioToPlay = AnswerAudios[button_n];
                 SoundEffectManager.PlayVoice(audioToPlay);
                 break;
             case Player.John2:
                 Texts[0].enabled = true;
-                Texts[0].text = ObjectNames2[button_n];
+                StartCoroutine(TypeLine(ObjectNames2[button_n], Texts[0]));
                 Images[2].sprite = Spris[1];
                 AudioClip audioToPlay1 = AnswerAudios[button_n + 4];
                 SoundEffectManager.PlayVoice(audioToPlay1);
                 break;
             case Player.John3:
                 Texts[0].enabled = true;
-                Texts[0].text = ObjectNames3[button_n];
+                StartCoroutine(TypeLine(ObjectNames3[button_n], Texts[0]));
                 Images[2].sprite = Spris[2];
                 AudioClip audioToPlay2 = AnswerAudios[button_n + 8];
                 SoundEffectManager.PlayVoice(audioToPlay2);
                 break;
             case Player.John4:
                 Texts[0].enabled = true;
-                Texts[0].text = ObjectNames4[button_n];
+                StartCoroutine(TypeLine(ObjectNames4[button_n], Texts[0]));
                 Images[2].sprite = Spris[3];
                 AudioClip audioToPlay3 = AnswerAudios[button_n + 12];
                 SoundEffectManager.PlayVoice(audioToPlay3);
@@ -475,5 +482,13 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(2f);
 
         SceneManager.LoadScene("Restaurant");
+    }
+    IEnumerator TypeLine(string textin, TextMeshProUGUI Texton)
+    {
+        foreach (char letter in textin)
+        {
+            Texton.text += letter;
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 }

@@ -14,9 +14,9 @@ public class FinalDelJuego : MonoBehaviour
     void Update()
     {
         TiempoEscena -= Time.deltaTime;
-        if (TiempoEscena <= 13.5)
+        if (TiempoEscena <= 15.5 && TiempoEscena >= 3)
         {
-            Mover.transform.position += 0.4f * Vector3.up;
+            Mover.transform.position += 0.6f * Vector3.up;
         }
         if (TiempoEscena <= 0)
         {
