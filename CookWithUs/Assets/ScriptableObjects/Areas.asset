@@ -16,5 +16,5 @@ MonoBehaviour:
   mjohnSelected: 0
   jusepSelected: 0
   pirulinCompleted: 1
-  mjohnCompleted: 0
-  jusepCompleted: 0
+  mjohnCompleted: 1
+  jusepCompleted: 1

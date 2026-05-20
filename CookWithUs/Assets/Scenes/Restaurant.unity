@@ -4196,7 +4196,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890548775}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: ae1c540c6bcaade48b7bc9d8e07d7c20, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: cafc0abdf85789b45b204eb7a03a7ed2, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -6111,6 +6111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2442952413746395636, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+    - {fileID: 3263917464979929224, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
     m_RemovedGameObjects:
     - {fileID: 411350077492651501, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
     - {fileID: 8239180705659659246, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
@@ -6146,7 +6147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87227135f0f92694f9b3fa897688c870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UltimoEscena
-  TiempoEscena: 10
+  TiempoEscena: 61
 --- !u!1 &1230148642
 GameObject:
   m_ObjectHideFlags: 0

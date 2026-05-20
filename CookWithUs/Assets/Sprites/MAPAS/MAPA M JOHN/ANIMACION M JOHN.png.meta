@@ -8,9 +8,6 @@ TextureImporter:
   - first:
       213: 2866697184257494100
     second: ANIMACION M JOHN_1
-  - first:
-      213: 472247943207555749
-    second: ANIMACION M JOHN_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,9 +106,9 @@ TextureImporter:
       name: ANIMACION M JOHN_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 15
         y: 0
-        width: 141
+        width: 142
         height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,9 +128,9 @@ TextureImporter:
       name: ANIMACION M JOHN_1
       rect:
         serializedVersion: 2
-        x: 127
+        x: 169
         y: 0
-        width: 170
+        width: 177
         height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,28 +142,6 @@ TextureImporter:
       bones: []
       spriteID: 45cc74296ed88c720800000000000000
       internalID: 2866697184257494100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ANIMACION M JOHN_2
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 99
-        width: 30
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a29bc49003cd8600800000000000000
-      internalID: 472247943207555749
       vertices: []
       indices: 
       edges: []
@@ -187,7 +162,6 @@ TextureImporter:
     nameFileIdTable:
       ANIMACION M JOHN_0: -3444521863696539300
       ANIMACION M JOHN_1: 2866697184257494100
-      ANIMACION M JOHN_2: 472247943207555749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

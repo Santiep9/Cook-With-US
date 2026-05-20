@@ -4261,7 +4261,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584354336}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: e76125c91cec909408d81d2730acb90d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: dd4728d2ac0dd474cb3e6f75c8ee1ef6, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -5859,6 +5859,10 @@ PrefabInstance:
     - target: {fileID: 3263917464979929224, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: NombreEscena
       value: MJohn Minigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263917464979929224, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
+      propertyPath: TiempoEscena
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 3263917464979929224, guid: 6b8a9ba664081954f81935ecb3cf6f90, type: 3}
       propertyPath: dialogueData
