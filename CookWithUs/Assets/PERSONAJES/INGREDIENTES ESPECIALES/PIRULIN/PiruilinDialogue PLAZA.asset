@@ -40,7 +40,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5ee23249062dfec418f4de25b1e6e342, type: 3}
   - {fileID: 8300000, guid: 6de32e7793086c94495ef1da79d76e3a, type: 3}
   - {fileID: 8300000, guid: 035483c7ee7a77749b8ffae12e4ecf4f, type: 3}
-  - {fileID: 8300000, guid: 6de32e7793086c94495ef1da79d76e3a, type: 3}
+  - {fileID: 8300000, guid: b375224e4049ee14f843fa7e401c8138, type: 3}
   - {fileID: 8300000, guid: 41b0e292f6bb75c47b50e4ff62ebe498, type: 3}
   - {fileID: 8300000, guid: 645845cefcf2e6f4c9f89c5ca9864660, type: 3}
   voicePitch: 1
