@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c61d95ed80af042bcf61798cdf6f0c, type: 3}
   m_Name: NPC 9
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Triculina
+  npcName: Victima de Pirulin
   npcPortrait: {fileID: -5333270447306496418, guid: 28d59b8a465d9bc4d9e35410ad37b376, type: 3}
   dialogueLines:
   - NO NO NO NO NO NO NO NO NO NO NO NO NO NO
