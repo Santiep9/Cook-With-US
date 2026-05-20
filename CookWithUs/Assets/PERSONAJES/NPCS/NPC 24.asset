@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 24
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Kenzzar
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 21300000, guid: b19aaff61fc7a594cbff48948ca71f62, type: 3}
   dialogueLines:
   - "nooo\u2026 noo porfavor\u2026 la tormenta joder\u2026 no me quedan vendas\u2026
     la tormenta\u2026"
@@ -27,5 +27,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

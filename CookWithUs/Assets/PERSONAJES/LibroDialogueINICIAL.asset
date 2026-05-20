@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LibroDialogueINICIAL
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Sr.Libro
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 21300000, guid: 4b1d8f5a417103348bb65250bb377175, type: 3}
   dialogueLines:
   - "\xBFTe preguntar\xE1s que soy verdad? Soy la soluci\xF3n a todos tus problemas
     peque\xF1o \u201CAnto\u201D. Me llaman \u201CSr. Libro\u201D "

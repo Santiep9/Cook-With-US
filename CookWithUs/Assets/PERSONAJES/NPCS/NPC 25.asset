@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 25
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Mr. Flow
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 21300000, guid: b79faf48138139a44bd4ace48516fe5c, type: 3}
   dialogueLines:
   - Soy una mantequilla molona que flipas y llevo gafas de sol, tengo un flow matador.
   - "No te lo niego t\xEDo nunca he dicho lo contrario."
@@ -35,5 +35,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

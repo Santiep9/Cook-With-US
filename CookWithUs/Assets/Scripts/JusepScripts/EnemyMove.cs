@@ -67,7 +67,7 @@ public class EnemyMove : MonoBehaviour
         targetPos = SnapToGrid(transform.position);
         transform.position = targetPos;
         AudioClip Won = VFX;
-        SoundEffectManager.PlayVoice(Won);
+        SoundEffectManager.PlayMusic(Won);
     }
 
     void Update()
@@ -338,12 +338,12 @@ public class EnemyMove : MonoBehaviour
                 areas.jusepCompleted = true;
             }
 
-            SoundEffectManager.StopVoice();
+            SoundEffectManager.StopMusic();
             TransitionManager.Instance().Transition("Restaurant", fadeTransition, 0);
         }
         else
         {
-            SoundEffectManager.StopVoice();
+            SoundEffectManager.StopMusic();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
