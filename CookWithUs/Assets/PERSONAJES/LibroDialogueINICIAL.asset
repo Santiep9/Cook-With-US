@@ -34,7 +34,7 @@ MonoBehaviour:
   - Ah bueno, vale venga.
   - "Cu\xE1ndo selecciones un ingrediente te marcar\xE9 la zona donde suelen habitar,
     si no seleccionas ninguno es posible que no los encuentres\u2026"
-  isNPCSpeaking: 
+  isNPCSpeaking: 0101000100010101000100010001
   autoProgressLines: 0101010101010101010101010101
   autoProgressDelay: 0
   typingSpeed: 0.05
