@@ -81,4 +81,21 @@ public class SoundEffectManager : MonoBehaviour
     {
         voiceAudioSource.UnPause();
     }
+
+    public static void PlayMusic(AudioClip audioClip)
+    {
+        if (audioClip == null) return;
+
+        if (audioSource.clip == audioClip && audioSource.isPlaying)
+            return;
+
+        audioSource.clip = audioClip;
+        audioSource.loop = true;
+        audioSource.Play();
+    }
+
+    public static void StopMusic()
+    {
+        audioSource.Stop();
+    }
 }

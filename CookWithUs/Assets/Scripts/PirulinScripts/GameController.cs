@@ -25,9 +25,8 @@ public class GameController : MonoBehaviour
         progressAmount = 0;
         progressSlider.value = 0;
         Botones.OnPointsAdded += IncreaseProgressAmount;
-        AudioClip Song = song;
-        SoundEffectManager.PlayVoice(Song);
-        SoundEffectManager.UnPause();
+
+        SoundEffectManager.PlayMusic(song);
     }
     public void IncreaseProgressAmount(int amount)
     {

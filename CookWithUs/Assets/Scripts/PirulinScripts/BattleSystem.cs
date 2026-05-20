@@ -170,12 +170,15 @@ public class BattleSystem : MonoBehaviour
         if(win)
         {
             state = BattleState.WON;
-
+            
+            
             SoundEffectManager.PlayVoice(dialogueManager.audioVictoria);
 
             dialogueText.text = "Vale Anto, tú ganas...";
 
             yield return new WaitForSeconds(4f);
+
+            SoundEffectManager.StopMusic();
 
             TransitionManager.Instance().Transition("Restaurant", fadeTransition, 0);
 

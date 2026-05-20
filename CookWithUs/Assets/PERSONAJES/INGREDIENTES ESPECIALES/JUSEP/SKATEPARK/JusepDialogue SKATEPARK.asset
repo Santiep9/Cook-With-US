@@ -15,15 +15,29 @@ MonoBehaviour:
   npcName: Jusep
   npcPortrait: {fileID: 21300000, guid: 6138b6b90d6dd9e41b5cea292f380196, type: 3}
   dialogueLines:
-  - soyh jusep en skatepark tio
-  - joan es mariquita
-  autoProgressLines: 0101
+  - "Sup my G\u2019"
+  - "Ho-hola mi G (hola mi je). Conoces a alg\xFAn Jusep? "
+  - "En persona compai, aqu\xED estoy, qu\xE9 quieres 5 petardos XXL? "
+  - "No no, te quer\xEDa preguntar si te interesar\xEDa formar parte de mi restaurante,
+    estoy buscando ingredientes para hacer una receta. "
+  - "Qu\xE9 me est\xE1s contando nano, que te pasa quieres alg\xFAn problema? Ingrediente
+    yo??? "
+  - "No quer\xEDa ofenderte t\xEDo rel\xE1jate mi G"
+  - 'Escucha, no me rayes la cabeza, te voy a reventar. '
+  isNPCSpeaking: 01000100010001
+  autoProgressLines: 01010101010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound:
-  - {fileID: 8300000, guid: 29b87d5734dfbb24e8dbdd2469aea7df, type: 3}
-  - {fileID: 8300000, guid: c907b9a164d09354ca2e88243159416c, type: 3}
+  - {fileID: 8300000, guid: 63e52f9d6120c0d4a96afb41784273d6, type: 3}
+  - {fileID: 8300000, guid: e9beabc160205b148a7589b877eb78c4, type: 3}
+  - {fileID: 8300000, guid: f72d561e3a399de4580d1fae6c102bc0, type: 3}
+  - {fileID: 8300000, guid: 6031dbbf89b226e48bf9a500ee998373, type: 3}
+  - {fileID: 8300000, guid: 94530c19b07b78c40889c9ef89c39502, type: 3}
+  - {fileID: 8300000, guid: 0de27779e902e2040ace6bfb24108056, type: 3}
+  - {fileID: 8300000, guid: fb68067ca07629f498ab200bff5292e8, type: 3}
   voicePitch: 1
   necesitaTimeline: 1
   timelineTerminada: 0
   timelineYminijuego: 1
+  primeraConverLibro: 0
