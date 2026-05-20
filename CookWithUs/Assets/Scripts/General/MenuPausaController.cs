@@ -60,7 +60,6 @@ public class MenuPausaController : MonoBehaviour
         SoundEffectManager.PlayVoice(sonidosSettings[1]);
 
         StartCoroutine(QuitAfterSound(sonidosSettings[1].length));
-        //Application.Quit();
     }
 
     private IEnumerator QuitAfterSound(float delay)

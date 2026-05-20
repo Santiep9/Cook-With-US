@@ -5298,7 +5298,8 @@ MonoBehaviour:
   menuSettings: {fileID: 573416862}
   exitCanvas: {fileID: 1115306286}
   sonidosSettings:
-  - {fileID: 8300000, guid: 4c8d95a05df596b49a09e8659233bace, type: 3}
+  - {fileID: 8300000, guid: e2d74de4febbf2243ab777d0e1de9699, type: 3}
+  - {fileID: 8300000, guid: 48fb3ea5fb7ffed4aa53fd8c66c9a250, type: 3}
   spriteExitCONFIRMADO: {fileID: 21300000, guid: 46955ca9e8855c642ac0eb9256b66153, type: 3}
   exitImage: {fileID: 1075464892}
 --- !u!114 &1909059493

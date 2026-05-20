@@ -709,7 +709,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 0.6308594
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2674,7 +2674,8 @@ MonoBehaviour:
   menuSettings: {fileID: 1115137248}
   exitCanvas: {fileID: 1600941143}
   sonidosSettings:
-  - {fileID: 8300000, guid: 4c8d95a05df596b49a09e8659233bace, type: 3}
+  - {fileID: 8300000, guid: e2d74de4febbf2243ab777d0e1de9699, type: 3}
+  - {fileID: 8300000, guid: 48fb3ea5fb7ffed4aa53fd8c66c9a250, type: 3}
   spriteExitCONFIRMADO: {fileID: 21300000, guid: 46955ca9e8855c642ac0eb9256b66153, type: 3}
   exitImage: {fileID: 2033463735}
 --- !u!114 &644238491
