@@ -12,15 +12,19 @@ public class BookCanvasRestaurant : MonoBehaviour, IInteractable
 
     public Canvas LibroConversacion;
 
-    public Image ingredientImg;
     public Image mapaImg;
     public TMP_Text ingredientTitle;
     public TMP_Text ingredientDesc;
 
+    public Image pirulinUI;
+    public Image mjohnUI;
+    public Image jusepUI;
+
     [System.Serializable]
     public class Option
     {
-        public Sprite image;
+        public Sprite lockedImage;
+        public Sprite unlockedImage;
         public string textTitle;
         public string textDesc;
     }
@@ -48,11 +52,16 @@ public class BookCanvasRestaurant : MonoBehaviour, IInteractable
     {
         if (!CanInteract()) return;
 
-        if (areas.pirulinCompleted && areas.mjohnCompleted && areas.jusepCompleted)
+        UpdateIngredientSprites();
+
+        if (areas.pirulinCompleted &&
+            areas.mjohnCompleted &&
+            areas.jusepCompleted)
         {
             FinalJuego();
             return;
         }
+
         canvas.SetActive(true);
         isCanvasActive = true;
         PauseController.SetPause(true);
@@ -94,7 +103,6 @@ public class BookCanvasRestaurant : MonoBehaviour, IInteractable
 
     void change(Option opcion)
     {
-        ingredientImg.sprite = opcion.image;
         ingredientTitle.text = opcion.textTitle;
         ingredientDesc.text = opcion.textDesc;
     }
@@ -107,5 +115,37 @@ public class BookCanvasRestaurant : MonoBehaviour, IInteractable
     void FinalJuego()
     {
         LibroConversacion.gameObject.SetActive(true);
+    }
+
+    void UpdateIngredientSprites()
+    {
+        pirulinUI.sprite = areas.pirulinCompleted
+            ? pirulin.unlockedImage
+            : pirulin.lockedImage;
+
+        mjohnUI.sprite = areas.mjohnCompleted
+            ? mjohn.unlockedImage
+            : mjohn.lockedImage;
+
+        jusepUI.sprite = areas.jusepCompleted
+            ? jusep.unlockedImage
+            : jusep.lockedImage;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ResetImages();
+        }
+    }
+
+    public void ResetImages()
+    {
+        areas.pirulinCompleted = false;
+        areas.mjohnCompleted = false;
+        areas.jusepCompleted = false;
+
+        UpdateIngredientSprites();
     }
 }
