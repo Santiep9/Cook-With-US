@@ -351,7 +351,7 @@ MonoBehaviour:
   moveSpeed: 3
   rb: {fileID: 0}
   canMove: 1
-  footstepInterval: 0.5
+  footstepInterval: 0.3
 --- !u!95 &3896383626037034671
 Animator:
   serializedVersion: 7

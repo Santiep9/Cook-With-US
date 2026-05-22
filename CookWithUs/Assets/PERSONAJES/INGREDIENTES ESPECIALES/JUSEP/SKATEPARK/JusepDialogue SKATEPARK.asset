@@ -16,7 +16,7 @@ MonoBehaviour:
   npcPortrait: {fileID: 21300000, guid: a7bb440e90d06a7468bc09f7f8ee2b5a, type: 3}
   dialogueLines:
   - "Sup my G\u2019"
-  - "Ho-hola mi G (hola mi je). Conoces a alg\xFAn Jusep? "
+  - "Ho-hola mi G. Conoces a alg\xFAn Jusep? "
   - "En persona compai, aqu\xED estoy, qu\xE9 quieres 5 petardos XXL? "
   - "No no, te quer\xEDa preguntar si te interesar\xEDa formar parte de mi restaurante,
     estoy buscando ingredientes para hacer una receta. "

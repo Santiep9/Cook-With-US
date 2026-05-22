@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 43847f6aec1b34f4abb21a47bbd93b9d
+guid: 42acc2556fec69b40b948c76aa9721bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3444521863696539300
-    second: ANIMACION M JOHN_0
-  - first:
-      213: 2866697184257494100
-    second: ANIMACION M JOHN_1
+      213: -8765226841437367654
+    second: jhon 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ANIMACION M JOHN_0
+      name: jhon 1_0
       rect:
         serializedVersion: 2
-        x: 15
+        x: 0
         y: 0
-        width: 142
-        height: 264
+        width: 153
+        height: 261
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c512d456d999230d0800000000000000
-      internalID: -3444521863696539300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ANIMACION M JOHN_1
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 0
-        width: 177
-        height: 262
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45cc74296ed88c720800000000000000
-      internalID: 2866697184257494100
+      spriteID: a92186cb0a8ab5680800000000000000
+      internalID: -8765226841437367654
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ANIMACION M JOHN_0: -3444521863696539300
-      ANIMACION M JOHN_1: 2866697184257494100
+      jhon 1_0: -8765226841437367654
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
