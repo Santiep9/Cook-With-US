@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 22
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Dubby Ducks
-  npcPortrait: {fileID: 1875893139071438443, guid: c887f82de63562c48bdad8812903770a, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 186d00fbeb6f84b42bac6b30268e1835, type: 3}
   dialogueLines:
   - "Una vez vi a un t\xEDo vender figuritas de porcelana, que cosa m\xE1s molona."
   isNPCSpeaking: 01

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 10
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Aitor Menta
-  npcPortrait: {fileID: -7234868061413856360, guid: 77e6b086e082bd247accc70d754e9a20, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 35695a7ad44f7374a8313c514234f0f3, type: 3}
   dialogueLines:
   - "He visto al t\xEDo de la tienda vender fentanilo a 2 ni\xF1os."
   - "\xBFPero t\xFA no trabajas con \xE9l?"

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JusepDialogue RESTAURANT
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Jusep
-  npcPortrait: {fileID: 21300000, guid: 6138b6b90d6dd9e41b5cea292f380196, type: 3}
+  npcPortrait: {fileID: 21300000, guid: a7bb440e90d06a7468bc09f7f8ee2b5a, type: 3}
   dialogueLines:
   - Oye G, no eres tan malo como pensaba.
   - Gracias mi G, que te parece mi restaurante?

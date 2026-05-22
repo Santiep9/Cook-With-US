@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 6
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Amparo
-  npcPortrait: {fileID: -5576130516289626769, guid: 93a3de4529826484fbba5e090b5ddee0, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 2f30eb468356a8a46ad61a2ba0700333, type: 3}
   dialogueLines:
   - Mi camiseta de Wintendo es super guay! La hizo mi padre a mano!!
   - "El d\xEDa despu\xE9s de d\xE1rmela desapareci\xF3, a\xFAn sigo busc\xE1ndole\u2026"

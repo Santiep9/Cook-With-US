@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 15 MONO 3
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Mono explotado
-  npcPortrait: {fileID: -1378141826382501330, guid: ab35c39c5518cc8458d2712d3513094e, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 7205f257d2307a64e96f720492a70c3f, type: 3}
   dialogueLines:
   - aghsasjkdhEnAlgunLugarDeLaManchaDeCuyoNombreNoQuieroAcordarmeakjsdaljqkaskj
   isNPCSpeaking: 01

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MJohnDialogueRESTAURANT
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Meji y John
-  npcPortrait: {fileID: 21300000, guid: ca7f7cfe0c8a4af468dc8c09ca9eccfb, type: 3}
+  npcPortrait: {fileID: 21300000, guid: da869e3674988c640adcc4992a4aa050, type: 3}
   dialogueLines:
   - "T\xEDo no sabes cuanto te agradezco lo que has hecho por nosotros."
   - "Nada chicos, no pod\xEDa quedarme de brazos cruzados. Me emociona veros juntos
@@ -43,5 +43,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

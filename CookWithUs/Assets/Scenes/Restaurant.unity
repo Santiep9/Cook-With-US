@@ -709,7 +709,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 0.6347656
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -9392,7 +9392,6 @@ MonoBehaviour:
   canvas: {fileID: 1157931920}
   areas: {fileID: 11400000, guid: 61bdbd5adf6cc154f859a730927e04ec, type: 2}
   LibroConversacion: {fileID: 2125800872}
-  ingredientImg: {fileID: 777882530}
   mapaImg: {fileID: 799933125}
   ingredientTitle: {fileID: 1578849813}
   ingredientDesc: {fileID: 807404254}
@@ -9401,19 +9400,19 @@ MonoBehaviour:
   jusepUI: {fileID: 777882530}
   pirulin:
     lockedImage: {fileID: 21300000, guid: 54d0ca33645aad7479c39e43746175d1, type: 3}
-    unlockedImage: {fileID: 21300000, guid: d537cae0e6fe0a8498fbf12eef5cd8e0, type: 3}
+    unlockedImage: {fileID: 21300000, guid: a50f7cab6ea746f4887e1bc0ae30d575, type: 3}
     textTitle: Pirulin
-    textDesc: Pick me TOTAL.
+    textDesc: "Gamba pick me, necesita mucha atenci\xF3n."
   mjohn:
     lockedImage: {fileID: 21300000, guid: e89cb41b378e69a4c8eb118df1b45ed6, type: 3}
     unlockedImage: {fileID: 21300000, guid: 5dbedce7de72c54438e26de05f0d9520, type: 3}
     textTitle: M John
-    textDesc: Desgraciado de la vida.
+    textDesc: "Desgraciado de la vida, lleva buscando a un amigo 30 a\xF1os."
   jusep:
     lockedImage: {fileID: 21300000, guid: e4ef8e6340b332242887827245c72db1, type: 3}
     unlockedImage: {fileID: 21300000, guid: 1cb63246db100ba4eb3fc3c0732cc566, type: 3}
     textTitle: Jusep
-    textDesc: Acabado final boss.
+    textDesc: Suele rondar el skatepark junto con sus malas amistades.
   mapaPirulin:
     image: {fileID: 21300000, guid: c5a85d5393907f04ba4a0f29c8f11df0, type: 3}
   mapaJusep:

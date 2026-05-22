@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 26
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: John Pork
-  npcPortrait: {fileID: 21300000, guid: b9d2848f84bbe0f47a307f1f2d6fdb45, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 5f69537f36954714b865519dfbe14086, type: 3}
   dialogueLines:
   - "\xBFQu\xE9 necesitas?"
   - Pues mira la verdad que-

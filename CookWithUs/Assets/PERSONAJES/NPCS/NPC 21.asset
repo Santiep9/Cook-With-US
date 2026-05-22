@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 21
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Chubby Chucks
-  npcPortrait: {fileID: -4177412731531969908, guid: a36a7a983c83c3d42ac8ff3ec6dfc036, type: 3}
+  npcPortrait: {fileID: 21300000, guid: c5c37d4500df85b4a8d2af93e1f68345, type: 3}
   dialogueLines:
   - "Una vez vi a un t\xEDo matar a sus padres con una figura de cer\xE1mica, que
     cosa m\xE1s loca."

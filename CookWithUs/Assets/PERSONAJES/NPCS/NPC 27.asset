@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 27
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Human Lover
-  npcPortrait: {fileID: 21300000, guid: 1a5d88f40af5d8240835ecd518091dd0, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 3748b4ccd93b00c438ce3045fedd4975, type: 3}
   dialogueLines:
   - Ay por favor, sigo sin encontrar a mi amado.
   - "Lo siento much\xEDsimo, seguro que era una gran persona."

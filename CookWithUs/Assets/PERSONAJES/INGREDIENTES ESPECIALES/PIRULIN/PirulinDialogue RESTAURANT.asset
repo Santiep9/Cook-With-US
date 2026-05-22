@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PirulinDialogue RESTAURANT
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Pirulin
-  npcPortrait: {fileID: 21300000, guid: 2bbb75de819608d4e8911c039831efd4, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 52897022d3d59d44a97a9c6e48909e16, type: 3}
   dialogueLines:
   - O-oye muchas gracias por todas esas cosas que me has dicho >.<
   - Nada Pirulin, te lo mereces.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ParedesFrente
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Juan Paredes
-  npcPortrait: {fileID: 21300000, guid: e202ed454b16333448edd2891a31b5ee, type: 3}
+  npcPortrait: {fileID: 21300000, guid: ef357611d70f41444b6b554b8f96420d, type: 3}
   dialogueLines:
   - Lo siento lo siento, tienes que irte no puedes pasar estoy bloqueando la puertaaaa.
   isNPCSpeaking: 01
@@ -26,5 +26,4 @@ MonoBehaviour:
   necesitaTimeline: 0
   timelineTerminada: 0
   timelineYminijuego: 0
-  playOnSceneStart: 0
-  hasPlayed: 0
+  primeraConverLibro: 0

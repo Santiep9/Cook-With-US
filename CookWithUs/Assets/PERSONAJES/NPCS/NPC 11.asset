@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 11
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: "Se\xF1or Donut"
-  npcPortrait: {fileID: 2987074628759743060, guid: c97a11103a5f3b74aa4e8b28e5e68cd5, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 4b2aa4e607a11854d83f4138bc9c82bf, type: 3}
   dialogueLines:
   - "\xBFQu\xE9 tipo de donut quieres?"
   - El especial.

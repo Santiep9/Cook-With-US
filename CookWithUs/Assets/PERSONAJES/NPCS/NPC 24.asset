@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: NPC 24
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Kenzzar
-  npcPortrait: {fileID: 21300000, guid: b19aaff61fc7a594cbff48948ca71f62, type: 3}
+  npcPortrait: {fileID: 21300000, guid: bb3af9cb944fb1a42a746ff164a361b0, type: 3}
   dialogueLines:
-  - "nooo\u2026 noo porfavor\u2026 la tormenta joder\u2026 no me quedan vendas\u2026
-    la tormenta\u2026"
+  - noo. . . noo porfavor. . . la tormenta jodeeer. . . no me quedan vendas. . . 
+    la tormenta
   isNPCSpeaking: 01
   autoProgressLines: 01
   autoProgressDelay: 1.5

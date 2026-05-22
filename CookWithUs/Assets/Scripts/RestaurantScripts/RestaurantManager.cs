@@ -54,14 +54,6 @@ public class RestaurantManager : MonoBehaviour
     void ResetAreaValues()
     {
         PauseController.SetPause(false);
-
-        areas.pirulinSelected = false;
-        areas.mjohnSelected = false;
-        areas.jusepSelected = false;
-
-        doorData.puertaJusep = false;
-        doorData.puertaMJohn = false;
-        doorData.puertaRestaurante = false;
     }
 
     public void UpdateBooks()

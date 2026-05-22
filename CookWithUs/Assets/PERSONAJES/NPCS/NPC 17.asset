@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC 17
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Mr.Vendedor de Ceramica
-  npcPortrait: {fileID: -1542854870254267478, guid: 8c8308e46ac71314c9d3c5ce96677250, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 2468618da00e2de45a927a2cac9b5b9b, type: 3}
   dialogueLines:
   - "Tssch, \xBFquieres algo? Me llaman Mr. Vendedor de figuritas de ceramica."
   - "\xBFQu\xE9 por qu\xE9 me llaman as\xED? No te lo vas a creer\u2026"
